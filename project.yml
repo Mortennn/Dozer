@@ -1,0 +1,40 @@
+name: Dozer
+options:
+  usesTabs: false
+  indentWidth: 2
+  tabWidth: 2
+targets:
+  Dozer:
+    type: application
+    platform: macOS
+    deploymentTarget: "10.12"
+    sources:
+      - Dozer
+    prebuildScripts:
+      - path: LaunchAtLogin.sh
+        name: LaunchAtLogin
+    settings:
+      DEVELOPMENT_TEAM: 34D486ERX2
+      base:
+        CODE_SIGN_ENTITLEMENTS: Dozer/SupportingFiles/Dozer.entitlements
+        INFOPLIST_FILE: Dozer/SupportingFiles/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.mortennn.Dozer
+        SWIFT_VERSION: 4.2
+      configs:
+        Debug: debug
+        Release: release
+    dependencies:
+      - carthage: LaunchAtLogin
+      - carthage: MASShortcut
+  DozerTests:
+    type: bundle.unit-test
+    platform: [macOS]
+    scheme: {}
+    sources:
+      - DozerTests
+  DozerUITests:
+    type: bundle.ui-testing
+    platform: [macOS]
+    scheme: {}
+    sources:
+      - DozerUITests

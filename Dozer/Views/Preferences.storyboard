@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rqw-GB-nSm">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="dhl-jS-4rY">
+            <objects>
+                <windowController id="Rqw-GB-nSm" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="jCK-cv-aDA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="245" y="258" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="922"/>
+                        <connections>
+                            <outlet property="delegate" destination="Rqw-GB-nSm" id="JaL-Dm-tJo"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="J6k-5a-SbH" kind="relationship" relationship="window.shadowedContentViewController" id="wY0-cH-yRu"/>
+                    </connections>
+                </windowController>
+                <customObject id="MVD-Wo-i65" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122" y="-178"/>
+        </scene>
+        <!--Tab View Controller-->
+        <scene sceneID="r6D-qp-HkB">
+            <objects>
+                <tabViewController tabStyle="toolbar" id="J6k-5a-SbH" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem identifier="" image="NSPreferencesGeneral" id="A1Q-mE-RUm" userLabel="General"/>
+                        <tabViewItem identifier="" image="AppIcon" id="Aqn-ra-OlR" userLabel="About"/>
+                    </tabViewItems>
+                    <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
+                    <tabView key="tabView" type="noTabsNoBorder" id="Mj1-0u-SZL">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <connections>
+                            <outlet property="delegate" destination="J6k-5a-SbH" id="ivM-a5-yP8"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="Mj1-0u-SZL" id="b7T-9z-pp5"/>
+                        <segue destination="CbG-uA-UXG" kind="relationship" relationship="tabItems" id="p6U-IE-ILd"/>
+                        <segue destination="jIF-zo-Q9v" kind="relationship" relationship="tabItems" id="QCH-QO-mvV"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="wzg-J3-s6R" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122" y="263"/>
+        </scene>
+        <!--General-->
+        <scene sceneID="N6l-xC-bfR">
+            <objects>
+                <viewController title="General" id="CbG-uA-UXG" customClass="GeneralVC" customModule="Dozer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="4Ei-kU-JuY">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="140"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDh-fk-WnU">
+                                <rect key="frame" x="16" y="13" width="66" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZgU-cN-ur9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="QuitPressed:" target="CbG-uA-UXG" id="KYG-pA-Vzv"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Enj-Sg-955">
+                                <rect key="frame" x="20" y="61" width="123" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Toggle Menu Items:" id="oag-ht-MLU">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ont-tO-dfX">
+                                <rect key="frame" x="21" y="104" width="115" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Launch at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kAj-f9-4Ss">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="LaunchAtLoginPressed:" target="CbG-uA-UXG" id="d1V-KV-osk"/>
+                                </connections>
+                            </button>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJw-f6-OCG" userLabel="ToggleMenuItems" customClass="MASShortcutView">
+                                <rect key="frame" x="143" y="58" width="140" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="LaunchAtLoginCheckbox" destination="ont-tO-dfX" id="SAR-AM-xSl"/>
+                        <outlet property="ToggleMenuItemsView" destination="LJw-f6-OCG" id="BZ2-ZM-34z"/>
+                    </connections>
+                </viewController>
+                <customObject id="FvE-cN-eWk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="-3"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="qGp-4b-l0U">
+            <objects>
+                <viewController title="About" id="jIF-zo-Q9v" customClass="AboutVC" customModule="Dozer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="XZr-ZU-qCW">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="137"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruO-El-AAO">
+                                <rect key="frame" x="192" y="79" width="66" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Version: X" id="qs4-oP-twB">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qB-H3-8TR">
+                                <rect key="frame" x="70" y="46" width="311" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Please star the Project!😀" id="0GF-h2-x2a">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dVP-SB-7oR">
+                                <rect key="frame" x="70" y="24" width="311" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" title="https://github.com/Mortennn/FiScript" id="bfZ-8x-Smm">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="VersionLabel" destination="ruO-El-AAO" id="UVe-fd-WkN"/>
+                    </connections>
+                </viewController>
+                <customObject id="alA-8d-lUT" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="201.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppIcon" width="128" height="128"/>
+        <image name="NSPreferencesGeneral" width="32" height="32"/>
+    </resources>
+</document>

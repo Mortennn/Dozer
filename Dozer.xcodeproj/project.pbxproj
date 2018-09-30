@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A43B808213BE74A0029E64B /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A43B805213BE7490029E64B /* Preferences.storyboard */; };
+		5AB05C89214249730049FB35 /* GeneralVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB05C88214249730049FB35 /* GeneralVC.swift */; };
+		5AF5DB6121454E0E009A83ED /* UserDefaultsIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5DB6021454E0E009A83ED /* UserDefaultsIDs.swift */; };
+		5AF5DB64214552D9009A83ED /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5DB63214552D9009A83ED /* AboutVC.swift */; };
+		BF_176493698303 /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_313939739558 /* LaunchAtLogin.framework */; };
+		BF_186471333246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FR_554209460677 /* Assets.xcassets */; };
+		BF_254612048700 /* LaunchAtLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_313939739558 /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF_336950074820 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = VG_570313816293 /* MainMenu.xib */; };
+		BF_399039938551 /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_350953458293 /* StatusItem.swift */; };
+		BF_515285622931 /* DozerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_363539180751 /* DozerTests.swift */; };
+		BF_590185752771 /* MASShortcut.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_562443839300 /* MASShortcut.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF_666588932963 /* StatusBarIconController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_763850318025 /* StatusBarIconController.swift */; };
+		BF_762364267611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_465314535169 /* AppDelegate.swift */; };
+		BF_842868813130 /* MASShortcut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_562443839300 /* MASShortcut.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CFBP_8437081002 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BF_254612048700 /* LaunchAtLogin.framework in Embed Frameworks */,
+				BF_590185752771 /* MASShortcut.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5A43B805213BE7490029E64B /* Preferences.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		5AB05C88214249730049FB35 /* GeneralVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralVC.swift; sourceTree = "<group>"; };
+		5AF5DB6021454E0E009A83ED /* UserDefaultsIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsIDs.swift; sourceTree = "<group>"; };
+		5AF5DB63214552D9009A83ED /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		FR_114064246828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FR_181633778992 /* bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bridging-header.h"; sourceTree = "<group>"; };
+		FR_313939739558 /* LaunchAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LaunchAtLogin.framework; sourceTree = "<group>"; };
+		FR_350953458293 /* StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
+		FR_363539180751 /* DozerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DozerTests.swift; sourceTree = "<group>"; };
+		FR_422714436537 /* DozerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DozerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_465314535169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FR_479945837573 /* Dozer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dozer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_554209460677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FR_562443839300 /* MASShortcut.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MASShortcut.framework; sourceTree = "<group>"; };
+		FR_570313816293 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FR_594147164305 /* DozerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DozerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_648707474633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FR_663277439318 /* Dozer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dozer.entitlements; sourceTree = "<group>"; };
+		FR_763850318025 /* StatusBarIconController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarIconController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBP_47994583757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF_176493698303 /* LaunchAtLogin.framework in Frameworks */,
+				BF_842868813130 /* MASShortcut.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G_1952740716080 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				G_2883690153011 /* Carthage */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		G_2262017442691 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				FR_313939739558 /* LaunchAtLogin.framework */,
+				FR_562443839300 /* MASShortcut.framework */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		G_2555110680911 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				VG_570313816293 /* MainMenu.xib */,
+				5A43B805213BE7490029E64B /* Preferences.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G_2589714072103 /* DozerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FR_363539180751 /* DozerTests.swift */,
+				FR_648707474633 /* Info.plist */,
+			);
+			path = DozerTests;
+			sourceTree = "<group>";
+		};
+		G_2741725469179 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FR_350953458293 /* StatusItem.swift */,
+				5AB05C88214249730049FB35 /* GeneralVC.swift */,
+				5AF5DB63214552D9009A83ED /* AboutVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		G_2883690153011 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				G_2262017442691 /* Mac */,
+			);
+			name = Carthage;
+			path = Carthage/Build;
+			sourceTree = "<group>";
+		};
+		G_2932046581532 /* DozerUITests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DozerUITests;
+			sourceTree = "<group>";
+		};
+		G_4799458375734 /* Dozer */ = {
+			isa = PBXGroup;
+			children = (
+				FR_465314535169 /* AppDelegate.swift */,
+				G_8503354709357 /* Constants */,
+				G_2741725469179 /* ViewControllers */,
+				G_9107343887793 /* Resources */,
+				G_7490044046610 /* SupportingFiles */,
+				G_2555110680911 /* Views */,
+			);
+			path = Dozer;
+			sourceTree = "<group>";
+		};
+		G_7490044046610 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FR_181633778992 /* bridging-header.h */,
+				FR_663277439318 /* Dozer.entitlements */,
+				FR_114064246828 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		G_8448771205358 = {
+			isa = PBXGroup;
+			children = (
+				G_4799458375734 /* Dozer */,
+				G_2589714072103 /* DozerTests */,
+				G_2932046581532 /* DozerUITests */,
+				G_1952740716080 /* Frameworks */,
+				G_8620238527590 /* Products */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		G_8503354709357 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FR_763850318025 /* StatusBarIconController.swift */,
+				5AF5DB6021454E0E009A83ED /* UserDefaultsIDs.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		G_8620238527590 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FR_479945837573 /* Dozer.app */,
+				FR_594147164305 /* DozerTests.xctest */,
+				FR_422714436537 /* DozerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G_9107343887793 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FR_554209460677 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		NT_422714436537 /* DozerUITests_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL_422714436537 /* Build configuration list for PBXNativeTarget "DozerUITests_macOS" */;
+			buildPhases = (
+				SBP_42271443653 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DozerUITests_macOS;
+			productName = DozerUITests_macOS;
+			productReference = FR_422714436537 /* DozerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		NT_479945837573 /* Dozer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = "CL_479945837573-1" /* Build configuration list for PBXNativeTarget "Dozer" */;
+			buildPhases = (
+				SBP_47994583757 /* Sources */,
+				RBP_47994583757 /* Resources */,
+				FBP_47994583757 /* Frameworks */,
+				CFBP_8437081002 /* Embed Frameworks */,
+				5A2DA2002132C0F300503E97 /* LaunchAtLogin */,
+				5A76B588214D45C20014FE1D /* HighlightTags */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dozer;
+			productName = Dozer;
+			productReference = FR_479945837573 /* Dozer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		NT_594147164305 /* DozerTests_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CL_594147164305 /* Build configuration list for PBXNativeTarget "DozerTests_macOS" */;
+			buildPhases = (
+				SBP_59414716430 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DozerTests_macOS;
+			productName = DozerTests_macOS;
+			productReference = FR_594147164305 /* DozerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P_4799458375734 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					NT_479945837573 = {
+						DevelopmentTeam = DE6MHLRTVN;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = CL_479945837573 /* Build configuration list for PBXProject "Dozer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+			);
+			mainGroup = G_8448771205358;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				NT_479945837573 /* Dozer */,
+				NT_594147164305 /* DozerTests_macOS */,
+				NT_422714436537 /* DozerUITests_macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		RBP_47994583757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF_186471333246 /* Assets.xcassets in Resources */,
+				5A43B808213BE74A0029E64B /* Preferences.storyboard in Resources */,
+				BF_336950074820 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A2DA2002132C0F300503E97 /* LaunchAtLogin */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = LaunchAtLogin;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Carthage/Build/Mac/LaunchAtLogin.framework/Resources/copy-helper.sh\n";
+		};
+		5A76B588214D45C20014FE1D /* HighlightTags */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = HighlightTags;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"WARNING:|TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -not -path \"${SRCROOT}/Carthage/*\" -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		SBP_42271443653 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		SBP_47994583757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AF5DB64214552D9009A83ED /* AboutVC.swift in Sources */,
+				BF_762364267611 /* AppDelegate.swift in Sources */,
+				5AB05C89214249730049FB35 /* GeneralVC.swift in Sources */,
+				BF_666588932963 /* StatusBarIconController.swift in Sources */,
+				5AF5DB6121454E0E009A83ED /* UserDefaultsIDs.swift in Sources */,
+				BF_399039938551 /* StatusItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		SBP_59414716430 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF_515285622931 /* DozerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		VG_570313816293 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FR_570313816293 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC_386654779870 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Dozer/SupportingFiles/Dozer.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DE6MHLRTVN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = Dozer/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mortennn.Dozer;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		BC_479945831424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		BC_498920453202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DozerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = DozerTests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BC_591140605377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Dozer/SupportingFiles/Dozer.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = DE6MHLRTVN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = Dozer/SupportingFiles/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mortennn.Dozer;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		BC_673329857679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = DozerUITests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BC_698532536451 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = DozerUITests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BC_703987697103 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = DozerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = DozerTests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BC_881114754245 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CL_422714436537 /* Build configuration list for PBXNativeTarget "DozerUITests_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_698532536451 /* Debug */,
+				BC_673329857679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+		CL_479945837573 /* Build configuration list for PBXProject "Dozer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_479945831424 /* Debug */,
+				BC_881114754245 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		"CL_479945837573-1" /* Build configuration list for PBXNativeTarget "Dozer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_386654779870 /* Debug */,
+				BC_591140605377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+		CL_594147164305 /* Build configuration list for PBXNativeTarget "DozerTests_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC_498920453202 /* Debug */,
+				BC_703987697103 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = P_4799458375734 /* Project object */;
+}
