@@ -1,8 +1,8 @@
 <p align="center">
-	<img width="200" height="200" margin-right="100%" src="https://github.com/Mortennn/Dozer/raw/master/Images/Logo.png">
+	<img width="200" height="200" margin-right="100%" src="https://github.com/Mortennn/Dozer/blob/master/Dozer/Resources/Assets.xcassets/AppIcon.appiconset/Icon_512x512%402x.png">
 </p>
 <p align="center">
-	<a href="https://github.com/Mortennn/Dozer/releases/download/v1.0/Dozer.dmg">
+	<a href="https://github.com/Mortennn/Dozer/releases/download/v1/Dozer.dmg">
  		<img src="https://img.shields.io/badge/download-v1.0-brightgreen.svg" alt="download">
 	</a>
 	<a href="https://img.shields.io/badge/platform-macOS-lightgrey.svg">
@@ -21,7 +21,7 @@
 
 ## 🚀 Dozer
 <p align="center">
-	<img height="22" min-width="100" src="https://github.com/Mortennn/Dozer/raw/master/Images/demo.gif" alt="desktop-image">
+	<img height="22" min-width="100" src="https://github.com/Mortennn/Dozer/raw/master/demo/demo.gif" alt="desktop-image">
 </p>
 <p align="center"></p>
 Dozer lets you hide menu bar items to give your Mac a cleaner look.
@@ -33,7 +33,7 @@ Easiest way [Homebrew Cask](https://caskroom.github.io/):
 Manual:
 
 
-1. [Download](https://github.com/Mortennn/Dozer/releases/download/v0.7-beta/Dozer.dmg), open, and drag the app to the Applications folder.
+1. [Download](https://github.com/Mortennn/Dozer/releases/download/v1/Dozer.dmg), open, and drag the app to the Applications folder.
 
 ## Requirements
 macOS version >= 10.12
