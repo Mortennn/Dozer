@@ -34,6 +34,11 @@ Manual:
 
 
 1. [Download](https://github.com/Mortennn/Dozer/releases/latest), open, and drag the app to the Applications folder.
+2. Open Dozer and drag the icon in your menu bar (hold CMD) to the right so it is between some other icons. When activated (with a right click) any icons to the left will be hidden. You can arrange your other icons accordingly.
+
+<p align="center">
+	<img height="22" min-width="100" src="https://github.com/digiltd/Dozer/raw/master/demo/dozer.gif" alt="menubar demo">
+</p>
 
 ## Requirements
 macOS version >= 10.12
