@@ -8,6 +8,7 @@
 import Cocoa
 import MASShortcut
 import LaunchAtLogin
+import Sparkle
 
 class GeneralVC: NSViewController {
 
@@ -15,6 +16,7 @@ class GeneralVC: NSViewController {
   
   @IBOutlet var LaunchAtLoginCheckbox: NSButton!
   @IBOutlet var ToggleMenuItemsView: MASShortcutView!
+  @IBOutlet var CheckForUpdates: NSButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -29,6 +31,10 @@ class GeneralVC: NSViewController {
       self.userShortCut = self.ToggleMenuItemsView.shortcutValue
     }
 
+    // check for updates button
+    CheckForUpdates.target = SUUpdater.shared()!
+    CheckForUpdates.action = #selector(SUUpdater.shared()!.checkForUpdates(_:))
+    
   }
   
   override func viewDidAppear() {

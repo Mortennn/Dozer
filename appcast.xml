@@ -1,10 +1,18 @@
 <?xml version="1.0" standalone="yes"?><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
 <channel>
 <title>Dozer</title>
-<item>
-<title>1.1.0</title>
-<pubDate>Mon, 01 Oct 2018 16:13:25 +0200</pubDate>
-<sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.0/Dozer.1.1.0.dmg" sparkle:version="4" sparkle:shortVersionString="1.1.0" length="8131490" type="application/octet-stream" sparkle:edSignature="wb02w8B/z3unl0gLBTxSmEV/Laa5z+o8k9lvjsZRCRbWioL1C+nT+H3jDm5d8MQV3Wvs4F8xQKvjFsfmzyphCQ=="/>
-</item>
+    <item>
+        <title>1.1.0</title>
+        <pubDate>Mon, 01 Oct 2018 16:13:25 +0200</pubDate>
+        <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
+        <enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.0/Dozer.1.1.0.dmg" sparkle:version="4" sparkle:shortVersionString="1.1.0" length="8131490" type="application/octet-stream" sparkle:edSignature="wb02w8B/z3unl0gLBTxSmEV/Laa5z+o8k9lvjsZRCRbWioL1C+nT+H3jDm5d8MQV3Wvs4F8xQKvjFsfmzyphCQ=="/>
+    </item>
+    <item>
+        <title>1.1.1 (bug fixes and new boarding screen)</title>
+        <pubDate>Wed, 03 Oct 2018 22:04:36 +0200</pubDate>
+        <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
+        <enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.1/Dozer.1.1.1.dmg" sparkle:version="5" sparkle:shortVersionString="1.1.1" length="8420775" type="application/octet-stream" sparkle:edSignature="0IcprebgZzoEljZGfmpsBAZ58knWv3wnX5LTYhEwnA9//kWhDjYeIWV46Ammsd1y+/a9oYJmY3eYYjUL+AB3Ag=="/>
+        <sparkle:deltas>
+        <enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.1/Dozer5-4.delta" sparkle:version="5" sparkle:shortVersionString="1.1.1" sparkle:deltaFrom="4" length="370749" type="application/octet-stream" sparkle:edSignature="piv4vg9jmaJzoCWf4V1I09UOiqIq/i/hAdHzmF0h3xp9RQAjCSZbyViiHo9OuwP8QWkJtik4hwfpEBfoFN79DQ=="/></sparkle:deltas>
+    </item>
 </channel></rss>
