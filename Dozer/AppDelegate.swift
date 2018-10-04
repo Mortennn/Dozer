@@ -17,6 +17,9 @@ let blockMenuItemLengthLarge:CGFloat = 10000
 class AppDelegate: NSObject, NSApplicationDelegate {
   
   func applicationDidFinishLaunching(_ notification: Notification) {
+    
+    firstRun()
+    
     // background menu item
     mainStatusItem.length = mainMenuItemLength
     if let mainStatusItemButton = mainStatusItem.button {

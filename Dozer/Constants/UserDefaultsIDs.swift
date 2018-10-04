@@ -17,6 +17,14 @@ struct UserDefaultKeys {
       static let ToggleMenuItems = "toggleMenuItemsDEBUG"
     #endif
   }
+  struct FirstRun {
+    private init(){}
+    #if !DEBUG
+      static let defaultKey = "firstRun"
+    #else
+      static let defaultKey = "firstRunDEBUG"
+    #endif
+  }
 }
 
 struct StoryboardNames {

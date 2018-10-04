@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A43B808213BE74A0029E64B /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A43B805213BE7490029E64B /* Preferences.storyboard */; };
-		5AB05C89214249730049FB35 /* GeneralVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB05C88214249730049FB35 /* GeneralVC.swift */; };
-		5AF5DB6121454E0E009A83ED /* UserDefaultsIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5DB6021454E0E009A83ED /* UserDefaultsIDs.swift */; };
-		5AF5DB64214552D9009A83ED /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5DB63214552D9009A83ED /* AboutVC.swift */; };
+		5A326C1521651B5B00CA0BEF /* moveDozerDemo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5A326C1421651B5B00CA0BEF /* moveDozerDemo.mp4 */; };
+		5AF022DA2163BAD100676A82 /* BoardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF022D82163BAD100676A82 /* BoardingScreen.swift */; };
+		5AF022DB2163BAD100676A82 /* BoardingScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF022D92163BAD100676A82 /* BoardingScreen.xib */; };
+		5AF022DE2163C9F100676A82 /* firstRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF022DD2163C9F100676A82 /* firstRun.swift */; };
+		BF_172740948368 /* StatusBarIconController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_526307919371 /* StatusBarIconController.swift */; };
 		BF_176493698303 /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_313939739558 /* LaunchAtLogin.framework */; };
 		BF_186471333246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FR_554209460677 /* Assets.xcassets */; };
 		BF_254612048700 /* LaunchAtLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_313939739558 /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF_279143273661 /* UserDefaultsIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_226152609915 /* UserDefaultsIDs.swift */; };
 		BF_336950074820 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = VG_570313816293 /* MainMenu.xib */; };
-		BF_399039938551 /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_350953458293 /* StatusItem.swift */; };
+		BF_457832268999 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_861919633272 /* Sparkle.framework */; };
+		BF_490796392216 /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_680983747574 /* StatusItem.swift */; };
 		BF_515285622931 /* DozerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_363539180751 /* DozerTests.swift */; };
+		BF_583701331972 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_861919633272 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_590185752771 /* MASShortcut.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_562443839300 /* MASShortcut.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BF_666588932963 /* StatusBarIconController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_763850318025 /* StatusBarIconController.swift */; };
+		BF_612390121792 /* GeneralVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_211201971878 /* GeneralVC.swift */; };
 		BF_762364267611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_465314535169 /* AppDelegate.swift */; };
+		BF_796634540213 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_291041785031 /* AboutVC.swift */; };
 		BF_842868813130 /* MASShortcut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_562443839300 /* MASShortcut.framework */; };
+		BF_897320047095 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FR_266252780135 /* Preferences.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +38,7 @@
 			files = (
 				BF_254612048700 /* LaunchAtLogin.framework in Embed Frameworks */,
 				BF_590185752771 /* MASShortcut.framework in Embed Frameworks */,
+				BF_583701331972 /* Sparkle.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,25 +46,30 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5A43B805213BE7490029E64B /* Preferences.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
-		5AB05C88214249730049FB35 /* GeneralVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralVC.swift; sourceTree = "<group>"; };
-		5AF5DB6021454E0E009A83ED /* UserDefaultsIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsIDs.swift; sourceTree = "<group>"; };
-		5AF5DB63214552D9009A83ED /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		5A326C1421651B5B00CA0BEF /* moveDozerDemo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = moveDozerDemo.mp4; sourceTree = "<group>"; };
+		5AF022D82163BAD100676A82 /* BoardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingScreen.swift; sourceTree = "<group>"; };
+		5AF022D92163BAD100676A82 /* BoardingScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardingScreen.xib; sourceTree = "<group>"; };
+		5AF022DD2163C9F100676A82 /* firstRun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstRun.swift; sourceTree = "<group>"; };
 		FR_114064246828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FR_181633778992 /* bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bridging-header.h"; sourceTree = "<group>"; };
+		FR_211201971878 /* GeneralVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralVC.swift; sourceTree = "<group>"; };
+		FR_226152609915 /* UserDefaultsIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsIDs.swift; sourceTree = "<group>"; };
+		FR_266252780135 /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		FR_291041785031 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		FR_313939739558 /* LaunchAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LaunchAtLogin.framework; sourceTree = "<group>"; };
-		FR_350953458293 /* StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
 		FR_363539180751 /* DozerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DozerTests.swift; sourceTree = "<group>"; };
 		FR_422714436537 /* DozerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DozerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_465314535169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FR_479945837573 /* Dozer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dozer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_526307919371 /* StatusBarIconController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarIconController.swift; sourceTree = "<group>"; };
 		FR_554209460677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FR_562443839300 /* MASShortcut.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MASShortcut.framework; sourceTree = "<group>"; };
 		FR_570313816293 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		FR_594147164305 /* DozerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DozerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_648707474633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FR_663277439318 /* Dozer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dozer.entitlements; sourceTree = "<group>"; };
-		FR_763850318025 /* StatusBarIconController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarIconController.swift; sourceTree = "<group>"; };
+		FR_680983747574 /* StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
+		FR_861919633272 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +79,21 @@
 			files = (
 				BF_176493698303 /* LaunchAtLogin.framework in Frameworks */,
 				BF_842868813130 /* MASShortcut.framework in Frameworks */,
+				BF_457832268999 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AF022DC2163C9DD00676A82 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				5AF022DD2163C9F100676A82 /* firstRun.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
 		G_1952740716080 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +107,7 @@
 			children = (
 				FR_313939739558 /* LaunchAtLogin.framework */,
 				FR_562443839300 /* MASShortcut.framework */,
+				FR_861919633272 /* Sparkle.framework */,
 			);
 			path = Mac;
 			sourceTree = "<group>";
@@ -94,7 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				VG_570313816293 /* MainMenu.xib */,
-				5A43B805213BE7490029E64B /* Preferences.storyboard */,
+				FR_266252780135 /* Preferences.storyboard */,
+				5AF022D92163BAD100676A82 /* BoardingScreen.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,16 +129,6 @@
 				FR_648707474633 /* Info.plist */,
 			);
 			path = DozerTests;
-			sourceTree = "<group>";
-		};
-		G_2741725469179 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				FR_350953458293 /* StatusItem.swift */,
-				5AB05C88214249730049FB35 /* GeneralVC.swift */,
-				5AF5DB63214552D9009A83ED /* AboutVC.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		G_2883690153011 /* Carthage */ = {
@@ -138,13 +151,25 @@
 			isa = PBXGroup;
 			children = (
 				FR_465314535169 /* AppDelegate.swift */,
+				5AF022DC2163C9DD00676A82 /* Logic */,
 				G_8503354709357 /* Constants */,
-				G_2741725469179 /* ViewControllers */,
 				G_9107343887793 /* Resources */,
 				G_7490044046610 /* SupportingFiles */,
+				G_6747595145625 /* ViewControllers */,
 				G_2555110680911 /* Views */,
 			);
 			path = Dozer;
+			sourceTree = "<group>";
+		};
+		G_6747595145625 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FR_291041785031 /* AboutVC.swift */,
+				FR_211201971878 /* GeneralVC.swift */,
+				FR_680983747574 /* StatusItem.swift */,
+				5AF022D82163BAD100676A82 /* BoardingScreen.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		G_7490044046610 /* SupportingFiles */ = {
@@ -174,8 +199,8 @@
 		G_8503354709357 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				FR_763850318025 /* StatusBarIconController.swift */,
-				5AF5DB6021454E0E009A83ED /* UserDefaultsIDs.swift */,
+				FR_526307919371 /* StatusBarIconController.swift */,
+				FR_226152609915 /* UserDefaultsIDs.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -194,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				FR_554209460677 /* Assets.xcassets */,
+				5A326C1421651B5B00CA0BEF /* moveDozerDemo.mp4 */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -224,8 +250,8 @@
 				RBP_47994583757 /* Resources */,
 				FBP_47994583757 /* Frameworks */,
 				CFBP_8437081002 /* Embed Frameworks */,
-				5A2DA2002132C0F300503E97 /* LaunchAtLogin */,
-				5A76B588214D45C20014FE1D /* HighlightTags */,
+				SSBP_8188862981 /* LaunchAtLogin */,
+				SSBP_6009087431 /* Unused */,
 			);
 			buildRules = (
 			);
@@ -262,14 +288,6 @@
 					NT_479945837573 = {
 						DevelopmentTeam = DE6MHLRTVN;
 						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.HardenedRuntime = {
-								enabled = 0;
-							};
-							com.apple.Sandbox = {
-								enabled = 1;
-							};
-						};
 					};
 				};
 			};
@@ -297,15 +315,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF_186471333246 /* Assets.xcassets in Resources */,
-				5A43B808213BE74A0029E64B /* Preferences.storyboard in Resources */,
+				5AF022DB2163BAD100676A82 /* BoardingScreen.xib in Resources */,
 				BF_336950074820 /* MainMenu.xib in Resources */,
+				BF_897320047095 /* Preferences.storyboard in Resources */,
+				5A326C1521651B5B00CA0BEF /* moveDozerDemo.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5A2DA2002132C0F300503E97 /* LaunchAtLogin */ = {
+		SSBP_6009087431 /* Unused */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Unused;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "chmod +x ./Scripts/Unused.rb;\n./Scripts/Unused.rb xcode\n";
+		};
+		SSBP_8188862981 /* LaunchAtLogin */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,20 +352,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Carthage/Build/Mac/LaunchAtLogin.framework/Resources/copy-helper.sh\n";
-		};
-		5A76B588214D45C20014FE1D /* HighlightTags */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = HighlightTags;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "TAGS=\"WARNING:|TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -not -path \"${SRCROOT}/Carthage/*\" -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -347,12 +367,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AF5DB64214552D9009A83ED /* AboutVC.swift in Sources */,
+				BF_796634540213 /* AboutVC.swift in Sources */,
 				BF_762364267611 /* AppDelegate.swift in Sources */,
-				5AB05C89214249730049FB35 /* GeneralVC.swift in Sources */,
-				BF_666588932963 /* StatusBarIconController.swift in Sources */,
-				5AF5DB6121454E0E009A83ED /* UserDefaultsIDs.swift in Sources */,
-				BF_399039938551 /* StatusItem.swift in Sources */,
+				BF_612390121792 /* GeneralVC.swift in Sources */,
+				BF_172740948368 /* StatusBarIconController.swift in Sources */,
+				BF_490796392216 /* StatusItem.swift in Sources */,
+				5AF022DA2163BAD100676A82 /* BoardingScreen.swift in Sources */,
+				5AF022DE2163C9F100676A82 /* firstRun.swift in Sources */,
+				BF_279143273661 /* UserDefaultsIDs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +488,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DozerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = DozerTests;
 				SDKROOT = macosx;
 			};
@@ -524,7 +546,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DozerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = DozerTests;
 				SDKROOT = macosx;
 			};

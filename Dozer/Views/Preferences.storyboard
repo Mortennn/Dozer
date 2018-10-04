@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rqw-GB-nSm">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Rqw-GB-nSm">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -59,22 +59,11 @@
             <objects>
                 <viewController title="General" id="CbG-uA-UXG" customClass="GeneralVC" customModule="Dozer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="4Ei-kU-JuY">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="140"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="183"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDh-fk-WnU">
-                                <rect key="frame" x="16" y="13" width="66" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZgU-cN-ur9">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="QuitPressed:" target="CbG-uA-UXG" id="KYG-pA-Vzv"/>
-                                </connections>
-                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Enj-Sg-955">
-                                <rect key="frame" x="20" y="61" width="123" height="17"/>
+                                <rect key="frame" x="18" y="102" width="123" height="17"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Toggle Menu Items:" id="oag-ht-MLU">
                                     <font key="font" metaFont="system"/>
@@ -83,7 +72,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ont-tO-dfX">
-                                <rect key="frame" x="21" y="104" width="115" height="18"/>
+                                <rect key="frame" x="21" y="147" width="115" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Launch at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kAj-f9-4Ss">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -94,19 +83,39 @@
                                 </connections>
                             </button>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJw-f6-OCG" userLabel="ToggleMenuItems" customClass="MASShortcutView">
-                                <rect key="frame" x="143" y="58" width="140" height="20"/>
+                                <rect key="frame" x="143" y="100" width="140" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDh-fk-WnU">
+                                <rect key="frame" x="14" y="13" width="66" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZgU-cN-ur9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="QuitPressed:" target="CbG-uA-UXG" id="KYG-pA-Vzv"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hD-Ba-FRE">
+                                <rect key="frame" x="284" y="13" width="152" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Check for updates" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZVx-J2-9qL">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="CheckForUpdates" destination="0hD-Ba-FRE" id="JDT-CE-edO"/>
                         <outlet property="LaunchAtLoginCheckbox" destination="ont-tO-dfX" id="SAR-AM-xSl"/>
                         <outlet property="ToggleMenuItemsView" destination="LJw-f6-OCG" id="BZ2-ZM-34z"/>
                     </connections>
                 </viewController>
                 <customObject id="FvE-cN-eWk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="548" y="-3"/>
+            <point key="canvasLocation" x="548" y="18.5"/>
         </scene>
         <!--About-->
         <scene sceneID="qGp-4b-l0U">
@@ -117,9 +126,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruO-El-AAO">
-                                <rect key="frame" x="192" y="79" width="66" height="17"/>
+                                <rect key="frame" x="18" y="79" width="414" height="17"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Version: X" id="qs4-oP-twB">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Version: X" id="qs4-oP-twB">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -137,7 +146,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dVP-SB-7oR">
                                 <rect key="frame" x="70" y="24" width="311" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" title="https://github.com/Mortennn/FiScript" id="bfZ-8x-Smm">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" title="https://github.com/Mortennn/Dozer" id="bfZ-8x-Smm">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -151,7 +160,7 @@
                 </viewController>
                 <customObject id="alA-8d-lUT" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="548" y="201.5"/>
+            <point key="canvasLocation" x="548" y="310.5"/>
         </scene>
     </scenes>
     <resources>
