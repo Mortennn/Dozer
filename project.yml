@@ -13,8 +13,10 @@ targets:
     prebuildScripts:
       - path: LaunchAtLogin.sh
         name: LaunchAtLogin
+      - path: Scripts/Unused.sh
+        name: Unused
     settings:
-      DEVELOPMENT_TEAM: 34D486ERX2
+      DEVELOPMENT_TEAM: DE6MHLRTVN
       base:
         CODE_SIGN_ENTITLEMENTS: Dozer/SupportingFiles/Dozer.entitlements
         INFOPLIST_FILE: Dozer/SupportingFiles/Info.plist
@@ -26,6 +28,7 @@ targets:
     dependencies:
       - carthage: LaunchAtLogin
       - carthage: MASShortcut
+      - carthage: Sparkle
   DozerTests:
     type: bundle.unit-test
     platform: [macOS]
