@@ -2,9 +2,8 @@
 	<img width="200" height="200" margin-right="100%" src="https://github.com/Mortennn/Dozer/blob/master/Dozer/Resources/Assets.xcassets/AppIcon.appiconset/Icon_512x512%402x.png">
 </p>
 <p align="center">
-	<a href="https://github.com/Mortennn/Dozer/releases/download/v1/Dozer.dmg">
- 		<img src="https://img.shields.io/badge/download-v1.0-brightgreen.svg" alt="download">
-	</a>
+<a href="https://github.com/Mortennn/Dozer/releases/latest">
+ 		<img src="https://img.shields.io/badge/download-latest-brightgreen.svg" alt="download">
 	<a href="https://img.shields.io/badge/platform-macOS-lightgrey.svg">
  		<img src="https://img.shields.io/badge/platform-macOS-lightgrey.svg" alt="platform">
 	</a>
@@ -33,8 +32,12 @@ Easiest way [Homebrew Cask](https://caskroom.github.io/):
 Manual:
 
 
-1. [Download](https://github.com/Mortennn/Dozer/releases/download/v1/Dozer.dmg), open, and drag the app to the Applications folder.
+1. [Download](https://github.com/Mortennn/Dozer/releases/latest), open, and drag the app to the Applications folder.
+2. Open Dozer and drag the icon in your menu bar (hold CMD) to the right so it is between some other icons. When activated (with a right click) any icons to the left will be hidden. You can arrange your other icons accordingly.
 
+<p align="center">
+	<img height="22" min-width="100" src="https://github.com/Mortennn/Dozer/raw/master/demo/dozer.gif" alt="menubar demo">
+</p>
 ## Requirements
 macOS version >= 10.12
 
