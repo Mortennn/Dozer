@@ -45,4 +45,6 @@ macOS version >= 10.12
 
 Dozer is released under the terms of [MIT License](http://opensource.org/licenses/MIT).
 
-#### You might also like [FiScript](https://github.com/Mortennn/FiScript), which lets you execute custom scripts on your files/folders from the context menu in Finder.
+###### You might also like [FiScript](https://github.com/Mortennn/FiScript), which lets you execute custom scripts on your files/folders from the context menu in Finder.
+
+[![HitCount](http://hits.dwyl.io/Mortennn/Dozer.svg)](http://hits.dwyl.io/Mortennn/Dozer)
