@@ -40,6 +40,7 @@ Manual:
 <p align="center">
 	<img height="22" min-width="100" src="https://github.com/Mortennn/Dozer/raw/master/demo/dozer.gif" alt="menubar demo">
 </p>
+
 ## Requirements
 macOS version >= 10.12
 
