@@ -47,5 +47,3 @@ macOS version >= 10.12
 ## License
 
 Dozer is released under the terms of [MIT License](http://opensource.org/licenses/MIT).
-
-[![HitCount](http://hits.dwyl.io/Mortennn/Dozer.svg)](http://hits.dwyl.io/Mortennn/Dozer)
