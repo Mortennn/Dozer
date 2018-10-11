@@ -28,7 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       mainStatusItemButton.image = Icons().shown
       mainStatusItemButton.sendAction(on: [.leftMouseDown, .rightMouseDown])
     }
-   
+
     // bind global shortcut
     MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: UserDefaultKeys.Shortcuts.ToggleMenuItems, toAction: {
       if mainStatusItem.isExpanded {
