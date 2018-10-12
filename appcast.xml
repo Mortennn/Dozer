@@ -15,4 +15,14 @@
         <sparkle:deltas>
         <enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.1/Dozer5-4.delta" sparkle:version="5" sparkle:shortVersionString="1.1.1" sparkle:deltaFrom="4" length="370749" type="application/octet-stream" sparkle:edSignature="piv4vg9jmaJzoCWf4V1I09UOiqIq/i/hAdHzmF0h3xp9RQAjCSZbyViiHo9OuwP8QWkJtik4hwfpEBfoFN79DQ=="/></sparkle:deltas>
     </item>
+    <item>
+        <title>1.1.2 (fixed bug in boarding screen)</title>
+        <pubDate>Fri., 12 oct. 2018 03:40:40 +0200</pubDate>
+        <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
+        <enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.2/Dozer.1.1.2.dmg" sparkle:version="6" sparkle:shortVersionString="1.1.2" length="8427226" type="application/octet-stream" sparkle:edSignature="5GPj3wLbH9cMqtIsdx+on9n4ekyEo9Sbn32l3CBuJDZT/3lsGAyxU1tlKLnHtJPtMEIMuDtl7bjLkdFj684ZAQ=="/>
+        <sparkle:deltas>
+        <enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.2/Dozer5-4.delta" sparkle:version="6" sparkle:shortVersionString="1.1.2" sparkle:deltaFrom="5" length="71763" type="application/octet-stream" sparkle:edSignature="JayJaRNOm0gsGfN2IyIjWjCLGNoySg3NGEBRXXysZpnDs6D88DX+oe4yE7PDIWmIOebTvgm0OC8N8uinIH/1Cw=="/>
+        <enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.2/Dozer5-4.delta" sparkle:version="6" sparkle:shortVersionString="1.1.2" sparkle:deltaFrom="4" length="379568" type="application/octet-stream" sparkle:edSignature="03BaVo0W2z6NB1A/ViFGr5IV4MiMf5nXR8ayEfGa6R6EzB8W0Spqi9j+Wgbg2G3dMC9HmMW7knqR4pbvooMWDg=="/></sparkle:deltas>
+    </item>
+
 </channel></rss>
