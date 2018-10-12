@@ -9,10 +9,6 @@
 import Cocoa
 import MASShortcut
 
-let DozerStatusItem1 = DozerStatusItem()
-let DozerStatusItem2 = DozerStatusItem()
-var DozerStatusItems:[DozerStatusItem] = [DozerStatusItem1, DozerStatusItem2]
-
 class DozerStatusItem {
   
   let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
@@ -21,7 +17,7 @@ class DozerStatusItem {
   let hiddenLength:CGFloat = 10000
   
   init() {
-    statusItem.length = NSStatusItem.variableLength
+    statusItem.length = shownLength
     if let mainStatusItemButton = statusItem.button {
       mainStatusItemButton.target = self
       mainStatusItemButton.action = #selector(mainMenuItemClicked(sender:))
@@ -39,6 +35,7 @@ class DozerStatusItem {
   }
   
   @objc func mainMenuItemClicked(sender: AnyObject?) {
+    print("main menu item clicked")
     guard let currentEvent = NSApp.currentEvent else {
       NSLog("read current event failed")
       return
@@ -68,7 +65,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   func applicationDidFinishLaunching(_ notification: Notification) {
     
     //firstRun()
-    
+    let statusItem = NSStatusBar.system.statusItem(withLength: 20)
+    statusItem.image = Icons().shown
+//    if let mainStatusItemButton = statusItem.button {
+//      mainStatusItemButton.target = self
+//      mainStatusItemButton.image = Icons().shown
+//      mainStatusItemButton.sendAction(on: [.leftMouseDown, .rightMouseDown])
+//    }
+//    let DozerStatusItem1 = DozerStatusItem()
+//    let DozerStatusItem2 = DozerStatusItem()
+//    var DozerStatusItems:[DozerStatusItem] = [DozerStatusItem1]
+
     
     // TODO: fix shortcut
     // bind global shortcut
