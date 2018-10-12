@@ -9,6 +9,8 @@
 import Cocoa
 import MASShortcut
 
+var items:[DozerStatusItem] = []
+
 class DozerStatusItem {
   
   let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
@@ -24,6 +26,10 @@ class DozerStatusItem {
       mainStatusItemButton.image = Icons().shown
       mainStatusItemButton.sendAction(on: [.leftMouseDown, .rightMouseDown])
     }
+  }
+  
+  deinit {
+    print("status item has been deallocated")
   }
   
   func show() {
@@ -65,8 +71,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   func applicationDidFinishLaunching(_ notification: Notification) {
     
     //firstRun()
-    let statusItem = NSStatusBar.system.statusItem(withLength: 20)
-    statusItem.image = Icons().shown
+    items.append(DozerStatusItem())
+    
 //    if let mainStatusItemButton = statusItem.button {
 //      mainStatusItemButton.target = self
 //      mainStatusItemButton.image = Icons().shown
