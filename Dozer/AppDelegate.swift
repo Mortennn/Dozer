@@ -73,6 +73,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     //firstRun()
     items.append(DozerStatusItem())
     
+    
 //    if let mainStatusItemButton = statusItem.button {
 //      mainStatusItemButton.target = self
 //      mainStatusItemButton.image = Icons().shown
