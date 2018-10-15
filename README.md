@@ -30,7 +30,7 @@ Dozer lets you hide menu bar items to give your Mac a cleaner look.
 ## ⚙️ Install
 Easiest way [Homebrew Cask](https://caskroom.github.io/):
 
-	brew cask install dozer	
+	brew cask install https://raw.githubusercontent.com/Mortennn/Dozer/master/dozer.rb	
 Manual:
 
 
