@@ -25,6 +25,20 @@ struct UserDefaultKeys {
       static let defaultKey = "firstRunDEBUG"
     #endif
   }
+  struct Theme {
+    private init(){}
+    #if !DEBUG
+    static let darkmode = "darkIcon"
+    #else
+    static let darkmode = "darkIconDEBUG"
+    #endif
+    
+    #if !DEBUG
+    static let autochange = "autoChangeIconTheme"
+    #else
+    static let autochange = "autoChangeIconThemeDEBUG"
+    #endif
+  }
 }
 
 struct StoryboardNames {
