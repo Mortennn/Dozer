@@ -25,11 +25,6 @@
         <enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.2/Dozer5-4.delta" sparkle:version="6" sparkle:shortVersionString="1.1.2" sparkle:deltaFrom="4" length="379568" type="application/octet-stream" sparkle:edSignature="03BaVo0W2z6NB1A/ViFGr5IV4MiMf5nXR8ayEfGa6R6EzB8W0Spqi9j+Wgbg2G3dMC9HmMW7knqR4pbvooMWDg=="/></sparkle:deltas>
     </item>
         <title>1.1.3</title>
-        <description>
-        <![CDATA[
-        • Added option to change the theme of the Dozer icon, since some users experienced Dozer not detecting the system appearance automatically.
-        ]]>
-        </description>
         <pubDate>man., 15 oct. 2018 21:18:54 +0200</pubDate>
         <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
         <enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.3/Dozer.1.1.3.dmg" sparkle:version="7" sparkle:shortVersionString="1.1.3" length="8429742" type="application/octet-stream" sparkle:edSignature="odxp7UBw2OgM2QBt3MXwSDePrk9j5Kk+gdrz8z6xvfpwdS59U2+4w63hsnF5jjyYHmGmg1sP41GzS2TQddqACA=="/>
