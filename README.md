@@ -28,6 +28,8 @@ Dozer lets you hide menu bar items to give your Mac a cleaner look.
 ###### You might also like [FiScript](https://github.com/Mortennn/FiScript), which lets you execute custom scripts on your files/folders from the context menu in Finder.
 
 ## ⚙️ Install
+###### I am curretly rewriting Dozer due to too many minor bug present in the current version of Dozer. I will try to have it finished by the end of October, but since then, please be patient and know that I am aware of most minor bugs.
+
 Easiest way [Homebrew Cask](https://caskroom.github.io/):
 
 	brew cask install https://raw.githubusercontent.com/Mortennn/Dozer/master/dozer.rb
