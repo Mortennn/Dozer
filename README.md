@@ -23,18 +23,23 @@
 	<img height="22" min-width="100" src="https://github.com/Mortennn/Dozer/raw/master/demo/demo.gif" alt="desktop-image">
 </p>
 <p align="center"></p>
+
 Dozer lets you hide menu bar items to give your Mac a cleaner look.
 
 ###### You might also like [FiScript](https://github.com/Mortennn/FiScript), which lets you execute custom scripts on your files/folders from the context menu in Finder.
 
 ## ⚙️ Install
+<<<<<<< HEAD
 ###### I am curretly rewriting Dozer due to too many minor bug present in the current version of Dozer. I will try to have it finished by the end of October, but since then, please be patient and know that I am aware of most minor bugs.
+=======
+
+###### Note: A rewritten version of Dozer will be released soon, hopefully at the end of October 2018. This version will solve most minor bugs present in the current version of Dozer.
+>>>>>>> master
 
 Easiest way [Homebrew Cask](https://caskroom.github.io/):
 
-	brew cask install https://raw.githubusercontent.com/Mortennn/Dozer/master/dozer.rb
+	brew cask install https://raw.githubusercontent.com/Mortennn/Dozer/master/dozer.rb	
 Manual:
-
 
 1. [Download](https://github.com/Mortennn/Dozer/releases/latest), open, and drag the app to the Applications folder.
 2. Open Dozer and drag the icon in your menu bar (hold CMD) to the right so it is between some other icons. When activated (with a right click) any icons to the left will be hidden. You can arrange your other icons accordingly.

@@ -16,8 +16,6 @@ class BoardingScreen: NSViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height)
-    self.view.wantsLayer = true
-    self.view.layer?.backgroundColor = .white
     
     // button config
     ContinueButton.focusRingType = .none

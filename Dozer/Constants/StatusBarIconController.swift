@@ -12,7 +12,17 @@ struct Icons {
   private var imageName:String!
   
   init() {
-    if isSystemAppearenceDark {
+
+    let autochange = UserDefaults.standard.bool(forKey: UserDefaultKeys.Theme.autochange)
+    let darkmode = UserDefaults.standard.bool(forKey: UserDefaultKeys.Theme.darkmode)
+    
+    if !autochange {
+      if darkmode {
+        imageName = "StatusBarIconBlack"
+      } else {
+        imageName = "StatusBarIconWhite"
+      }
+    } else if isSystemAppearenceDark {
       imageName = "StatusBarIconWhite"
     } else {
       imageName = "StatusBarIconBlack"
@@ -43,6 +53,7 @@ struct Icons {
 var isSystemAppearenceDark:Bool {
   get {
     let currentAppearence = UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? "Light"
+    UserDefaults.standard.removeObject(forKey: "AppleInterfaceStyle")
     if currentAppearence == "Light" {
       return false
     } else {
