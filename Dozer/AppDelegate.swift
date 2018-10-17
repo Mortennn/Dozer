@@ -9,7 +9,7 @@
 import Cocoa
 import MASShortcut
 
-var items:[DozerStatusItem] = []
+let dozerStatusItem = DozerStatusItem()
 
 class DozerStatusItem {
   
