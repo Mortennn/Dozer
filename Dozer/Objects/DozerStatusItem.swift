@@ -9,13 +9,17 @@ class DozerStatusItem {
   
   init() {
     statusItem.length = shownLength
-    if let mainStatusItemButton = statusItem.button {
-      mainStatusItemButton.target = self
-      mainStatusItemButton.action = #selector(statusItemClicked(sender:))
-      mainStatusItemButton.image = Icons().shown
-      mainStatusItemButton.sendAction(on: [.leftMouseDown, .rightMouseDown])
+    
+    guard let mainStatusItemButton = statusItem.button else {
+      fatalError("main status item button failed")
     }
+    
+    mainStatusItemButton.target = self
+    mainStatusItemButton.action = #selector(statusItemClicked(sender:))
+    mainStatusItemButton.image = Icons().shown
+    mainStatusItemButton.sendAction(on: [.leftMouseDown, .rightMouseDown])
   }
+  
   
   deinit {
     print("status item has been deallocated")
@@ -41,11 +45,8 @@ class DozerStatusItem {
     }
   }
   
-  func handleLeftClick() {
-    let tmpView = NSView(frame: statusItem.button!.frame)
-    statusItem.button!.addSubview(tmpView)
-    let menu = createMenu(in: tmpView)
-    statusItem.button!.menu = menu
+  internal func handleLeftClick() {
+    showMenu()
   }
   
   var isShown:Bool {
@@ -58,6 +59,40 @@ class DozerStatusItem {
     get {
       return (statusItem.length == hiddenLength)
     }
+  }
+  
+  internal func createMenu() -> NSMenu {
+    let menu = NSMenu()
+    
+    let about = NSMenuItem(title: "About", action: #selector(NSApp.orderFrontStandardAboutPanel(_:)), keyEquivalent: "")
+    let preferences = NSMenuItem(title: "Preferences", action: #selector(AppDelegate.showPreferences), keyEquivalent: ",")
+    let quit = NSMenuItem(title: "Quit", action: #selector(NSApp.terminate(_:)), keyEquivalent: "q")
+    
+    menu.addItem(about)
+    menu.addItem(NSMenuItem.separator())
+    menu.addItem(preferences)
+    menu.addItem(NSMenuItem.separator())
+    menu.addItem(quit)
+    
+    return menu
+  }
+  
+  internal func showMenu() {
+    // not possible to unit test due to dispatch block
+    guard let menu = statusItem.menu else {
+      fatalError("menu is not initialized")
+    }
+    statusItem.menu = createMenu()
+    statusItem.popUpMenu(menu)
+  }
+  
+  internal func hideMenu() {
+    // not possible to unit test due to dispatch block
+    guard let menu = statusItem.menu else {
+      fatalError("menu is not initialized")
+    }
+    statusItem.menu = nil
+    statusItem.menu = createMenu()
   }
   
 }

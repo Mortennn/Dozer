@@ -29,13 +29,6 @@ class DozerStatusIcon: XCTestCase {
     assert(dozerStatusItem.statusItem.length == dozerStatusItem.hiddenLength)
   }
   
-  #warning("Test freezes")
-  func testHandleLeftClick() {
-    let dozerStatusItem = DozerStatusItem()
-    dozerStatusItem.handleLeftClick()
-    
-  }
-  
   func testIsShown() {
     let dozerStatusItem = DozerStatusItem()
     assert(dozerStatusItem.isShown == (dozerStatusItem.statusItem.length == dozerStatusItem.shownLength))
@@ -46,4 +39,26 @@ class DozerStatusIcon: XCTestCase {
     assert(dozerStatusItem.isHidden == (dozerStatusItem.statusItem.length == dozerStatusItem.hiddenLength))
   }
   
+  func testCreateMenu() {
+    let menu = DozerStatusItem().createMenu()
+    
+    let about = menu.item(at: 0)!
+    XCTAssertNotNil(menu.item(at: 1)) // seperator
+    let preferences = menu.item(at: 2)!
+    XCTAssertNotNil(menu.item(at: 3)) // seperator
+    let quit = menu.item(at: 4)!
+    
+    assert(about.title == "About")
+    assert(preferences.title == "Preferences")
+    assert(quit.title == "Quit")
+    
+    assert(about.keyEquivalent == "")
+    assert(preferences.keyEquivalent == ",")
+    assert(quit.keyEquivalent == "q")
+    
+    XCTAssertNotNil(about.action)
+    XCTAssertNotNil(preferences.action)
+    XCTAssertNotNil(quit.action)
+    
+  }
 }

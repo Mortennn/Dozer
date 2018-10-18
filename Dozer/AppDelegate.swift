@@ -69,33 +69,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   
 }
 
-func createMenu(in view:NSView) -> NSMenu {
-  let newView = NSView(frame: view.frame)
-  view.addSubview(newView)
-  let menu = NSMenu()
-  
-  let about = NSMenuItem(title: "About", action: #selector(NSApp.orderFrontStandardAboutPanel(_:)), keyEquivalent: "")
-  let preferences = NSMenuItem(title: "Preferences", action: #selector(AppDelegate.showPreferences), keyEquivalent: ",")
-  let quit = NSMenuItem(title: "Quit", action: #selector(NSApp.terminate(_:)), keyEquivalent: "q")
-  
-  menu.addItem(about)
-  menu.addItem(NSMenuItem.separator())
-  menu.addItem(preferences)
-  menu.addItem(NSMenuItem.separator())
-  menu.addItem(quit)
-  
-  if isSystemAppearenceDark {
-    newView.appearance = NSAppearance(named: .vibrantDark)
-  } else {
-    newView.appearance = NSAppearance(named: .vibrantLight)
-  }
-
-  menu.popUp(positioning: nil, at: NSPoint(x: 0, y: -5), in: newView)
-  
-  return menu
-}
-
-
 final class PreferencesController {
   private init() {}
   
