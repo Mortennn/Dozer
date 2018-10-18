@@ -88,12 +88,13 @@ class GeneralVC: NSViewController {
     changeAppTheme(toDarkMode: (sender.state == .on))
   }
   
+  #warning("changeAppTheme doesn't work")
   func changeAppTheme(toDarkMode darkmode:Bool?) {
-    if mainStatusItem.isExpanded {
-      showStatusItems() // FIXME: status items get showed, even when they shouldn't
-    } else {
-      mainStatusItem.button!.image = Icons().shown
-    }
+//    if dozerStatusItem.isHidden {
+//      showStatusItems() // FIXME: status items get showed, even when they shouldn't
+//    } else {
+//      mainStatusItem.button!.image = Icons().shown
+//    }
   }
   
   @IBAction func LaunchAtLoginPressed(_ sender: NSButton) {

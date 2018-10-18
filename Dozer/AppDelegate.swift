@@ -11,80 +11,17 @@ import MASShortcut
 
 let dozerStatusItem = DozerStatusItem()
 
-class DozerStatusItem {
-  
-  let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-  
-  let shownLength:CGFloat = 20
-  let hiddenLength:CGFloat = 10000
-  
-  init() {
-    statusItem.length = shownLength
-    if let mainStatusItemButton = statusItem.button {
-      mainStatusItemButton.target = self
-      mainStatusItemButton.action = #selector(mainMenuItemClicked(sender:))
-      mainStatusItemButton.image = Icons().shown
-      mainStatusItemButton.sendAction(on: [.leftMouseDown, .rightMouseDown])
-    }
-  }
-  
-  deinit {
-    print("status item has been deallocated")
-  }
-  
-  func show() {
-    statusItem.length = shownLength
-  }
-  
-  func hidden() {
-    statusItem.length = hiddenLength
-  }
-  
-  @objc func mainMenuItemClicked(sender: AnyObject?) {
-    print("main menu item clicked")
-    guard let currentEvent = NSApp.currentEvent else {
-      NSLog("read current event failed")
-      return
-    }
-    if currentEvent.type == NSEvent.EventType.rightMouseDown {
-//      MainStatusItemWindowController.shared.createWindows()
-      statusItem.length = hiddenLength
-    } else if currentEvent.type == NSEvent.EventType.leftMouseDown {
-      let tmpView = NSView(frame: statusItem.button!.frame)
-      statusItem.button!.addSubview(tmpView)
-      let menu = createMenu(in: tmpView)
-      statusItem.button!.menu = menu
-    }
-  }
-  
-  var isShown:Bool {
-    get {
-      return (statusItem.length == shownLength)
-    }
-  }
-  
-}
-
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
   
   func applicationDidFinishLaunching(_ notification: Notification) {
     
+    print(dozerStatusItem.statusItem.length)
+    
+    #warning("first run is not enabled")
     //firstRun()
-    items.append(DozerStatusItem())
-    
-    
-//    if let mainStatusItemButton = statusItem.button {
-//      mainStatusItemButton.target = self
-//      mainStatusItemButton.image = Icons().shown
-//      mainStatusItemButton.sendAction(on: [.leftMouseDown, .rightMouseDown])
-//    }
-//    let DozerStatusItem1 = DozerStatusItem()
-//    let DozerStatusItem2 = DozerStatusItem()
-//    var DozerStatusItems:[DozerStatusItem] = [DozerStatusItem1]
 
-    
-    // TODO: fix shortcut
+    #warning("TODO: fix shortcut")
     // bind global shortcut
 //    MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: UserDefaultKeys.Shortcuts.ToggleMenuItems, toAction: {
 //      if mainStatusItem.isExpanded {
@@ -110,12 +47,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       name: NSApplication.didChangeScreenParametersNotification,
       object: nil)
   }
-  // FIX: screen did change in resolution
+  
+  #warning("FIX: screen did change in resolution")
     @objc func screenDidChangeInResolution() {
 //      showStatusItems()
     }
   
-  // FIX: handle interface mode changed
+  #warning("FIX: handle interface mode changed")
    @objc func interfaceModeChanged(sender: NSNotification) {
 //    if mainStatusItem.isExpanded {
 //      let _ = MainStatusItemWindowController.shared.windowInstances.map { $0.backgroundView.image = Icons().hidden }
