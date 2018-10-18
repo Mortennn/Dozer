@@ -20,7 +20,6 @@ class DozerStatusItem {
     mainStatusItemButton.sendAction(on: [.leftMouseDown, .rightMouseDown])
   }
   
-  
   deinit {
     print("status item has been deallocated")
   }
@@ -64,6 +63,8 @@ class DozerStatusItem {
   internal func createMenu() -> NSMenu {
     let menu = NSMenu()
     
+    #warning("FIX: menu items")
+    #warning("FIX: About should open preferences about")
     let about = NSMenuItem(title: "About", action: #selector(NSApp.orderFrontStandardAboutPanel(_:)), keyEquivalent: "")
     let preferences = NSMenuItem(title: "Preferences", action: #selector(AppDelegate.showPreferences), keyEquivalent: ",")
     let quit = NSMenuItem(title: "Quit", action: #selector(NSApp.terminate(_:)), keyEquivalent: "q")

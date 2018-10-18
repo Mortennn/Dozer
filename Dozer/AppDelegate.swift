@@ -16,23 +16,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   
   func applicationDidFinishLaunching(_ notification: Notification) {
     
-    print(dozerStatusItem.statusItem.length)
+    #warning("FIX: listen to mouse hover")
+    NSEvent.addGlobalMonitorForEvents(matching: .mouseMoved) { (event) in
+      let mouseLocation = NSEvent.mouseLocation
+      if isMouseInStatusBar(with: mouseLocation) {
+        
+      }
+    }
     
     #warning("first run is not enabled")
     //firstRun()
 
     #warning("FIX: fix shortcut")
     // bind global shortcut
-//    MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: UserDefaultKeys.Shortcuts.ToggleMenuItems, toAction: {
-//      if mainStatusItem.isExpanded {
-//        mainStatusItem.length = mainMenuItemLength
-//        mainStatusItem.button!.image = Icons().shown
-//        MainStatusItemWindowController.shared.removeWindows()
-//      } else {
-//        mainStatusItem.length = blockMenuItemLengthLarge
-//        MainStatusItemWindowController.shared.createWindows()
-//      }
-//    })
+    MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: UserDefaultKeys.Shortcuts.ToggleMenuItems, toAction: {
+    
+    })
     
     // listens for change is interface theme
     DistributedNotificationCenter.default.addObserver(
@@ -91,86 +90,3 @@ final class PreferencesController {
     }
   }
 }
-
-//final class MainStatusItemWindowController {
-//
-//  private init() {}
-//
-//  static let shared = MainStatusItemWindowController()
-//
-//  var windowInstances:[MainStatusItemWindow] = []
-//
-//  public func createWindows() {
-//    guard let statusItemBtnWindow = mainStatusItem.button?.window else {
-//      fatalError("get status item button window failed for: \(mainStatusItem)")
-//    }
-//
-//    // removes all existing window instances
-//    removeWindows()
-//    let pixelsToRight = statusItemBtnWindow.screen!.frame.width-(statusItemBtnWindow.frame.origin.x-statusItemBtnWindow.screen!.frame.origin.x)
-//    for screen in NSScreen.screens {
-//      let frame = NSRect(
-//        x: screen.frame.width-pixelsToRight,
-//        y: screen.frame.height-22,
-//        width: mainMenuItemLength,
-//        height: 22)
-//      let windowInstance = MainStatusItemWindow(frame: frame, screen:screen)
-//      windowInstances.append(windowInstance)
-//      windowInstance.orderFront(nil)
-//    }
-//  }
-//
-//  public func removeWindows() {
-//    let _ = windowInstances.map { $0.orderOut(nil) }
-//    windowInstances = []
-//  }
-//}
-//
-//final class MainStatusItemWindow: NSPanel {
-//
-//  public var backgroundView:NSImageView!
-//
-//  convenience init(frame:NSRect, screen:NSScreen) {
-//    self.init(contentRect:frame, styleMask: [.nonactivatingPanel], backing: .buffered, defer: false, screen: screen)
-//    self.isOpaque = false
-//    self.hasShadow = false
-//    self.titlebarAppearsTransparent = true
-//    self.titleVisibility = .hidden
-//    self.level = NSWindow.Level(rawValue: (NSWindow.Level.statusBar.rawValue))
-//    self.collectionBehavior = [.canJoinAllSpaces, .fullScreenNone]
-//    self.backgroundColor = NSColor(white: 1, alpha: 0)
-//    let backgroundImageView = NSImageView()
-//    backgroundImageView.autoresizingMask = [.height, .width]
-//    backgroundImageView.image = Icons().hidden
-//    backgroundImageView.frame = self.contentView!.frame
-//    backgroundView = backgroundImageView
-//    self.contentView!.addSubview(backgroundImageView)
-//    self.ignoresMouseEvents = false
-//  }
-//
-//  override func mouseDown(with event: NSEvent) {
-//    let menu = createMenu(in: self.contentView!)
-//    self.menu = menu
-//  }
-//
-//  override func rightMouseDown(with event: NSEvent) {
-//    showStatusItems()
-//  }
-//
-//}
-
-// should be handled in the class itself
-//extension NSStatusItem {
-//  var isExpanded:Bool {
-//    return (self.length == blockMenuItemLengthLarge)
-//  }
-//}
-
-//func showStatusItems() {
-//  mainStatusItem.length = mainMenuItemLength
-//  for window in MainStatusItemWindowController.shared.windowInstances {
-//    window.orderOut(nil)
-//  }
-//  MainStatusItemWindowController.shared.windowInstances = []
-//  mainStatusItem.button!.image = Icons().shown
-//}
