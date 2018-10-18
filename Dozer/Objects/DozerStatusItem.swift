@@ -88,7 +88,7 @@ class DozerStatusItem {
   
   internal func hideMenu() {
     // not possible to unit test due to dispatch block
-    guard let menu = statusItem.menu else {
+    guard let _ = statusItem.menu else {
       fatalError("menu is not initialized")
     }
     statusItem.menu = nil

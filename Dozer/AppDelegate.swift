@@ -21,7 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     #warning("first run is not enabled")
     //firstRun()
 
-    #warning("TODO: fix shortcut")
+    #warning("FIX: fix shortcut")
     // bind global shortcut
 //    MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: UserDefaultKeys.Shortcuts.ToggleMenuItems, toAction: {
 //      if mainStatusItem.isExpanded {

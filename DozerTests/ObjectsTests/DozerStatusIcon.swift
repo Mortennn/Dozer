@@ -61,4 +61,12 @@ class DozerStatusIcon: XCTestCase {
     XCTAssertNotNil(quit.action)
     
   }
+  
+  func testShowMenu() {
+    // not possible to unit test due to dispatch block
+  }
+  
+  func testHideMenu() {
+    // not possible to unit test due to dispatch block
+  }
 }

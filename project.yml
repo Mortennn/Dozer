@@ -1,8 +1,4 @@
 name: Dozer
-options:
-  usesTabs: false
-  indentWidth: 2
-  tabWidth: 2
 targets:
   Dozer:
     type: application
@@ -35,9 +31,3 @@ targets:
     scheme: {}
     sources:
       - DozerTests
-  DozerUITests:
-    type: bundle.ui-testing
-    platform: [macOS]
-    scheme: {}
-    sources:
-      - DozerUITests
