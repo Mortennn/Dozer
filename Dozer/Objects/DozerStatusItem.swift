@@ -11,7 +11,7 @@ class DozerStatusItem {
     statusItem.length = shownLength
     if let mainStatusItemButton = statusItem.button {
       mainStatusItemButton.target = self
-      mainStatusItemButton.action = #selector(mainMenuItemClicked(sender:))
+      mainStatusItemButton.action = #selector(statusItemClicked(sender:))
       mainStatusItemButton.image = Icons().shown
       mainStatusItemButton.sendAction(on: [.leftMouseDown, .rightMouseDown])
     }
@@ -21,15 +21,15 @@ class DozerStatusItem {
     print("status item has been deallocated")
   }
   
-  public func show() {
+  func show() {
     statusItem.length = shownLength
   }
   
-  func hidden() {
+  func hide() {
     statusItem.length = hiddenLength
   }
   
-  @objc func mainMenuItemClicked(sender: AnyObject?) {
+  @objc func statusItemClicked(sender: AnyObject?) {
     print("main menu item clicked")
     guard let currentEvent = NSApp.currentEvent else {
       NSLog("read current event failed")
@@ -37,11 +37,15 @@ class DozerStatusItem {
     }
     
     if currentEvent.type == NSEvent.EventType.leftMouseDown {
-      let tmpView = NSView(frame: statusItem.button!.frame)
-      statusItem.button!.addSubview(tmpView)
-      let menu = createMenu(in: tmpView)
-      statusItem.button!.menu = menu
+      handleLeftClick()
     }
+  }
+  
+  func handleLeftClick() {
+    let tmpView = NSView(frame: statusItem.button!.frame)
+    statusItem.button!.addSubview(tmpView)
+    let menu = createMenu(in: tmpView)
+    statusItem.button!.menu = menu
   }
   
   var isShown:Bool {

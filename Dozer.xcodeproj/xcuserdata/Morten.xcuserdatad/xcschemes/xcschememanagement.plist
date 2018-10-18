@@ -17,11 +17,21 @@
 		<key>DozerTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>5A2128E721789A7C004899BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5A2129312178B3ED004899BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5A71DA79212898C000BC4079</key>
 		<dict>
 			<key>primary</key>

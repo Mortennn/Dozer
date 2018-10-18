@@ -1,10 +1,3 @@
-//
-//  GlobalSettings.swift
-//  Dozer
-//
-//  Created by Mortennn on 10/08/2018.
-//
-
 import Cocoa
 
 struct Icons {
@@ -42,7 +35,7 @@ struct Icons {
   }
   
   private func create(image name:String, _ width:Int, _ height:Int) -> NSImage {
-    guard let image = NSImage(named: NSImage.Name(name)) else {
+    guard let image = Bundle.main.image(forResource: NSImage.Name(name)) else {
       fatalError("get image failed")
     }
     image.size = NSSize(width: width, height: height)
