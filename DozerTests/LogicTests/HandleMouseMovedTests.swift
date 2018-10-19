@@ -5,8 +5,8 @@ class HandleMouseMovedTests: XCTestCase {
   
   func testIsMouseInStatusBar() {
     #warning("use the screen height in the calculations")
-    let inStatusbar = NSPoint(x: 800, y: 800)
-    let notInStatusbar = NSPoint(x: 0, y: 0)
+    let inStatusbar = NSPoint(x: 200, y: 780)
+    let notInStatusbar = NSPoint(x: 200, y: 500)
     
     XCTAssertTrue(isMouseInStatusBar(with: inStatusbar))
     XCTAssertFalse(isMouseInStatusBar(with: notInStatusbar))
