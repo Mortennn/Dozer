@@ -45,7 +45,8 @@ class DozerStatusItem {
   }
   
   internal func handleLeftClick() {
-    showMenu()
+    #warning("FIX: blocks thread")
+    PreferencesController.shared.showPreferencesPane()
   }
   
   var isShown:Bool {
@@ -59,50 +60,4 @@ class DozerStatusItem {
       return (statusItem.length == hiddenLength)
     }
   }
-  
-  internal func createMenu() -> NSMenu {
-    let menu = NSMenu()
-    
-    #warning("FIX: menu item actions")
-    #warning("FIX: About should open preferences about")
-    let about = NSMenuItem(title: "About", action: #selector(NSApp.orderFrontStandardAboutPanel(_:)), keyEquivalent: "")
-    let preferences = NSMenuItem(title: "Preferences", action: #selector(AppDelegate.showPreferences), keyEquivalent: ",")
-    let quit = NSMenuItem(title: "Quit", action: #selector(NSApp.terminate(_:)), keyEquivalent: "q")
-    
-    menu.addItem(about)
-    menu.addItem(NSMenuItem.separator())
-    menu.addItem(preferences)
-    menu.addItem(NSMenuItem.separator())
-    menu.addItem(quit)
-    
-    return menu
-  }
-  
-  internal func showMenu() {
-    // not possible to unit test due to dispatch block
-    let menu = createMenu()
-    let statusItemView = statusItem.view
-    let newView = NSView(frame: statusItemView.frame)
-    statusItemView.addSubview(newView)
-    menu.popUp(positioning: nil, at: NSPoint(x: 0, y: -5), in: newView)
-  }
-  
-  internal func hideMenu() {
-    // not possible to unit test due to dispatch block
-    if let view = statusItem.view {
-      view.subviews.removeAll()
-    } else {
-      print("no view")
-    }
-  }
-  
-  #warning("FIX: remove the menu when icons are hidden")
-  func isMenuShown() -> Bool {
-    guard let isHighlighted = statusItem.button?.isHighlighted else {
-      return false
-    }
-    // statusItem clicked and icons
-    return (isHighlighted && isShown)
-  }
-  
 }

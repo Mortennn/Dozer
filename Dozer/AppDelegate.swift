@@ -70,7 +70,7 @@ final class PreferencesController {
   }
   
   static let shared = PreferencesController()
-  private var preferencesController:NSWindowController?
+  internal var preferencesController:NSWindowController?
   
   @objc func showPreferencesPane() {
     if preferencesController == nil {
@@ -83,4 +83,5 @@ final class PreferencesController {
       NSApp.activate(ignoringOtherApps: true)
     }
   }
+  
 }
