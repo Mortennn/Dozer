@@ -34,6 +34,7 @@ struct Icons {
     }
   }
   
+  #warning("FIX: get the images from the assets folder")
   private func create(image name:String, _ width:Int, _ height:Int) -> NSImage {
     guard let image = Bundle.main.image(forResource: NSImage.Name(name)) else {
       fatalError("get image failed")
