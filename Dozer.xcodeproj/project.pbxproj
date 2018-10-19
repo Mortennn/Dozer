@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A14713221791CFD00B84674 /* HandleMouseMoved.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14713121791CFD00B84674 /* HandleMouseMoved.swift */; };
 		5A14713521791E5D00B84674 /* HandleMouseMovedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14713421791E5C00B84674 /* HandleMouseMovedTests.swift */; };
+		5A147137217A098E00B84674 /* DozerStatusItemMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A147136217A098E00B84674 /* DozerStatusItemMenu.swift */; };
 		5A2128FE2178A789004899BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_465314535169 /* AppDelegate.swift */; };
 		5A2128FF2178A789004899BA /* StatusBarIconController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_526307919371 /* StatusBarIconController.swift */; };
 		5A2129002178A789004899BA /* UserDefaultsIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_226152609915 /* UserDefaultsIDs.swift */; };
@@ -64,6 +65,7 @@
 /* Begin PBXFileReference section */
 		5A14713121791CFD00B84674 /* HandleMouseMoved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleMouseMoved.swift; sourceTree = "<group>"; };
 		5A14713421791E5C00B84674 /* HandleMouseMovedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleMouseMovedTests.swift; sourceTree = "<group>"; };
+		5A147136217A098E00B84674 /* DozerStatusItemMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DozerStatusItemMenu.swift; sourceTree = "<group>"; };
 		5A2129082178A867004899BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A21291A2178B237004899BA /* StatusBarIconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusBarIconWhite.png; path = Dozer/Resources/Assets.xcassets/StatusBarIconWhite.imageset/StatusBarIconWhite.png; sourceTree = "<group>"; };
 		5A21291D2178B240004899BA /* StatusBarIconBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusBarIconBlack.png; path = Dozer/Resources/Assets.xcassets/StatusBarIconBlack.imageset/StatusBarIconBlack.png; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				FR_558612881203 /* DozerStatusItem.swift */,
+				5A147136217A098E00B84674 /* DozerStatusItemMenu.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				5A2129022178A789004899BA /* DozerStatusItem.swift in Sources */,
 				5A2129032178A789004899BA /* AboutVC.swift in Sources */,
 				5A2129042178A789004899BA /* BoardingScreen.swift in Sources */,
+				5A147137217A098E00B84674 /* DozerStatusItemMenu.swift in Sources */,
 				5A2129052178A789004899BA /* GeneralVC.swift in Sources */,
 				5A2129062178A789004899BA /* StatusItem.swift in Sources */,
 			);

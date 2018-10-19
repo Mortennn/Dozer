@@ -63,7 +63,7 @@ class DozerStatusItem {
   internal func createMenu() -> NSMenu {
     let menu = NSMenu()
     
-    #warning("FIX: menu items")
+    #warning("FIX: menu item actions")
     #warning("FIX: About should open preferences about")
     let about = NSMenuItem(title: "About", action: #selector(NSApp.orderFrontStandardAboutPanel(_:)), keyEquivalent: "")
     let preferences = NSMenuItem(title: "Preferences", action: #selector(AppDelegate.showPreferences), keyEquivalent: ",")
@@ -80,16 +80,20 @@ class DozerStatusItem {
   
   internal func showMenu() {
     // not possible to unit test due to dispatch block
-    if statusItem.menu == nil {
-      statusItem.menu = createMenu()
-    }
-    statusItem.popUpMenu(statusItem.menu!)
+    let menu = createMenu()
+    let statusItemView = statusItem.view
+    let newView = NSView(frame: statusItemView.frame)
+    statusItemView.addSubview(newView)
+    menu.popUp(positioning: nil, at: NSPoint(x: 0, y: -5), in: newView)
   }
   
   internal func hideMenu() {
     // not possible to unit test due to dispatch block
-    statusItem.menu = nil
-    statusItem.menu = createMenu()
+    if let view = statusItem.view {
+      view.subviews.removeAll()
+    } else {
+      print("no view")
+    }
   }
   
   #warning("FIX: remove the menu when icons are hidden")
