@@ -16,13 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   
   func applicationDidFinishLaunching(_ notification: Notification) {
     
-    #warning("FIX: listen to mouse hover")
-    NSEvent.addGlobalMonitorForEvents(matching: .mouseMoved) { (event) in
-      let mouseLocation = NSEvent.mouseLocation
-      if isMouseInStatusBar(with: mouseLocation) {
-        
-      }
-    }
+    handleMouseMoved()
     
     #warning("first run is not enabled")
     //firstRun()
