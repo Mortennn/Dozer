@@ -1,7 +1,7 @@
 import Cocoa
 
 func handleMouseMoved() {
-  #warning("FIX: listen to mouse hover (animation missing)")
+  #warning("FIX: animation missing")
   NSEvent.addGlobalMonitorForEvents(matching: .mouseMoved) { (event) in
     let mouseLocation = NSEvent.mouseLocation
     if isMouseInStatusBar(with: mouseLocation) {
