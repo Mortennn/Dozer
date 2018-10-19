@@ -72,6 +72,7 @@ final class PreferencesController {
   static let shared = PreferencesController()
   internal var preferencesController:NSWindowController?
   
+  #warning("FIX: dispatch this from seperate thread")
   @objc func showPreferencesPane() {
     if preferencesController == nil {
       let storyboard = NSStoryboard(name: StoryboardNames.Preferences, bundle: nil)

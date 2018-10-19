@@ -45,7 +45,6 @@ class DozerStatusItem {
   }
   
   internal func handleLeftClick() {
-    #warning("FIX: blocks thread")
     PreferencesController.shared.showPreferencesPane()
   }
   
