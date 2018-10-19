@@ -4,10 +4,13 @@ func handleMouseMoved() {
   #warning("FIX: animation missing")
   NSEvent.addGlobalMonitorForEvents(matching: .mouseMoved) { (event) in
     let mouseLocation = NSEvent.mouseLocation
+    print(dozerStatusItem.isMenuShown())
     if isMouseInStatusBar(with: mouseLocation) {
       dozerStatusItem.show()
     } else {
       dozerStatusItem.hide()
+      dozerStatusItem.hideMenu()
+      dozerStatusItem.statusItem.button!.isHighlighted = false
     }
   }
 }

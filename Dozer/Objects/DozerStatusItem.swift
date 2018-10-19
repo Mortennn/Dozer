@@ -80,20 +80,25 @@ class DozerStatusItem {
   
   internal func showMenu() {
     // not possible to unit test due to dispatch block
-    guard let menu = statusItem.menu else {
-      fatalError("menu is not initialized")
+    if statusItem.menu == nil {
+      statusItem.menu = createMenu()
     }
-    statusItem.menu = createMenu()
-    statusItem.popUpMenu(menu)
+    statusItem.popUpMenu(statusItem.menu!)
   }
   
   internal func hideMenu() {
     // not possible to unit test due to dispatch block
-    guard let _ = statusItem.menu else {
-      fatalError("menu is not initialized")
-    }
     statusItem.menu = nil
     statusItem.menu = createMenu()
+  }
+  
+  #warning("FIX: remove the menu when icons are hidden")
+  func isMenuShown() -> Bool {
+    guard let isHighlighted = statusItem.button?.isHighlighted else {
+      return false
+    }
+    // statusItem clicked and icons
+    return (isHighlighted && isShown)
   }
   
 }
