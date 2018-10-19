@@ -169,6 +169,7 @@
 			children = (
 				FR_902582216983 /* firstRun.swift */,
 				5A14713121791CFD00B84674 /* HandleMouseMoved.swift */,
+				FR_526307919371 /* StatusBarIconController.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -251,7 +252,6 @@
 		G_8503354709357 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				FR_526307919371 /* StatusBarIconController.swift */,
 				FR_226152609915 /* UserDefaultsIDs.swift */,
 			);
 			path = Constants;
