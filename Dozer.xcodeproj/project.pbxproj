@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A14713221791CFD00B84674 /* HandleMouseMoved.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14713121791CFD00B84674 /* HandleMouseMoved.swift */; };
 		5A14713521791E5D00B84674 /* HandleMouseMovedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14713421791E5C00B84674 /* HandleMouseMovedTests.swift */; };
+		5A147139217A39DC00B84674 /* PreferencesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A147138217A39DC00B84674 /* PreferencesVC.swift */; };
 		5A2128FE2178A789004899BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_465314535169 /* AppDelegate.swift */; };
 		5A2128FF2178A789004899BA /* StatusBarIconController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_526307919371 /* StatusBarIconController.swift */; };
 		5A2129002178A789004899BA /* UserDefaultsIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_226152609915 /* UserDefaultsIDs.swift */; };
@@ -17,10 +18,7 @@
 		5A2129032178A789004899BA /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_291041785031 /* AboutVC.swift */; };
 		5A2129042178A789004899BA /* BoardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_156989833044 /* BoardingScreen.swift */; };
 		5A2129052178A789004899BA /* GeneralVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_211201971878 /* GeneralVC.swift */; };
-		5A2129062178A789004899BA /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_680983747574 /* StatusItem.swift */; };
 		5A21290C2178AA4B004899BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2129082178A867004899BA /* Assets.xcassets */; };
-		5A21291B2178B237004899BA /* StatusBarIconWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A21291A2178B237004899BA /* StatusBarIconWhite.png */; };
-		5A21291E2178B240004899BA /* StatusBarIconBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A21291D2178B240004899BA /* StatusBarIconBlack.png */; };
 		5A2129422178B46D004899BA /* DozerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2129412178B46D004899BA /* DozerTests.swift */; };
 		5AB237BD2178B72E0084BF7C /* DozerStatusItemIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB237BC2178B72E0084BF7C /* DozerStatusItemIcons.swift */; };
 		BF_176493698303 /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_313939739558 /* LaunchAtLogin.framework */; };
@@ -64,9 +62,8 @@
 /* Begin PBXFileReference section */
 		5A14713121791CFD00B84674 /* HandleMouseMoved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleMouseMoved.swift; sourceTree = "<group>"; };
 		5A14713421791E5C00B84674 /* HandleMouseMovedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleMouseMovedTests.swift; sourceTree = "<group>"; };
+		5A147138217A39DC00B84674 /* PreferencesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesVC.swift; sourceTree = "<group>"; };
 		5A2129082178A867004899BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5A21291A2178B237004899BA /* StatusBarIconWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusBarIconWhite.png; path = Dozer/Resources/Assets.xcassets/StatusBarIconWhite.imageset/StatusBarIconWhite.png; sourceTree = "<group>"; };
-		5A21291D2178B240004899BA /* StatusBarIconBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StatusBarIconBlack.png; path = Dozer/Resources/Assets.xcassets/StatusBarIconBlack.imageset/StatusBarIconBlack.png; sourceTree = "<group>"; };
 		5A2129322178B3ED004899BA /* DozerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DozerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2129362178B3ED004899BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A2129412178B46D004899BA /* DozerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DozerTests.swift; sourceTree = "<group>"; };
@@ -88,7 +85,6 @@
 		FR_562443839300 /* MASShortcut.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MASShortcut.framework; sourceTree = "<group>"; };
 		FR_570313816293 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		FR_663277439318 /* Dozer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dozer.entitlements; sourceTree = "<group>"; };
-		FR_680983747574 /* StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
 		FR_861919633272 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		FR_902582216983 /* firstRun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstRun.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +116,15 @@
 				5A14713421791E5C00B84674 /* HandleMouseMovedTests.swift */,
 			);
 			path = LogicTests;
+			sourceTree = "<group>";
+		};
+		5A14713A217A39FB00B84674 /* PreferencesViewVCs */ = {
+			isa = PBXGroup;
+			children = (
+				FR_291041785031 /* AboutVC.swift */,
+				FR_211201971878 /* GeneralVC.swift */,
+			);
+			path = PreferencesViewVCs;
 			sourceTree = "<group>";
 		};
 		5A2129332178B3ED004899BA /* DozerTests */ = {
@@ -171,9 +176,9 @@
 		G_2555110680911 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FR_266252780135 /* Preferences.storyboard */,
 				FR_467012274011 /* BoardingScreen.xib */,
 				VG_570313816293 /* MainMenu.xib */,
-				FR_266252780135 /* Preferences.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,10 +218,9 @@
 		G_6747595145625 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FR_291041785031 /* AboutVC.swift */,
+				5A147138217A39DC00B84674 /* PreferencesVC.swift */,
+				5A14713A217A39FB00B84674 /* PreferencesViewVCs */,
 				FR_156989833044 /* BoardingScreen.swift */,
-				FR_211201971878 /* GeneralVC.swift */,
-				FR_680983747574 /* StatusItem.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -234,8 +238,6 @@
 		G_8448771205358 = {
 			isa = PBXGroup;
 			children = (
-				5A21291A2178B237004899BA /* StatusBarIconWhite.png */,
-				5A21291D2178B240004899BA /* StatusBarIconBlack.png */,
 				G_4799458375734 /* Dozer */,
 				5A2129332178B3ED004899BA /* DozerTests */,
 				G_1952740716080 /* Frameworks */,
@@ -365,11 +367,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A21291B2178B237004899BA /* StatusBarIconWhite.png in Resources */,
 				BF_348806854865 /* BoardingScreen.xib in Resources */,
 				BF_336950074820 /* MainMenu.xib in Resources */,
 				BF_897320047095 /* Preferences.storyboard in Resources */,
-				5A21291E2178B240004899BA /* StatusBarIconBlack.png in Resources */,
 				BF_405291726830 /* moveDozerDemo.mp4 in Resources */,
 				5A21290C2178AA4B004899BA /* Assets.xcassets in Resources */,
 			);
@@ -428,11 +428,11 @@
 				5A2129002178A789004899BA /* UserDefaultsIDs.swift in Sources */,
 				5A14713221791CFD00B84674 /* HandleMouseMoved.swift in Sources */,
 				5A2129012178A789004899BA /* firstRun.swift in Sources */,
+				5A147139217A39DC00B84674 /* PreferencesVC.swift in Sources */,
 				5A2129022178A789004899BA /* DozerStatusItem.swift in Sources */,
 				5A2129032178A789004899BA /* AboutVC.swift in Sources */,
 				5A2129042178A789004899BA /* BoardingScreen.swift in Sources */,
 				5A2129052178A789004899BA /* GeneralVC.swift in Sources */,
-				5A2129062178A789004899BA /* StatusItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
