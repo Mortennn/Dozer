@@ -16,7 +16,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   
   func applicationDidFinishLaunching(_ notification: Notification) {
     
-    handleMouseMoved()
+    NSEvent.addGlobalMonitorForEvents(matching: .mouseMoved) { (event) in
+      let mouseLocation = NSEvent.mouseLocation
+      dozerStatusItem.handleMouseMoved(mouseLocation: mouseLocation)
+    }
     
     #warning("first run is not enabled")
     //firstRun()

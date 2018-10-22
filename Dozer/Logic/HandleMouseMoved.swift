@@ -1,18 +1,5 @@
 import Cocoa
 
-func handleMouseMoved() {
-  #warning("FIX: animation missing")
-  NSEvent.addGlobalMonitorForEvents(matching: .mouseMoved) { (event) in
-    let mouseLocation = NSEvent.mouseLocation
-    if isMouseInStatusBar(with: mouseLocation) {
-      dozerStatusItem.show()
-    } else {
-      dozerStatusItem.hide()
-    }
-  }
-}
-
-#warning("FIX: handle multiple screens")
 func isMouseInStatusBar(with mouseLocation:NSPoint) -> Bool {
   let mouseLocationY = mouseLocation.y
   
@@ -23,3 +10,19 @@ func isMouseInStatusBar(with mouseLocation:NSPoint) -> Bool {
 
   return (mouseLocationY >= offsetY)
 }
+
+class listenForMouseExit {
+  
+  static let shared = listenForMouseExit()
+  
+  var mouseHasExited:Bool
+  
+  private init() {
+    mouseHasExited = false
+  }
+  
+  func mouseExited() {
+    mouseHasExited = true
+  }
+}
+

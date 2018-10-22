@@ -22,7 +22,7 @@
 		5A2129052178A789004899BA /* GeneralVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_211201971878 /* GeneralVC.swift */; };
 		5A21290C2178AA4B004899BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2129082178A867004899BA /* Assets.xcassets */; };
 		5A2129422178B46D004899BA /* DozerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2129412178B46D004899BA /* DozerTests.swift */; };
-		5AB237BD2178B72E0084BF7C /* DozerStatusItemIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB237BC2178B72E0084BF7C /* DozerStatusItemIcons.swift */; };
+		5AB237BD2178B72E0084BF7C /* DozerStatusItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB237BC2178B72E0084BF7C /* DozerStatusItemTests.swift */; };
 		BF_176493698303 /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_313939739558 /* LaunchAtLogin.framework */; };
 		BF_254612048700 /* LaunchAtLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_313939739558 /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_336950074820 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = VG_570313816293 /* MainMenu.xib */; };
@@ -71,7 +71,7 @@
 		5A2129322178B3ED004899BA /* DozerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DozerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2129362178B3ED004899BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A2129412178B46D004899BA /* DozerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DozerTests.swift; sourceTree = "<group>"; };
-		5AB237BC2178B72E0084BF7C /* DozerStatusItemIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DozerStatusItemIcons.swift; sourceTree = "<group>"; };
+		5AB237BC2178B72E0084BF7C /* DozerStatusItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DozerStatusItemTests.swift; sourceTree = "<group>"; };
 		FR_114064246828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FR_118963529833 /* moveDozerDemo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = moveDozerDemo.mp4; sourceTree = "<group>"; };
 		FR_156989833044 /* BoardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingScreen.swift; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 		5AB237BB2178B7110084BF7C /* ObjectsTests */ = {
 			isa = PBXGroup;
 			children = (
-				5AB237BC2178B72E0084BF7C /* DozerStatusItemIcons.swift */,
+				5AB237BC2178B72E0084BF7C /* DozerStatusItemTests.swift */,
 			);
 			path = ObjectsTests;
 			sourceTree = "<group>";
@@ -420,7 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A2129422178B46D004899BA /* DozerTests.swift in Sources */,
-				5AB237BD2178B72E0084BF7C /* DozerStatusItemIcons.swift in Sources */,
+				5AB237BD2178B72E0084BF7C /* DozerStatusItemTests.swift in Sources */,
 				5A14713E217A419100B84674 /* CooldownTests.swift in Sources */,
 				5A14713521791E5D00B84674 /* HandleMouseMovedTests.swift in Sources */,
 			);

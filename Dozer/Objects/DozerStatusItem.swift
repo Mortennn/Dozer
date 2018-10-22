@@ -33,7 +33,6 @@ class DozerStatusItem {
   }
   
   @objc func statusItemClicked(sender: AnyObject?) {
-    print("main menu item clicked")
     guard let currentEvent = NSApp.currentEvent else {
       NSLog("read current event failed")
       return
@@ -42,9 +41,17 @@ class DozerStatusItem {
     if currentEvent.type == NSEvent.EventType.leftMouseDown {
       handleLeftClick()
     }
+    
+    if currentEvent.type == NSEvent.EventType.rightMouseDown {
+      handleRightClick()
+    }
   }
   
   internal func handleLeftClick() {
+    self.hide()
+  }
+  
+  internal func handleRightClick() {
     PreferencesController.shared.showPreferencesPane()
   }
   
@@ -57,6 +64,15 @@ class DozerStatusItem {
   var isHidden:Bool {
     get {
       return (statusItem.length == hiddenLength)
+    }
+  }
+  
+  internal func handleMouseMoved(mouseLocation:NSPoint) {
+    if isMouseInStatusBar(with: mouseLocation) && listenForMouseExit.shared.mouseHasExited {
+      self.show()
+      listenForMouseExit.shared.mouseHasExited = false
+    } else if !isMouseInStatusBar(with: mouseLocation) {
+      listenForMouseExit.shared.mouseHasExited = true
     }
   }
 }

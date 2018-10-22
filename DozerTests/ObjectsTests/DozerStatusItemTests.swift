@@ -1,7 +1,7 @@
 import XCTest
 @testable import Dozer
 
-class DozerStatusIconTests: XCTestCase {
+class DozerStatusItemTests: XCTestCase {
   
   func testDozerStatusItemInit() {
     let dozerStatusItem = DozerStatusItem()
@@ -25,6 +25,12 @@ class DozerStatusIconTests: XCTestCase {
   func testHandleLeftClick() {
     let dozerStatusItem = DozerStatusItem()
     dozerStatusItem.handleLeftClick()
+    XCTAssertTrue(dozerStatusItem.isHidden)
+ }
+  
+  func testHandleRightClick() {
+    let dozerStatusItem = DozerStatusItem()
+    dozerStatusItem.handleRightClick()
     guard let frontmostApp = NSWorkspace.shared.frontmostApplication?.localizedName else {
       XCTFail()
       return
@@ -36,7 +42,7 @@ class DozerStatusIconTests: XCTestCase {
     }
     preferencesWindow.close()
     PreferencesController.shared.preferencesController = nil
- }
+  }
   
   func testIsShown() {
     let dozerStatusItem = DozerStatusItem()
