@@ -10,6 +10,8 @@
 		5A14713221791CFD00B84674 /* HandleMouseMoved.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14713121791CFD00B84674 /* HandleMouseMoved.swift */; };
 		5A14713521791E5D00B84674 /* HandleMouseMovedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14713421791E5C00B84674 /* HandleMouseMovedTests.swift */; };
 		5A147139217A39DC00B84674 /* PreferencesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A147138217A39DC00B84674 /* PreferencesVC.swift */; };
+		5A14713C217A3E0000B84674 /* Cooldown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14713B217A3E0000B84674 /* Cooldown.swift */; };
+		5A14713E217A419100B84674 /* CooldownTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A14713D217A419100B84674 /* CooldownTests.swift */; };
 		5A2128FE2178A789004899BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_465314535169 /* AppDelegate.swift */; };
 		5A2128FF2178A789004899BA /* StatusBarIconController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_526307919371 /* StatusBarIconController.swift */; };
 		5A2129002178A789004899BA /* UserDefaultsIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_226152609915 /* UserDefaultsIDs.swift */; };
@@ -63,6 +65,8 @@
 		5A14713121791CFD00B84674 /* HandleMouseMoved.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleMouseMoved.swift; sourceTree = "<group>"; };
 		5A14713421791E5C00B84674 /* HandleMouseMovedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleMouseMovedTests.swift; sourceTree = "<group>"; };
 		5A147138217A39DC00B84674 /* PreferencesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesVC.swift; sourceTree = "<group>"; };
+		5A14713B217A3E0000B84674 /* Cooldown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cooldown.swift; sourceTree = "<group>"; };
+		5A14713D217A419100B84674 /* CooldownTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CooldownTests.swift; sourceTree = "<group>"; };
 		5A2129082178A867004899BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A2129322178B3ED004899BA /* DozerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DozerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A2129362178B3ED004899BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				5A14713421791E5C00B84674 /* HandleMouseMovedTests.swift */,
+				5A14713D217A419100B84674 /* CooldownTests.swift */,
 			);
 			path = LogicTests;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				FR_902582216983 /* firstRun.swift */,
 				5A14713121791CFD00B84674 /* HandleMouseMoved.swift */,
 				FR_526307919371 /* StatusBarIconController.swift */,
+				5A14713B217A3E0000B84674 /* Cooldown.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -415,6 +421,7 @@
 			files = (
 				5A2129422178B46D004899BA /* DozerTests.swift in Sources */,
 				5AB237BD2178B72E0084BF7C /* DozerStatusItemIcons.swift in Sources */,
+				5A14713E217A419100B84674 /* CooldownTests.swift in Sources */,
 				5A14713521791E5D00B84674 /* HandleMouseMovedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A14713C217A3E0000B84674 /* Cooldown.swift in Sources */,
 				5A2128FE2178A789004899BA /* AppDelegate.swift in Sources */,
 				5A2128FF2178A789004899BA /* StatusBarIconController.swift in Sources */,
 				5A2129002178A789004899BA /* UserDefaultsIDs.swift in Sources */,
