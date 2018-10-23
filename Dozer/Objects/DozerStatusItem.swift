@@ -16,7 +16,8 @@ class DozerStatusItem {
     
     mainStatusItemButton.target = self
     mainStatusItemButton.action = #selector(statusItemClicked(sender:))
-    mainStatusItemButton.image = Icons().shown
+    mainStatusItemButton.image = Icons().statusBarIcon
+    mainStatusItemButton.image!.isTemplate = true
     mainStatusItemButton.sendAction(on: [.leftMouseDown, .rightMouseDown])
   }
   

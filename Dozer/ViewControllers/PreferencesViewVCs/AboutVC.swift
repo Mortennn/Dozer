@@ -6,14 +6,20 @@
 //
 
 import Cocoa
+import Sparkle
 
 class AboutVC: NSViewController {
 
   @IBOutlet var VersionLabel: NSTextField!
+  @IBOutlet var CheckForUpdates: NSButton!
   
   override func viewDidLoad() {
   super.viewDidLoad()
     self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height)
+    
+    // check for updates button
+    CheckForUpdates.target = SUUpdater.shared()!
+    CheckForUpdates.action = #selector(SUUpdater.shared()!.checkForUpdates(_:))
   }
 
   override func viewDidAppear() {
@@ -23,9 +29,13 @@ class AboutVC: NSViewController {
     
     // set version
     if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-        VersionLabel.stringValue = "Version: \(version)"
+        VersionLabel.stringValue = "Version \(version)"
       }
     
   }
   
+  @IBAction func OpenInGithubPressed(_ sender: NSButton) {
+    let githubURL = URL(string: "https://github.com/Mortennn/Dozer")!
+    NSWorkspace.shared.open(githubURL)
+  }
 }

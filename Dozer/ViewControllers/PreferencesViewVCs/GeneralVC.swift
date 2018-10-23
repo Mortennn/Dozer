@@ -8,7 +8,6 @@
 import Cocoa
 import MASShortcut
 import LaunchAtLogin
-import Sparkle
 
 class GeneralVC: NSViewController {
 
@@ -16,9 +15,6 @@ class GeneralVC: NSViewController {
   
   @IBOutlet var LaunchAtLoginCheckbox: NSButton!
   @IBOutlet var ToggleMenuItemsView: MASShortcutView!
-  @IBOutlet var CheckForUpdates: NSButton!
-  @IBOutlet var EnableDarkModeCheckbox: NSButton!
-  @IBOutlet var ChangeThemeAutomatically: NSButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,29 +28,9 @@ class GeneralVC: NSViewController {
     ToggleMenuItemsView.shortcutValueChange = { (sender) in
       self.userShortCut = self.ToggleMenuItemsView.shortcutValue
     }
-
-    // check for updates button
-    CheckForUpdates.target = SUUpdater.shared()!
-    CheckForUpdates.action = #selector(SUUpdater.shared()!.checkForUpdates(_:))
     
   }
-  
-  override func viewWillAppear() {
-    super.viewWillAppear()
 
-    let defaults = UserDefaults.standard
-    
-    let changeThemeAutomaticallyBool = defaults.bool(forKey: UserDefaultKeys.Theme.autochange)
-    ChangeThemeAutomatically.setStateToOn(state: changeThemeAutomaticallyBool)
-    
-    let darkmodeBool = defaults.bool(forKey: UserDefaultKeys.Theme.darkmode)
-    EnableDarkModeCheckbox.setStateToOn(state: darkmodeBool)
-
-    EnableDarkModeCheckbox.isHidden = (changeThemeAutomaticallyBool == true)
-
-    
-  }
-  
   override func viewDidAppear() {
     super.viewDidAppear()
     // set title
@@ -68,33 +44,6 @@ class GeneralVC: NSViewController {
       LaunchAtLoginCheckbox.state = .off
     }
 
-  }
-  
-  
-  @IBAction func ChangeThemeAutomaticallyPressed(_ sender: NSButton) {
-    UserDefaults.standard.set(
-      (sender.state == .on),
-      forKey: UserDefaultKeys.Theme.autochange
-    )
-    EnableDarkModeCheckbox.isHidden = (sender.state == .on)
-    changeAppTheme(toDarkMode: nil)
-  }
-  
-  @IBAction func EnableDarkModeCheckboxPressed(_ sender: NSButton) {
-    UserDefaults.standard.set(
-      (sender.state == .on),
-      forKey: UserDefaultKeys.Theme.darkmode
-    )
-    changeAppTheme(toDarkMode: (sender.state == .on))
-  }
-  
-  #warning("changeAppTheme doesn't work")
-  func changeAppTheme(toDarkMode darkmode:Bool?) {
-//    if dozerStatusItem.isHidden {
-//      showStatusItems() // FIXME: status items get showed, even when they shouldn't
-//    } else {
-//      mainStatusItem.button!.image = Icons().shown
-//    }
   }
   
   @IBAction func LaunchAtLoginPressed(_ sender: NSButton) {

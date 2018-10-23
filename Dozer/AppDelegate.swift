@@ -36,18 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       selector: #selector(interfaceModeChanged(sender:)),
       name: NSNotification.Name(rawValue: "AppleInterfaceThemeChangedNotification"),
       object: nil)
-    
-    // listens for change in resolution
-    NotificationCenter.default.addObserver(self,
-      selector: #selector(screenDidChangeInResolution),
-      name: NSApplication.didChangeScreenParametersNotification,
-      object: nil)
   }
-  
-  #warning("FIX: screen did change in resolution")
-    @objc func screenDidChangeInResolution() {
-//      showStatusItems()
-    }
   
   #warning("FIX: handle interface mode changed")
    @objc func interfaceModeChanged(sender: NSNotification) {
