@@ -40,7 +40,3 @@ Manual:
 
 ## Requirements
 macOS version >= 10.12
-
-## License
-
-Dozer is released under the terms of [MIT License](http://opensource.org/licenses/MIT).
