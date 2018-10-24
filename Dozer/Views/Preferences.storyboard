@@ -59,19 +59,11 @@
             <objects>
                 <viewController title="Preferences" id="CbG-uA-UXG" customClass="GeneralVC" customModule="Dozer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="4Ei-kU-JuY">
-<<<<<<< HEAD
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="249"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Enj-Sg-955">
-                                <rect key="frame" x="21" y="179" width="123" height="17"/>
-=======
                         <rect key="frame" x="0.0" y="0.0" width="450" height="155"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Enj-Sg-955">
                                 <rect key="frame" x="21" y="69" width="123" height="17"/>
->>>>>>> v2
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Toggle Menu Items:" id="oag-ht-MLU">
                                     <font key="font" metaFont="system"/>
@@ -80,11 +72,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ont-tO-dfX">
-<<<<<<< HEAD
-                                <rect key="frame" x="21" y="213" width="115" height="18"/>
-=======
                                 <rect key="frame" x="21" y="119" width="115" height="18"/>
->>>>>>> v2
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Launch at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kAj-f9-4Ss">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -94,13 +82,6 @@
                                     <action selector="LaunchAtLoginPressed:" target="CbG-uA-UXG" id="d1V-KV-osk"/>
                                 </connections>
                             </button>
-<<<<<<< HEAD
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJw-f6-OCG" userLabel="ToggleMenuItems" customClass="MASShortcutView">
-                                <rect key="frame" x="147" y="177" width="140" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </customView>
-=======
->>>>>>> v2
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDh-fk-WnU">
                                 <rect key="frame" x="14" y="13" width="66" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -115,57 +96,17 @@
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJw-f6-OCG" userLabel="ToggleMenuItems" customClass="MASShortcutView">
                                 <rect key="frame" x="148" y="65" width="140" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-<<<<<<< HEAD
-                                <buttonCell key="cell" type="push" title="Check for updates" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZVx-J2-9qL">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rI6-9B-TqK">
-                                <rect key="frame" x="21" y="118" width="224" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Change icon theme automatically" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="r6y-xq-Efx">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="ChangeThemeAutomaticallyPressed:" target="CbG-uA-UXG" id="awA-qp-1cd"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qlx-4j-UgG">
-                                <rect key="frame" x="43" y="91" width="80" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Dark icon" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Ez4-O1-0Le">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="EnableDarkModeCheckboxPressed:" target="CbG-uA-UXG" id="OuE-Dd-ucg"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                    </view>
-                    <connections>
-                        <outlet property="ChangeThemeAutomatically" destination="rI6-9B-TqK" id="khz-zn-0vB"/>
-                        <outlet property="CheckForUpdates" destination="0hD-Ba-FRE" id="JDT-CE-edO"/>
-                        <outlet property="EnableDarkModeCheckbox" destination="Qlx-4j-UgG" id="oSd-bh-UQq"/>
-=======
                             </customView>
                         </subviews>
                     </view>
                     <connections>
->>>>>>> v2
                         <outlet property="LaunchAtLoginCheckbox" destination="ont-tO-dfX" id="SAR-AM-xSl"/>
                         <outlet property="ToggleMenuItemsView" destination="LJw-f6-OCG" id="BZ2-ZM-34z"/>
                     </connections>
                 </viewController>
                 <customObject id="FvE-cN-eWk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="548" y="51.5"/>
-=======
             <point key="canvasLocation" x="548" y="4.5"/>
->>>>>>> v2
         </scene>
         <!--Dozer-->
         <scene sceneID="qGp-4b-l0U">
