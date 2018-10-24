@@ -20,9 +20,9 @@ struct UserDefaultKeys {
   struct FirstRun {
     private init(){}
     #if !DEBUG
-      static let defaultKey = "firstRun"
+      static let defaultKey = "firstRunV2"
     #else
-      static let defaultKey = "firstRunDEBUG"
+      static let defaultKey = "firstRunV2DEBUG"
     #endif
   }
   struct Theme {
