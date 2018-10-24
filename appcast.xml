@@ -2,39 +2,17 @@
 <channel>
 <title>Dozer</title>
 <item>
-<title>1.1.3</title>
-<description>
-<![CDATA[
-• Added option to change the theme of the Dozer icon, since some users experienced Dozer not detecting the system appearance automatically.  
+<title>2</title>
+<description><![CDATA[
+<h2>Dozer V2 has arrived</h2>
+I'm very excited to announce Dozer version 2🎉
+The app has been completely rewritten, and Dozer is now more stable and intuitive.
+All bugs issued on Github has been fixed, and I will now focus on implementing new features.
+If you experience any issues or want a new feature added, you are more than welcome to <a href="https://github.com/Mortennn/Dozer/issues/new">Open a new issue</a>
 ]]>
 </description>
-<pubDate>man., 15 okt. 2018 21:18:54 +0200</pubDate>
+<pubDate>wed., 24 oct. 2018 20:24:15 +0200</pubDate>
 <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.3/Dozer.1.1.3.dmg" sparkle:version="7" sparkle:shortVersionString="1.1.3" length="8429742" type="application/octet-stream" sparkle:edSignature="odxp7UBw2OgM2QBt3MXwSDePrk9j5Kk+gdrz8z6xvfpwdS59U2+4w63hsnF5jjyYHmGmg1sP41GzS2TQddqACA=="/>
-<sparkle:deltas>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.3/Dozer7-5.delta" sparkle:version="7" sparkle:shortVersionString="1.1.3" sparkle:deltaFrom="5" length="108689" type="application/octet-stream" sparkle:edSignature="gc+uXKzsvzYx2kMOnptWtbfGiV2iwPpy+Huiod1FOO/D9j16pkg6m/TOdIVqRu/FFLmn7A8ph7AsRh0O+SFRDw=="/>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.3/Dozer7-6.delta" sparkle:version="7" sparkle:shortVersionString="1.1.3" sparkle:deltaFrom="6" length="92057" type="application/octet-stream" sparkle:edSignature="Hd16w0fp9aryXtPGn0ho0/rT7qANIcEARoXTjUihGdhQjOrp4JlCcnv8UH7DejUq4iYmFvMPZ6+eTCEqSWO6Cg=="/>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.3/Dozer7-4.delta" sparkle:version="7" sparkle:shortVersionString="1.1.3" sparkle:deltaFrom="4" length="387750" type="application/octet-stream" sparkle:edSignature="1Bel6T34IO6H7+AADQie5H8cN6o7QLhQv9hF49wYfvZ7sZnKaz9GTpzO9cUVWyEeHpHPXoNE5FoLVDEh3KQ6DQ=="/></sparkle:deltas>
-</item>
-
-<item>
-<title>1.1.2</title>
-<pubDate>fre., 12 okt. 2018 03:40:40 +0200</pubDate>
-<sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.2/Dozer.1.1.2.dmg" sparkle:version="6" sparkle:shortVersionString="1.1.2" length="8427226" type="application/octet-stream" sparkle:edSignature="5GPj3wLbH9cMqtIsdx+on9n4ekyEo9Sbn32l3CBuJDZT/3lsGAyxU1tlKLnHtJPtMEIMuDtl7bjLkdFj684ZAQ=="/>
-</item>
-
-<item>
-<title>1.1.1</title>
-<pubDate>ons., 03 okt. 2018 22:04:36 +0200</pubDate>
-<sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.1/Dozer.1.1.1.dmg" sparkle:version="5" sparkle:shortVersionString="1.1.1" length="8420775" type="application/octet-stream" sparkle:edSignature="0IcprebgZzoEljZGfmpsBAZ58knWv3wnX5LTYhEwnA9//kWhDjYeIWV46Ammsd1y+/a9oYJmY3eYYjUL+AB3Ag=="/>
-</item>
-
-<item>
-<title>1.1.0</title>
-<pubDate>man., 01 okt. 2018 16:13:25 +0200</pubDate>
-<sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/1.1.0/Dozer.1.1.0.dmg" sparkle:version="4" sparkle:shortVersionString="1.1.0" length="8131490" type="application/octet-stream" sparkle:edSignature="wb02w8B/z3unl0gLBTxSmEV/Laa5z+o8k9lvjsZRCRbWioL1C+nT+H3jDm5d8MQV3Wvs4F8xQKvjFsfmzyphCQ=="/>
+<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.0.0/Dozer.2.0.0.dmg" sparkle:version="8" sparkle:shortVersionString="2" length="8992991" type="application/octet-stream" sparkle:edSignature="csq1/oAUnNEGV8+t182iQoPj4JH8QOG5owkH8154+nbyHVmB3354kVp8HZXngm1WAbRKC+LRssBM6vIUWMb/Cw=="/>
 </item>
 </channel></rss>

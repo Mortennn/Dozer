@@ -94,7 +94,7 @@
                                 </connections>
                             </button>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJw-f6-OCG" userLabel="ToggleMenuItems" customClass="MASShortcutView">
-                                <rect key="frame" x="150" y="67" width="140" height="20"/>
+                                <rect key="frame" x="148" y="65" width="140" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                         </subviews>
