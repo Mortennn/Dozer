@@ -17,15 +17,15 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="519" height="506"/>
+            <rect key="frame" x="0.0" y="0.0" width="519" height="719"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <customView focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gp9-ke-zWk" userLabel="Wrapper">
-                    <rect key="frame" x="0.0" y="0.0" width="519" height="506"/>
+                    <rect key="frame" x="0.0" y="0.0" width="519" height="719"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ngK-IF-TRP">
-                            <rect key="frame" x="76" y="463" width="367" height="32"/>
+                            <rect key="frame" x="76" y="667" width="367" height="32"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <textFieldCell key="cell" lineBreakMode="clipping" title="Thanks for downloading Dozer!" id="min-8Z-UrR">
                                 <font key="font" size="26" name="HelveticaNeue"/>
@@ -34,16 +34,16 @@
                             </textFieldCell>
                         </textField>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vbY-2A-yOf">
-                            <rect key="frame" x="18" y="380" width="195" height="21"/>
+                            <rect key="frame" x="18" y="339" width="355" height="21"/>
                             <autoresizingMask key="autoresizingMask"/>
-                            <textFieldCell key="cell" lineBreakMode="clipping" title="· (CMD+drag) to move Dozer" id="0n9-hi-df5">
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="· (CMD+drag) to move Dozer around in the menu bar." id="0n9-hi-df5">
                                 <font key="font" size="14" name=".SFNSText"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="skZ-gn-AZp">
-                            <rect key="frame" x="18" y="344" width="443" height="21"/>
+                            <rect key="frame" x="18" y="303" width="443" height="21"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <textFieldCell key="cell" lineBreakMode="clipping" title="· Click the Dozer icon to hide menu bar items." id="DKV-uI-v7M">
                                 <font key="font" size="14" name=".SFNSText"/>
@@ -52,7 +52,7 @@
                             </textFieldCell>
                         </textField>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hAz-Lf-4dz">
-                            <rect key="frame" x="18" y="278" width="322" height="21"/>
+                            <rect key="frame" x="18" y="237" width="322" height="21"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <textFieldCell key="cell" lineBreakMode="clipping" title="· Right click the Dozer icon to open preferences." id="zqu-rZ-RQ6">
                                 <font key="font" size="14" name=".SFNSText"/>
@@ -61,7 +61,7 @@
                             </textFieldCell>
                         </textField>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wa4-fX-q4i">
-                            <rect key="frame" x="182" y="24" width="154" height="36"/>
+                            <rect key="frame" x="182" y="18" width="154" height="36"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="squareTextured" title="Continue" bezelStyle="texturedSquare" alignment="center" borderStyle="border" inset="2" id="MPy-8A-W6t">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -72,7 +72,7 @@
                             </connections>
                         </button>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCu-q7-xqz">
-                            <rect key="frame" x="91" y="432" width="337" height="27"/>
+                            <rect key="frame" x="91" y="631" width="337" height="27"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Here is a simple guide on how to use it." id="bq2-xB-WEZ">
                                 <font key="font" size="14" name=".SFNSText"/>
@@ -80,10 +80,6 @@
                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
-                        <avPlayerView fixedFrame="YES" controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="xn7-5Y-jQo">
-                            <rect key="frame" x="22" y="233" width="480" height="16"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        </avPlayerView>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lpt-Hy-Pjb">
                             <rect key="frame" x="138" y="91" width="243" height="21"/>
                             <autoresizingMask key="autoresizingMask"/>
@@ -94,7 +90,7 @@
                             </textFieldCell>
                         </textField>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZtZ-Rn-H7C">
-                            <rect key="frame" x="104" y="118" width="311" height="17"/>
+                            <rect key="frame" x="104" y="116" width="311" height="17"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Please star the Project!⭐️" id="G75-lW-kPE">
                                 <font key="font" metaFont="systemBold"/>
@@ -112,7 +108,7 @@
                             </textFieldCell>
                         </textField>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JV9-v3-q8u">
-                            <rect key="frame" x="18" y="312" width="443" height="21"/>
+                            <rect key="frame" x="18" y="271" width="443" height="21"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <textFieldCell key="cell" lineBreakMode="clipping" title="· To show the menu bar items again, simply re-enter the menu bar." id="yQS-3v-K76">
                                 <font key="font" size="14" name=".SFNSText"/>
@@ -121,17 +117,25 @@
                             </textFieldCell>
                         </textField>
                         <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="KZn-U5-4up">
-                            <rect key="frame" x="22" y="210" width="474" height="5"/>
+                            <rect key="frame" x="22" y="382" width="474" height="5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         </box>
                         <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="zbu-HS-0sd">
-                            <rect key="frame" x="22" y="407" width="474" height="5"/>
+                            <rect key="frame" x="22" y="620" width="474" height="5"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         </box>
+                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="hI2-Vl-TDJ">
+                            <rect key="frame" x="22" y="205" width="474" height="5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        </box>
+                        <avPlayerView fixedFrame="YES" controlsStyle="inline" translatesAutoresizingMaskIntoConstraints="NO" id="xn7-5Y-jQo">
+                            <rect key="frame" x="75" y="393" width="372" height="221"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        </avPlayerView>
                     </subviews>
                 </customView>
             </subviews>
-            <point key="canvasLocation" x="-7.5" y="420"/>
+            <point key="canvasLocation" x="-7.5" y="526.5"/>
         </customView>
     </objects>
 </document>

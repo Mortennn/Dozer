@@ -18,18 +18,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   
   func applicationDidFinishLaunching(_ notification: Notification) {
     
+//    [[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"NSApplicationCrashOnExceptions": @YES }];
+    UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions" : true])
     Fabric.with([Crashlytics.self])
     
     dozerStatusItem.show()
     
     NSEvent.addLocalMonitorForEvents(matching: .mouseMoved) { (event) -> NSEvent? in
-      let mouseLocation = event.locationInWindow
+      let mouseLocation = NSEvent.mouseLocation
       dozerStatusItem.handleMouseMoved(mouseLocation: mouseLocation)
       return event
     }
     
     NSEvent.addGlobalMonitorForEvents(matching: .mouseMoved) { (event) in
-      let mouseLocation = event.locationInWindow
+      let mouseLocation = NSEvent.mouseLocation
       dozerStatusItem.handleMouseMoved(mouseLocation: mouseLocation)
     }
     
@@ -38,8 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       dozerStatusItem.toggle()
     })
     
-    #warning("first run is not enabled")
-    //firstRun()
+    firstRun()
 
   }
 

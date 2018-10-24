@@ -20,7 +20,7 @@ class BoardingScreen: NSViewController {
     // button config
     ContinueButton.focusRingType = .none
 
-    let videoURL = Bundle.main.url(forResource: "moveDozerDemo", withExtension: "mp4")!
+    let videoURL = Bundle.main.url(forResource: "Demo", withExtension: "mp4")!
     let player = AVPlayer(url: videoURL)
     moveDozer.player = player
     moveDozer.controlsStyle = .none

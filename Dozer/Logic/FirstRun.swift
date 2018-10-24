@@ -11,12 +11,12 @@ func firstRun() {
   
   // check if first run
   let isNotFirstRun = UserDefaults.standard.bool(forKey: UserDefaultKeys.FirstRun.defaultKey)
-  print(isNotFirstRun)
 
   // comment this to test first run
-  if isNotFirstRun {
-    return
-  }
+  #warning("enable this")
+//  if isNotFirstRun {
+//    return
+//  }
   
   // show boarding screen
   let boardingScreen = BoardingScreen()
