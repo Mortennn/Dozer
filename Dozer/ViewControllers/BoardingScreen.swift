@@ -20,7 +20,7 @@ class BoardingScreen: NSViewController {
     // button config
     ContinueButton.focusRingType = .none
 
-    let videoURL = Bundle.main.url(forResource: "moveDozerDemo", withExtension: "mp4")!
+    let videoURL = Bundle.main.url(forResource: "Demo", withExtension: "mp4")!
     let player = AVPlayer(url: videoURL)
     moveDozer.player = player
     moveDozer.controlsStyle = .none
@@ -41,6 +41,7 @@ class BoardingScreen: NSViewController {
     let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), styleMask: [.titled, .miniaturizable], backing: .buffered, defer: false)
     window.contentView?.addSubview(self.view)
     window.makeKeyAndOrderFront(nil)
+    NSApp.activate(ignoringOtherApps: true)
     self.centerOnScreen()
   }
   

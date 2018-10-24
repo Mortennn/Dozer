@@ -8,7 +8,6 @@
 import Cocoa
 import MASShortcut
 import LaunchAtLogin
-import Sparkle
 
 class GeneralVC: NSViewController {
 
@@ -16,9 +15,12 @@ class GeneralVC: NSViewController {
   
   @IBOutlet var LaunchAtLoginCheckbox: NSButton!
   @IBOutlet var ToggleMenuItemsView: MASShortcutView!
+<<<<<<< HEAD:Dozer/ViewControllers/GeneralVC.swift
   @IBOutlet var CheckForUpdates: NSButton!
   @IBOutlet var EnableDarkModeCheckbox: NSButton!
   @IBOutlet var ChangeThemeAutomatically: NSButton!
+=======
+>>>>>>> v2:Dozer/ViewControllers/PreferencesViewVCs/GeneralVC.swift
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -32,12 +34,9 @@ class GeneralVC: NSViewController {
     ToggleMenuItemsView.shortcutValueChange = { (sender) in
       self.userShortCut = self.ToggleMenuItemsView.shortcutValue
     }
-
-    // check for updates button
-    CheckForUpdates.target = SUUpdater.shared()!
-    CheckForUpdates.action = #selector(SUUpdater.shared()!.checkForUpdates(_:))
     
   }
+<<<<<<< HEAD:Dozer/ViewControllers/GeneralVC.swift
   
   override func viewWillAppear() {
     super.viewWillAppear()
@@ -55,6 +54,9 @@ class GeneralVC: NSViewController {
     
   }
   
+=======
+
+>>>>>>> v2:Dozer/ViewControllers/PreferencesViewVCs/GeneralVC.swift
   override func viewDidAppear() {
     super.viewDidAppear()
     // set title

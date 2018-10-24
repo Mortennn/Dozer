@@ -267,3 +267,7 @@ BuildSystem/
 Dozer.xcodeproj/
 Version1/
 Dozer.xcodeproj/project.xcworkspace/xcuserdata/Morten.xcuserdatad/UserInterfaceState.xcuserstate
+<<<<<<< HEAD
+=======
+*.xcuserstate
+>>>>>>> v2

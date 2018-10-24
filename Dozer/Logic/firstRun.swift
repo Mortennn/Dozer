@@ -11,7 +11,10 @@ func firstRun() {
   
   // check if first run
   let isNotFirstRun = UserDefaults.standard.bool(forKey: UserDefaultKeys.FirstRun.defaultKey)
+<<<<<<< HEAD:Dozer/Logic/firstRun.swift
   print(isNotFirstRun)
+=======
+>>>>>>> v2:Dozer/Logic/FirstRun.swift
 
   // comment this to test first run
   if isNotFirstRun {

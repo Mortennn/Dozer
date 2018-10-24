@@ -54,16 +54,24 @@
             </objects>
             <point key="canvasLocation" x="-122" y="263"/>
         </scene>
-        <!--General-->
+        <!--Preferences-->
         <scene sceneID="N6l-xC-bfR">
             <objects>
-                <viewController title="General" id="CbG-uA-UXG" customClass="GeneralVC" customModule="Dozer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Preferences" id="CbG-uA-UXG" customClass="GeneralVC" customModule="Dozer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="4Ei-kU-JuY">
+<<<<<<< HEAD
                         <rect key="frame" x="0.0" y="0.0" width="450" height="249"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Enj-Sg-955">
                                 <rect key="frame" x="21" y="179" width="123" height="17"/>
+=======
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="155"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Enj-Sg-955">
+                                <rect key="frame" x="21" y="69" width="123" height="17"/>
+>>>>>>> v2
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Toggle Menu Items:" id="oag-ht-MLU">
                                     <font key="font" metaFont="system"/>
@@ -72,7 +80,11 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ont-tO-dfX">
+<<<<<<< HEAD
                                 <rect key="frame" x="21" y="213" width="115" height="18"/>
+=======
+                                <rect key="frame" x="21" y="119" width="115" height="18"/>
+>>>>>>> v2
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Launch at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kAj-f9-4Ss">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -82,10 +94,13 @@
                                     <action selector="LaunchAtLoginPressed:" target="CbG-uA-UXG" id="d1V-KV-osk"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJw-f6-OCG" userLabel="ToggleMenuItems" customClass="MASShortcutView">
                                 <rect key="frame" x="147" y="177" width="140" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
+=======
+>>>>>>> v2
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDh-fk-WnU">
                                 <rect key="frame" x="14" y="13" width="66" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -97,9 +112,10 @@
                                     <action selector="QuitPressed:" target="CbG-uA-UXG" id="KYG-pA-Vzv"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hD-Ba-FRE">
-                                <rect key="frame" x="284" y="13" width="152" height="32"/>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJw-f6-OCG" userLabel="ToggleMenuItems" customClass="MASShortcutView">
+                                <rect key="frame" x="148" y="65" width="140" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+<<<<<<< HEAD
                                 <buttonCell key="cell" type="push" title="Check for updates" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZVx-J2-9qL">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -133,58 +149,79 @@
                         <outlet property="ChangeThemeAutomatically" destination="rI6-9B-TqK" id="khz-zn-0vB"/>
                         <outlet property="CheckForUpdates" destination="0hD-Ba-FRE" id="JDT-CE-edO"/>
                         <outlet property="EnableDarkModeCheckbox" destination="Qlx-4j-UgG" id="oSd-bh-UQq"/>
+=======
+                            </customView>
+                        </subviews>
+                    </view>
+                    <connections>
+>>>>>>> v2
                         <outlet property="LaunchAtLoginCheckbox" destination="ont-tO-dfX" id="SAR-AM-xSl"/>
                         <outlet property="ToggleMenuItemsView" destination="LJw-f6-OCG" id="BZ2-ZM-34z"/>
                     </connections>
                 </viewController>
                 <customObject id="FvE-cN-eWk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="548" y="51.5"/>
+=======
+            <point key="canvasLocation" x="548" y="4.5"/>
+>>>>>>> v2
         </scene>
-        <!--About-->
+        <!--Dozer-->
         <scene sceneID="qGp-4b-l0U">
             <objects>
-                <viewController title="About" id="jIF-zo-Q9v" customClass="AboutVC" customModule="Dozer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Dozer" id="jIF-zo-Q9v" customClass="AboutVC" customModule="Dozer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="XZr-ZU-qCW">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="137"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="117"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruO-El-AAO">
-                                <rect key="frame" x="18" y="79" width="414" height="17"/>
+                                <rect key="frame" x="18" y="77" width="414" height="17"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Version: X" id="qs4-oP-twB">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Version X" id="qs4-oP-twB">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qB-H3-8TR">
-                                <rect key="frame" x="70" y="46" width="311" height="17"/>
+                                <rect key="frame" x="70" y="54" width="311" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Please star the Project!😀" id="0GF-h2-x2a">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Please star the project on Github!😀" id="0GF-h2-x2a">
                                     <font key="font" metaFont="systemBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dVP-SB-7oR">
-                                <rect key="frame" x="70" y="24" width="311" height="17"/>
+                            <button focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abp-Nx-1ei">
+                                <rect key="frame" x="14" y="8" width="152" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" title="https://github.com/Mortennn/Dozer" id="bfZ-8x-Smm">
+                                <buttonCell key="cell" type="push" title="Check for updates" bezelStyle="rounded" alignment="center" borderStyle="border" focusRingType="none" imageScaling="proportionallyDown" inset="2" id="6Sd-9n-gEd">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KMD-ql-uWf">
+                                <rect key="frame" x="305" y="8" width="131" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Open in Github" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="So8-Lu-wrk">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="OpenInGithubPressed:" target="jIF-zo-Q9v" id="VZy-uE-85j"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="CheckForUpdates" destination="abp-Nx-1ei" id="oeY-hs-HCn"/>
                         <outlet property="VersionLabel" destination="ruO-El-AAO" id="UVe-fd-WkN"/>
                     </connections>
                 </viewController>
                 <customObject id="alA-8d-lUT" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="548" y="310.5"/>
+            <point key="canvasLocation" x="548" y="300.5"/>
         </scene>
     </scenes>
     <resources>
