@@ -22,5 +22,5 @@ func firstRun() {
   let boardingScreen = BoardingScreen()
   boardingScreen.show()
 
-//  UserDefaults.standard.set(true, forKey: UserDefaultKeys.FirstRun.defaultKey)
+  UserDefaults.standard.set(true, forKey: UserDefaultKeys.FirstRun.defaultKey)
 }

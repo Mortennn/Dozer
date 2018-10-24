@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="-122" y="263"/>
         </scene>
-        <!--General-->
+        <!--Preferences-->
         <scene sceneID="N6l-xC-bfR">
             <objects>
-                <viewController title="General" id="CbG-uA-UXG" customClass="GeneralVC" customModule="Dozer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Preferences" id="CbG-uA-UXG" customClass="GeneralVC" customModule="Dozer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="4Ei-kU-JuY">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="155"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -108,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="548" y="4.5"/>
         </scene>
-        <!--About-->
+        <!--Dozer-->
         <scene sceneID="qGp-4b-l0U">
             <objects>
-                <viewController title="About" id="jIF-zo-Q9v" customClass="AboutVC" customModule="Dozer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Dozer" id="jIF-zo-Q9v" customClass="AboutVC" customModule="Dozer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="XZr-ZU-qCW">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="117"/>
                         <autoresizingMask key="autoresizingMask"/>

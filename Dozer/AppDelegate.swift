@@ -39,7 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     })
     
     #warning("first run is not enabled")
-    firstRun()
+    //firstRun()
 
   }
 
