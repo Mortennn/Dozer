@@ -8,6 +8,8 @@
 
 import Cocoa
 import MASShortcut
+import Fabric
+import Crashlytics
 
 let dozerStatusItem = DozerStatusItem()
 
@@ -15,6 +17,8 @@ let dozerStatusItem = DozerStatusItem()
 class AppDelegate: NSObject, NSApplicationDelegate {
   
   func applicationDidFinishLaunching(_ notification: Notification) {
+    
+    Fabric.with([Crashlytics.self])
     
     dozerStatusItem.show()
     

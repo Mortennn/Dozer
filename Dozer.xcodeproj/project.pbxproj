@@ -23,6 +23,8 @@
 		5A21290C2178AA4B004899BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2129082178A867004899BA /* Assets.xcassets */; };
 		5A2129422178B46D004899BA /* DozerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2129412178B46D004899BA /* DozerTests.swift */; };
 		5AB237BD2178B72E0084BF7C /* DozerStatusItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB237BC2178B72E0084BF7C /* DozerStatusItemTests.swift */; };
+		5AEB7F4221802AB8003AE1E3 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEB7F4021802AB8003AE1E3 /* Crashlytics.framework */; };
+		5AEB7F4321802AB8003AE1E3 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEB7F4121802AB8003AE1E3 /* Fabric.framework */; };
 		BF_176493698303 /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_313939739558 /* LaunchAtLogin.framework */; };
 		BF_254612048700 /* LaunchAtLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_313939739558 /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_336950074820 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = VG_570313816293 /* MainMenu.xib */; };
@@ -72,6 +74,8 @@
 		5A2129362178B3ED004899BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A2129412178B46D004899BA /* DozerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DozerTests.swift; sourceTree = "<group>"; };
 		5AB237BC2178B72E0084BF7C /* DozerStatusItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DozerStatusItemTests.swift; sourceTree = "<group>"; };
+		5AEB7F4021802AB8003AE1E3 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
+		5AEB7F4121802AB8003AE1E3 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		FR_114064246828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FR_118963529833 /* moveDozerDemo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = moveDozerDemo.mp4; sourceTree = "<group>"; };
 		FR_156989833044 /* BoardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingScreen.swift; sourceTree = "<group>"; };
@@ -106,7 +110,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF_176493698303 /* LaunchAtLogin.framework in Frameworks */,
+				5AEB7F4321802AB8003AE1E3 /* Fabric.framework in Frameworks */,
 				BF_842868813130 /* MASShortcut.framework in Frameworks */,
+				5AEB7F4221802AB8003AE1E3 /* Crashlytics.framework in Frameworks */,
 				BF_457832268999 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,9 +157,19 @@
 			path = ObjectsTests;
 			sourceTree = "<group>";
 		};
+		5AEB7F3E21802A88003AE1E3 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				5AEB7F4021802AB8003AE1E3 /* Crashlytics.framework */,
+				5AEB7F4121802AB8003AE1E3 /* Fabric.framework */,
+			);
+			path = Fabric;
+			sourceTree = "<group>";
+		};
 		G_1952740716080 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AEB7F3E21802A88003AE1E3 /* Fabric */,
 				G_2883690153011 /* Carthage */,
 			);
 			name = Frameworks;
@@ -312,6 +328,7 @@
 				CFBP_8437081002 /* Embed Frameworks */,
 				SSBP_6009087431 /* Unused */,
 				SSBP_8188862981 /* LaunchAtLogin */,
+				5AEB7F3F21802A92003AE1E3 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -384,6 +401,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5AEB7F3F21802A92003AE1E3 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 67eb7732a60d9f8f534b1e54b18079643f8bf5ac b4367b1858e713c3cace8b2b0d88bf0ed9b015e5abae59eeb27df6fb64d13663\n";
+		};
 		SSBP_6009087431 /* Unused */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -530,6 +565,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Dozer/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -574,7 +610,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -613,6 +649,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Dozer/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
