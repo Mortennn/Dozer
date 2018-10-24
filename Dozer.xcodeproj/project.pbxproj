@@ -157,19 +157,19 @@
 			path = ObjectsTests;
 			sourceTree = "<group>";
 		};
-		5AEB7F3E21802A88003AE1E3 /* Fabric */ = {
+		5AEB7F462180C64C003AE1E3 /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
 				5AEB7F4021802AB8003AE1E3 /* Crashlytics.framework */,
 				5AEB7F4121802AB8003AE1E3 /* Fabric.framework */,
 			);
-			path = Fabric;
+			name = Fabric;
 			sourceTree = "<group>";
 		};
 		G_1952740716080 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5AEB7F3E21802A88003AE1E3 /* Fabric */,
+				5AEB7F462180C64C003AE1E3 /* Fabric */,
 				G_2883690153011 /* Carthage */,
 			);
 			name = Frameworks;

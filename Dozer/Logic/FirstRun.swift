@@ -13,10 +13,9 @@ func firstRun() {
   let isNotFirstRun = UserDefaults.standard.bool(forKey: UserDefaultKeys.FirstRun.defaultKey)
 
   // comment this to test first run
-  #warning("enable this")
-//  if isNotFirstRun {
-//    return
-//  }
+  if isNotFirstRun {
+    return
+  }
   
   // show boarding screen
   let boardingScreen = BoardingScreen()
