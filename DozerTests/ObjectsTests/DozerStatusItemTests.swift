@@ -6,7 +6,7 @@ class DozerStatusItemTests: XCTestCase {
   func testDozerStatusItemInit() {
     let dozerStatusItem = DozerStatusItem()
     assert(dozerStatusItem.statusItem.length == dozerStatusItem.shownLength)
-    assert(dozerStatusItem.statusItem.button?.image?.name() == Icons().shown.name())
+    assert(dozerStatusItem.statusItem.button?.image?.name() == Icons().statusBarIcon.name())
     NSStatusBar.system.removeStatusItem(dozerStatusItem.statusItem)
   }
   
@@ -20,6 +20,13 @@ class DozerStatusItemTests: XCTestCase {
     let dozerStatusItem = DozerStatusItem()
     dozerStatusItem.hide()
     assert(dozerStatusItem.statusItem.length == dozerStatusItem.hiddenLength)
+  }
+  
+  func testToggle() {
+    let dozerStatusItem = DozerStatusItem()
+    dozerStatusItem.hide()
+    dozerStatusItem.toggle()
+    assert(dozerStatusItem.statusItem.length == dozerStatusItem.shownLength)
   }
   
   func testHandleLeftClick() {

@@ -21,9 +21,6 @@ func firstRun() {
   // show boarding screen
   let boardingScreen = BoardingScreen()
   boardingScreen.show()
-  
-  // set changeThemeAutomatically to true
-  UserDefaults.standard.set(true, forKey: UserDefaultKeys.Theme.autochange)
 
-  UserDefaults.standard.set(true, forKey: UserDefaultKeys.FirstRun.defaultKey)
+//  UserDefaults.standard.set(true, forKey: UserDefaultKeys.FirstRun.defaultKey)
 }

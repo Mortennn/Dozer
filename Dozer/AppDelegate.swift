@@ -16,37 +16,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   
   func applicationDidFinishLaunching(_ notification: Notification) {
     
+    dozerStatusItem.show()
+    
+    NSEvent.addLocalMonitorForEvents(matching: .mouseMoved) { (event) -> NSEvent? in
+      let mouseLocation = event.locationInWindow
+      dozerStatusItem.handleMouseMoved(mouseLocation: mouseLocation)
+      return event
+    }
+    
     NSEvent.addGlobalMonitorForEvents(matching: .mouseMoved) { (event) in
-      let mouseLocation = NSEvent.mouseLocation
+      let mouseLocation = event.locationInWindow
       dozerStatusItem.handleMouseMoved(mouseLocation: mouseLocation)
     }
     
-    #warning("first run is not enabled")
-    //firstRun()
-
-    #warning("FIX: fix shortcut")
     // bind global shortcut
     MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: UserDefaultKeys.Shortcuts.ToggleMenuItems, toAction: {
-    
+      dozerStatusItem.toggle()
     })
     
-    // listens for change is interface theme
-    DistributedNotificationCenter.default.addObserver(
-      self,
-      selector: #selector(interfaceModeChanged(sender:)),
-      name: NSNotification.Name(rawValue: "AppleInterfaceThemeChangedNotification"),
-      object: nil)
+    #warning("first run is not enabled")
+    firstRun()
+
   }
-  
-  #warning("FIX: handle interface mode changed")
-   @objc func interfaceModeChanged(sender: NSNotification) {
-//    if mainStatusItem.isExpanded {
-//      let _ = MainStatusItemWindowController.shared.windowInstances.map { $0.backgroundView.image = Icons().hidden }
-//      showStatusItems() // FIXME: status items get showed, even when they shouldn't
-//    } else {
-//      mainStatusItem.button!.image = Icons().shown
-//    }
-  }
+
   
   @objc func showPreferences() {
     PreferencesController.shared.showPreferencesPane()

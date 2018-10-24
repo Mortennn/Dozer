@@ -33,6 +33,14 @@ class DozerStatusItem {
     statusItem.length = hiddenLength
   }
   
+  func toggle() {
+    if isShown {
+      hide()
+    } else {
+      show()
+    }
+  }
+  
   @objc func statusItemClicked(sender: AnyObject?) {
     guard let currentEvent = NSApp.currentEvent else {
       NSLog("read current event failed")

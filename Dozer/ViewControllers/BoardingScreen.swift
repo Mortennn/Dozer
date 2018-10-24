@@ -41,6 +41,7 @@ class BoardingScreen: NSViewController {
     let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), styleMask: [.titled, .miniaturizable], backing: .buffered, defer: false)
     window.contentView?.addSubview(self.view)
     window.makeKeyAndOrderFront(nil)
+    NSApp.activate(ignoringOtherApps: true)
     self.centerOnScreen()
   }
   

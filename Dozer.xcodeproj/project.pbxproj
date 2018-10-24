@@ -15,7 +15,7 @@
 		5A2128FE2178A789004899BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_465314535169 /* AppDelegate.swift */; };
 		5A2128FF2178A789004899BA /* StatusBarIconController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_526307919371 /* StatusBarIconController.swift */; };
 		5A2129002178A789004899BA /* UserDefaultsIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_226152609915 /* UserDefaultsIDs.swift */; };
-		5A2129012178A789004899BA /* firstRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_902582216983 /* firstRun.swift */; };
+		5A2129012178A789004899BA /* FirstRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_902582216983 /* FirstRun.swift */; };
 		5A2129022178A789004899BA /* DozerStatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_558612881203 /* DozerStatusItem.swift */; };
 		5A2129032178A789004899BA /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_291041785031 /* AboutVC.swift */; };
 		5A2129042178A789004899BA /* BoardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_156989833044 /* BoardingScreen.swift */; };
@@ -90,7 +90,7 @@
 		FR_570313816293 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		FR_663277439318 /* Dozer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dozer.entitlements; sourceTree = "<group>"; };
 		FR_861919633272 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
-		FR_902582216983 /* firstRun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstRun.swift; sourceTree = "<group>"; };
+		FR_902582216983 /* FirstRun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRun.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +172,7 @@
 		G_2554562156446 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				FR_902582216983 /* firstRun.swift */,
+				FR_902582216983 /* FirstRun.swift */,
 				5A14713121791CFD00B84674 /* HandleMouseMoved.swift */,
 				FR_526307919371 /* StatusBarIconController.swift */,
 				5A14713B217A3E0000B84674 /* Cooldown.swift */,
@@ -306,12 +306,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = "CL_479945837573-1" /* Build configuration list for PBXNativeTarget "Dozer" */;
 			buildPhases = (
-				SSBP_8188862981 /* LaunchAtLogin */,
-				SSBP_6009087431 /* Unused */,
 				SBP_47994583757 /* Sources */,
 				RBP_47994583757 /* Resources */,
 				FBP_47994583757 /* Frameworks */,
 				CFBP_8437081002 /* Embed Frameworks */,
+				SSBP_6009087431 /* Unused */,
+				SSBP_8188862981 /* LaunchAtLogin */,
 			);
 			buildRules = (
 			);
@@ -435,7 +435,7 @@
 				5A2128FF2178A789004899BA /* StatusBarIconController.swift in Sources */,
 				5A2129002178A789004899BA /* UserDefaultsIDs.swift in Sources */,
 				5A14713221791CFD00B84674 /* HandleMouseMoved.swift in Sources */,
-				5A2129012178A789004899BA /* firstRun.swift in Sources */,
+				5A2129012178A789004899BA /* FirstRun.swift in Sources */,
 				5A147139217A39DC00B84674 /* PreferencesVC.swift in Sources */,
 				5A2129022178A789004899BA /* DozerStatusItem.swift in Sources */,
 				5A2129032178A789004899BA /* AboutVC.swift in Sources */,
