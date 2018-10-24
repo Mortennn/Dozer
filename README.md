@@ -20,7 +20,7 @@
 
 ## 🚀 Dozer
 <p align="center">
-	<img height="22" min-width="100" src="https://github.com/Mortennn/Dozer/raw/master/demo/demo.gif" alt="desktop-image">
+	<img height="200" min-width="100" src="https://github.com/Mortennn/Dozer/raw/master/demo/demo.gif" alt="desktop-image">
 </p>
 <p align="center"></p>
 
