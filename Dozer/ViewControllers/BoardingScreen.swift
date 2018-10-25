@@ -1,10 +1,3 @@
-//
-//  BoardingScreen.swift
-//  Dozer
-//
-//  Created by Morten Nautrup Nielsen on 02/10/2018.
-//
-
 import Cocoa
 import AVKit
 

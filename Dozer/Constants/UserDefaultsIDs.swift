@@ -1,10 +1,3 @@
-//
-//  UserDefaultsIDs.swift
-//  Dozer
-//
-//  Created by Morten Nautrup Nielsen on 09/09/2018.
-//
-
 import Cocoa
 
 struct UserDefaultKeys {

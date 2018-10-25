@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Dozer
-//
-//  Created by Mortennn on 05/08/2018.
-//  Copyright © 2018 Mortennn. All rights reserved.
-//
-
 import Cocoa
 import MASShortcut
 import Fabric

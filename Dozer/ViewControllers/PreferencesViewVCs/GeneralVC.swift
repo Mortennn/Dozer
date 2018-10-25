@@ -1,10 +1,3 @@
-//
-//  GeneralVC.swift
-//  Dozer
-//
-//  Created by Morten Nautrup Nielsen on 07/09/2018.
-//
-
 import Cocoa
 import MASShortcut
 import LaunchAtLogin
