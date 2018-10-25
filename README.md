@@ -13,9 +13,6 @@
 	<a href="https://swift.org/">
  		<img src="https://img.shields.io/badge/code-Swift-yellow.svg" alt="code">
 	</a>
-	<a href="http://opensource.org/licenses/MIT">
- 		<img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license">
-	</a>
 </p>
 
 ## 🚀 Dozer
