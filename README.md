@@ -32,8 +32,13 @@ Easiest way [Homebrew Cask](https://caskroom.github.io/):
 Manual:
 
 1. [Download](https://github.com/Mortennn/Dozer/releases/latest), open, and drag the app to the Applications folder.
-2. Open Dozer and drag the icon in your menu bar (hold CMD) to the right so it is between some other icons. When activated (with a right click) any icons to the left will be hidden. You can arrange your other icons accordingly.
+2. Open Dozer and drag the icon in your menu bar (hold CMD) to the right so it is between some other icons.
 
+## Usage
+- (CMD+drag) to move Dozer around in the menu bar.
+- Click the Dozer icon to hide menu bar items.
+- To show the menu bar items again, simply re-enter the menu bar.
+- Right click the Dozer icon to open preferences.
 
 ## Requirements
 macOS version >= 10.12
