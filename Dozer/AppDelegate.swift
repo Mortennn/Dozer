@@ -1,38 +1,61 @@
-//
-//  AppDelegate.swift
-//  Dozer
-//
-//  Created by Mortennn on 05/08/2018.
-//  Copyright © 2018 Mortennn. All rights reserved.
-//
-
 import Cocoa
 import MASShortcut
 import Fabric
 import Crashlytics
+import AXSwift
+import Sparkle
 
-let dozerStatusItem = DozerStatusItem()
+private let dozerStatusItem = DozerStatusItem()
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
   
   func applicationDidFinishLaunching(_ notification: Notification) {
     
-//    [[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"NSApplicationCrashOnExceptions": @YES }];
     UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions" : true])
     Fabric.with([Crashlytics.self])
+   
+    firstRun()
     
+  }
+  
+  func continueAppLife() {
     dozerStatusItem.show()
     
+    // Menu Bar Hover
     NSEvent.addLocalMonitorForEvents(matching: .mouseMoved) { (event) -> NSEvent? in
+      if !UserDefaults.standard.bool(forKey: UserDefaultKeys.ShowIconsOnHover.defaultKey) {
+        return event
+      }
       let mouseLocation = NSEvent.mouseLocation
       dozerStatusItem.handleMouseMoved(mouseLocation: mouseLocation)
       return event
     }
     
     NSEvent.addGlobalMonitorForEvents(matching: .mouseMoved) { (event) in
+      if !UserDefaults.standard.bool(forKey: UserDefaultKeys.ShowIconsOnHover.defaultKey) {
+        return
+      }
       let mouseLocation = NSEvent.mouseLocation
       dozerStatusItem.handleMouseMoved(mouseLocation: mouseLocation)
+    }
+    
+    // Menu Bar Click
+    NSEvent.addLocalMonitorForEvents(matching: .leftMouseUp) { (event) -> NSEvent? in
+      if UserDefaults.standard.bool(forKey: UserDefaultKeys.ShowIconsOnHover.defaultKey) {
+        return event
+      }
+      let mouseLocation = NSEvent.mouseLocation
+      dozerStatusItem.handleClickOnMenuBar(mouseLocation: mouseLocation)
+      return event
+    }
+    
+    NSEvent.addGlobalMonitorForEvents(matching: .leftMouseUp) { (event) in
+      if UserDefaults.standard.bool(forKey: UserDefaultKeys.ShowIconsOnHover.defaultKey) {
+        return
+      }
+      let mouseLocation = NSEvent.mouseLocation
+      dozerStatusItem.handleClickOnMenuBar(mouseLocation: mouseLocation)
     }
     
     // bind global shortcut
@@ -40,8 +63,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       dozerStatusItem.toggle()
     })
     
-    firstRun()
-
+    SUUpdater.shared()?.automaticallyChecksForUpdates = true
   }
 
   

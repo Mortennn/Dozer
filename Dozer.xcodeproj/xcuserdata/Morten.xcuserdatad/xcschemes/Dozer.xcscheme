@@ -32,19 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5A71DA8921289A6500BC4079"
+               BlueprintIdentifier = "NT_594147164305"
                BuildableName = "DozerTests.xctest"
-               BlueprintName = "DozerTests"
-               ReferencedContainer = "container:Dozer.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5A2128E721789A7C004899BA"
-               BuildableName = "DozerUITests.xctest"
-               BlueprintName = "DozerUITests"
+               BlueprintName = "DozerTests_macOS"
                ReferencedContainer = "container:Dozer.xcodeproj">
             </BuildableReference>
          </TestableReference>

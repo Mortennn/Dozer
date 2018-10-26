@@ -1,4 +1,8 @@
 name: Dozer
+options:
+  usesTabs: false
+  indentWidth: 2
+  tabWidth: 2
 targets:
   Dozer:
     type: application
@@ -6,11 +10,13 @@ targets:
     deploymentTarget: "10.12"
     sources:
       - Dozer
-    prebuildScripts:
+    postbuildScripts:
       - path: LaunchAtLogin.sh
         name: LaunchAtLogin
       - path: Scripts/Unused.sh
         name: Unused
+      - path: Scripts/LinkFabric.sh
+        name: LinkFabric
     settings:
       DEVELOPMENT_TEAM: DE6MHLRTVN
       base:
@@ -25,9 +31,16 @@ targets:
       - carthage: LaunchAtLogin
       - carthage: MASShortcut
       - carthage: Sparkle
+      - carthage: AXSwift
+      - framework: Frameworks/Crashlytics.framework
+      - framework: Frameworks/Fabric.framework
   DozerTests:
     type: bundle.unit-test
     platform: [macOS]
     scheme: {}
     sources:
       - DozerTests
+    settings:
+      DEVELOPMENT_TEAM: DE6MHLRTVN
+      base:
+        SWIFT_VERSION: 4.2

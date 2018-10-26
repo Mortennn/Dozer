@@ -267,3 +267,6 @@ BuildSystem/
 Dozer.xcodeproj/
 Version1/
 *.xcuserstate
+DozerTests/
+Scripts/LinkFabric.sh
+project.yml

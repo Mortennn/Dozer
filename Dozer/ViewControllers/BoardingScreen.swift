@@ -1,17 +1,13 @@
-//
-//  BoardingScreen.swift
-//  Dozer
-//
-//  Created by Morten Nautrup Nielsen on 02/10/2018.
-//
-
 import Cocoa
 import AVKit
+import AXSwift
 
 class BoardingScreen: NSViewController {
 
   @IBOutlet var ContinueButton: NSButton!
   @IBOutlet var moveDozer: AVPlayerView!
+  @IBOutlet var EnableDozerLabel: NSTextField!
+  @IBOutlet var OpenAccessibilityButton: NSButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -19,7 +15,13 @@ class BoardingScreen: NSViewController {
     
     // button config
     ContinueButton.focusRingType = .none
-
+    
+    if UIElement.isProcessTrusted(withPrompt: false) {
+      EnableDozerLabel.isHidden = true
+    }
+    
+    OpenAccessibilityButton.isEnabled = !UIElement.isProcessTrusted(withPrompt: false)
+    
     let videoURL = Bundle.main.url(forResource: "Demo", withExtension: "mp4")!
     let player = AVPlayer(url: videoURL)
     moveDozer.player = player
@@ -46,12 +48,20 @@ class BoardingScreen: NSViewController {
   }
   
   @IBAction func ContinueButtonPressed(_ sender: NSButton) {
-    moveDozer.player?.pause()
-    moveDozer.player = nil
-    let window = self.view.window
-    window?.orderOut(nil)
+    if UIElement.isProcessTrusted(withPrompt: true) {
+      moveDozer.player?.pause()
+      moveDozer.player = nil
+      let window = self.view.window
+      window?.orderOut(nil)
+      AppDelegate().continueAppLife()
+      
+      UserDefaults.standard.set(true, forKey: UserDefaultKeys.FirstRun.defaultKey)
+    }
   }
   
+  @IBAction func OpenAccessibility(_ sender: NSButton) {
+    let _ = UIElement.isProcessTrusted(withPrompt: true)
+  }
   
 }
 

@@ -1,3 +1,4 @@
 github "shpakovski/MASShortcut" "2.3.6"
-github "sindresorhus/LaunchAtLogin" "v2.2.1"
+github "sindresorhus/LaunchAtLogin" "v2.4.0"
 github "sparkle-project/Sparkle" "1.20.0"
+github "tmandry/AXSwift" "0.2.2"

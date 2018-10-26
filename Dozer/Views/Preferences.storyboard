@@ -59,20 +59,11 @@
             <objects>
                 <viewController title="Preferences" id="CbG-uA-UXG" customClass="GeneralVC" customModule="Dozer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="4Ei-kU-JuY">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="155"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="177"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Enj-Sg-955">
-                                <rect key="frame" x="21" y="69" width="123" height="17"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Toggle Menu Items:" id="oag-ht-MLU">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ont-tO-dfX">
-                                <rect key="frame" x="21" y="119" width="115" height="18"/>
+                                <rect key="frame" x="18" y="52" width="115" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Launch at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kAj-f9-4Ss">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -82,8 +73,12 @@
                                     <action selector="LaunchAtLoginPressed:" target="CbG-uA-UXG" id="d1V-KV-osk"/>
                                 </connections>
                             </button>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJw-f6-OCG" userLabel="ToggleMenuItems" customClass="MASShortcutView">
+                                <rect key="frame" x="147" y="136" width="140" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDh-fk-WnU">
-                                <rect key="frame" x="14" y="13" width="66" height="32"/>
+                                <rect key="frame" x="14" y="0.0" width="66" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZgU-cN-ur9">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -93,20 +88,37 @@
                                     <action selector="QuitPressed:" target="CbG-uA-UXG" id="KYG-pA-Vzv"/>
                                 </connections>
                             </button>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJw-f6-OCG" userLabel="ToggleMenuItems" customClass="MASShortcutView">
-                                <rect key="frame" x="148" y="65" width="140" height="20"/>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ga-ba-mG7">
+                                <rect key="frame" x="18" y="85" width="148" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </customView>
+                                <buttonCell key="cell" type="check" title="Show Icons on hover" bezelStyle="regularSquare" imagePosition="left" inset="2" id="FIP-Qk-AA0">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="ShowIconsOnHoverPressed:" target="CbG-uA-UXG" id="a1W-Gg-Ftg"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Enj-Sg-955">
+                                <rect key="frame" x="18" y="138" width="123" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Toggle Menu Items:" id="oag-ht-MLU">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="LaunchAtLoginCheckbox" destination="ont-tO-dfX" id="SAR-AM-xSl"/>
+                        <outlet property="ShowIconsOnHover" destination="2ga-ba-mG7" id="nLO-BP-6Lg"/>
                         <outlet property="ToggleMenuItemsView" destination="LJw-f6-OCG" id="BZ2-ZM-34z"/>
                     </connections>
                 </viewController>
                 <customObject id="FvE-cN-eWk" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="548" y="4.5"/>
+            <point key="canvasLocation" x="548" y="15.5"/>
         </scene>
         <!--Dozer-->
         <scene sceneID="qGp-4b-l0U">

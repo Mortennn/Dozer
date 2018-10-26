@@ -1,4 +1,5 @@
 import Cocoa
+import AXSwift
 
 class DozerStatusItem {
   
@@ -84,4 +85,42 @@ class DozerStatusItem {
       listenForMouseExit.shared.mouseHasExited = true
     }
   }
+  
+  internal func handleClickOnMenuBar(mouseLocation:NSPoint) {
+    if isMouseInStatusBarSaveSpace(with: mouseLocation) {
+      self.show()
+    }
+  }
+  
+  func isMouseInStatusBarSaveSpace(with mouseLocation:NSPoint) -> Bool {
+    
+    let statusBarHeight = NSStatusBar.system.thickness
+    guard let menuBarOwningApp = NSWorkspace.shared.menuBarOwningApplication else {
+      fatalError()
+    }
+    
+    for screen in NSScreen.screens {
+      var frame = screen.frame
+      frame.origin.y = frame.origin.y + frame.height - statusBarHeight - 2
+      frame.size.height = statusBarHeight + 3
+      frame.origin.x = getLastMenuItemXPosition(from: menuBarOwningApp)
+      frame.size.width = xPositionOnScreen - frame.origin.x + shownLength
+      if frame.contains(mouseLocation) {
+        return true
+      }
+    }
+    
+    return false
+  }
+  
+  internal var xPositionOnScreen:CGFloat {
+    get {
+      guard let dozerIconFrame = statusItem.button?.window?.frame else {
+        return 0
+      }
+      let dozerIconXPosition = dozerIconFrame.origin.x + dozerIconFrame.width - shownLength
+      return dozerIconXPosition
+    }
+  }
+  
 }

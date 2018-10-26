@@ -1,10 +1,3 @@
-//
-//  UserDefaultsIDs.swift
-//  Dozer
-//
-//  Created by Morten Nautrup Nielsen on 09/09/2018.
-//
-
 import Cocoa
 
 struct UserDefaultKeys {
@@ -20,9 +13,17 @@ struct UserDefaultKeys {
   struct FirstRun {
     private init(){}
     #if !DEBUG
-      static let defaultKey = "firstRunV2"
+      static let defaultKey = "firstRunV2.1.0"
     #else
-      static let defaultKey = "firstRunV2DEBUG"
+      static let defaultKey = "firstRunV2.1.0DEBUG"
+    #endif
+  }
+  struct ShowIconsOnHover {
+    private init(){}
+    #if !DEBUG
+    static let defaultKey = "showIconsOnHover"
+    #else
+    static let defaultKey = "showIconsOnHoverDEBUG"
     #endif
   }
 }
