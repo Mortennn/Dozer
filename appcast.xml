@@ -5,8 +5,9 @@
 <title>2.1.0</title>
 <description><![CDATA[
 <h2>Version 2.1.0</h2>
+
 - New feature: Show menu bar icons by clicking the menu bar.
-- Show menu bar icons by hover is now optional.
+- Show menu bar icons by hover are now optional.
 - Minor bug fixes.
 ]]>
 </description>
