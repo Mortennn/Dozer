@@ -61,6 +61,47 @@ class DozerStatusItemTests: XCTestCase {
     assert(dozerStatusItem.isHidden == (dozerStatusItem.statusItem.length == dozerStatusItem.hiddenLength))
   }
   
+  func testHandleClickOnMenuBar() {
+    let screenHeight = NSScreen.main!.frame.height
+    let statusbarHeight = NSStatusBar.system.thickness
+    
+    let inStatusbar = NSPoint(x: 200, y: screenHeight-statusbarHeight)
+    let notInStatusbar = NSPoint(x: 200, y: screenHeight-statusbarHeight-100)
+    
+    XCTAssertTrue(isMouseInStatusBar(with: inStatusbar))
+    XCTAssertFalse(isMouseInStatusBar(with: notInStatusbar))
+  }
+  
+  // single running works
+  func testIsMouseInStatusBarSaveSpace() {
+    let statusItem = DozerStatusItem()
+
+    let screenFrame = NSScreen.main!.frame
+    let screenHeight = screenFrame.height
+    let statusbarHeight = NSStatusBar.system.thickness
+    let dozerIconXPos = statusItem.xPositionOnScreen
+    
+    let inStatusbar = NSPoint(x: dozerIconXPos-10, y: screenHeight-statusbarHeight)
+    let notInStatusbarLeft = NSPoint(x: 2, y: screenHeight-statusbarHeight)
+    let notInStatusbarRight = NSPoint(x: screenFrame.width-2, y: screenHeight-statusbarHeight)
+    
+    XCTAssertTrue(statusItem.isMouseInStatusBarSaveSpace(with: inStatusbar))
+    XCTAssertFalse(statusItem.isMouseInStatusBarSaveSpace(with: notInStatusbarLeft))
+    XCTAssertFalse(statusItem.isMouseInStatusBarSaveSpace(with: notInStatusbarRight))
+  }
+  
+  func testXPositionOnScreen() {
+    // test that the x pos is the same in hidden/shown mode
+    let dozerStatusItem = DozerStatusItem()
+    dozerStatusItem.show()
+    let shownXPosition = dozerStatusItem.xPositionOnScreen
+
+    dozerStatusItem.hide()
+    let hiddenXPosition = dozerStatusItem.xPositionOnScreen
+    
+    XCTAssertEqual(shownXPosition, hiddenXPosition)
+  }
+  
 //  func testCreateMenu() {
 //    let menu = DozerStatusItem().createMenu()
 //

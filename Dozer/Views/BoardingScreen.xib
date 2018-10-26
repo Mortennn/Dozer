@@ -10,6 +10,8 @@
         <customObject id="-2" userLabel="File's Owner" customClass="BoardingScreen" customModule="Dozer" customModuleProvider="target">
             <connections>
                 <outlet property="ContinueButton" destination="Wa4-fX-q4i" id="xAn-IX-WC8"/>
+                <outlet property="EnableDozerLabel" destination="lht-dP-8Wl" id="3en-6g-gMG"/>
+                <outlet property="OpenAccessibilityButton" destination="ndo-se-eUP" id="gLl-Tg-sdA"/>
                 <outlet property="moveDozer" destination="xn7-5Y-jQo" id="hIN-Ij-oEn"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -60,17 +62,6 @@
                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
-                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wa4-fX-q4i">
-                            <rect key="frame" x="182" y="18" width="154" height="36"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <buttonCell key="cell" type="squareTextured" title="Continue" bezelStyle="texturedSquare" alignment="center" borderStyle="border" inset="2" id="MPy-8A-W6t">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
-                            <connections>
-                                <action selector="ContinueButtonPressed:" target="-2" id="Z5F-N3-nQd"/>
-                            </connections>
-                        </button>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCu-q7-xqz">
                             <rect key="frame" x="91" y="631" width="337" height="27"/>
                             <autoresizingMask key="autoresizingMask"/>
@@ -108,9 +99,9 @@
                             </textFieldCell>
                         </textField>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JV9-v3-q8u">
-                            <rect key="frame" x="18" y="271" width="443" height="21"/>
+                            <rect key="frame" x="18" y="271" width="494" height="21"/>
                             <autoresizingMask key="autoresizingMask"/>
-                            <textFieldCell key="cell" lineBreakMode="clipping" title="· To show the menu bar items again, simply re-enter the menu bar." id="yQS-3v-K76">
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="· Click menu bar (where there are no icons) to show the menu items again." id="yQS-3v-K76">
                                 <font key="font" size="14" name=".SFNSText"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -132,6 +123,37 @@
                             <rect key="frame" x="75" y="393" width="372" height="221"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         </avPlayerView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lht-dP-8Wl">
+                            <rect key="frame" x="81" y="61" width="391" height="17"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Before you continue, please allow Dozer under accessibility." id="Z65-WN-kck">
+                                <font key="font" metaFont="systemBold"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ndo-se-eUP">
+                            <rect key="frame" x="77" y="18" width="154" height="36"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="squareTextured" title="Open Accessibility" bezelStyle="texturedSquare" alignment="center" borderStyle="border" inset="2" id="Xrz-B1-BVh">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="OpenAccessibility:" target="-2" id="GcW-qM-FWf"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wa4-fX-q4i">
+                            <rect key="frame" x="273" y="18" width="154" height="36"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="squareTextured" title="Continue" bezelStyle="texturedSquare" alignment="center" borderStyle="border" inset="2" id="MPy-8A-W6t">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="ContinueButtonPressed:" target="-2" id="Z5F-N3-nQd"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </customView>
             </subviews>

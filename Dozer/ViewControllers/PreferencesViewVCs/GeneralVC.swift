@@ -8,7 +8,8 @@ class GeneralVC: NSViewController {
   
   @IBOutlet var LaunchAtLoginCheckbox: NSButton!
   @IBOutlet var ToggleMenuItemsView: MASShortcutView!
-  
+  @IBOutlet var ShowIconsOnHover: NSButton!
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height)
@@ -21,7 +22,6 @@ class GeneralVC: NSViewController {
     ToggleMenuItemsView.shortcutValueChange = { (sender) in
       self.userShortCut = self.ToggleMenuItemsView.shortcutValue
     }
-    
   }
 
   override func viewDidAppear() {
@@ -36,6 +36,14 @@ class GeneralVC: NSViewController {
     } else {
       LaunchAtLoginCheckbox.state = .off
     }
+    
+    // show icons on hover
+    ShowIconsOnHover.focusRingType = .none
+    if UserDefaults.standard.bool(forKey: UserDefaultKeys.ShowIconsOnHover.defaultKey) {
+      ShowIconsOnHover.state = .on
+    } else {
+      ShowIconsOnHover.state = .off
+    }
 
   }
   
@@ -47,6 +55,13 @@ class GeneralVC: NSViewController {
     NSApp.terminate(nil)
   }
   
+  @IBAction func ShowIconsOnHoverPressed(_ sender: NSButton) {
+    if sender.state == .on {
+      
+    }
+    UserDefaults.standard.set(sender.isOn, forKey: UserDefaultKeys.ShowIconsOnHover.defaultKey)
+  }
+  
 }
 
 extension NSButton {
@@ -56,6 +71,12 @@ extension NSButton {
       self.state = .on
     } else {
       self.state = .off
+    }
+  }
+  
+  var isOn:Bool {
+    get {
+      return (state == .on)
     }
   }
   

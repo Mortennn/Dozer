@@ -14,6 +14,7 @@ final class PreferencesController {
     if preferencesController == nil {
       let storyboard = NSStoryboard(name: StoryboardNames.Preferences, bundle: nil)
       preferencesController = storyboard.instantiateInitialController() as? NSWindowController
+      preferencesController?.window?.level = .statusBar
     }
     
     if preferencesController != nil {

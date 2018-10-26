@@ -2,18 +2,16 @@
 <channel>
 <title>Dozer</title>
 <item>
-<title>2</title>
+<title>2.1.0</title>
 <description><![CDATA[
-<h2>Dozer V2 has arrived</h2>
-I'm very excited to announce Dozer version 2🎉
-
-The app has been completely rewritten, and Dozer is now more stable and intuitive.
-All bugs issued on Github has been fixed, and I will now focus on implementing new features.
-If you experience any issues or want a new feature added, you are more than welcome to <a href="https://github.com/Mortennn/Dozer/issues/new">Open a new issue</a>
+<h2>Version 2.1.0</h2>
+- New feature: Show menu bar icons by clicking the menu bar.
+- Show menu bar icons by hover is now optional.
+- Minor bug fixes.
 ]]>
 </description>
-<pubDate>wed., 24 oct. 2018 20:24:15 +0200</pubDate>
+<pubDate>fri., 26 oct. 2018 23:01:14 +0200</pubDate>
 <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/v2.0.0/Dozer.2.0.0.dmg" sparkle:version="8" sparkle:shortVersionString="2" length="8992991" type="application/octet-stream" sparkle:edSignature="csq1/oAUnNEGV8+t182iQoPj4JH8QOG5owkH8154+nbyHVmB3354kVp8HZXngm1WAbRKC+LRssBM6vIUWMb/Cw=="/>
+<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.1.0/Dozer.2.1.0.dmg" sparkle:version="9" sparkle:shortVersionString="2.1.0" length="10145525" type="application/octet-stream" sparkle:edSignature="IvwhNnd/l1F3k+XmrX2/SWt9FHdVLRKv7OYmMO3pbkBv8UiJnInLL6Bhszdp98sN4xU6+kouk5JDEJk6qWAMCQ=="/>
 </item>
 </channel></rss>
