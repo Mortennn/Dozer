@@ -10,7 +10,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   
   func applicationDidFinishLaunching(_ notification: Notification) {
     
-//    [[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"NSApplicationCrashOnExceptions": @YES }];
     UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions" : true])
     Fabric.with([Crashlytics.self])
     
