@@ -37,7 +37,7 @@ Manual:
 ## Usage
 - (CMD+drag) to move Dozer around in the menu bar.
 - Click the Dozer icon to hide menu bar items.
-- To show the menu bar items again, simply re-enter the menu bar.
+- Click menu bar (where there are no icons) to show the menu items again.
 - Right click the Dozer icon to open preferences.
 
 ## Requirements
