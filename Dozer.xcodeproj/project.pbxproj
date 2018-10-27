@@ -11,7 +11,7 @@
 		5A289E4B21835487001FE543 /* GetLastMenuItemXPositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A289E4A21835487001FE543 /* GetLastMenuItemXPositionTests.swift */; };
 		5A289E5421836708001FE543 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A289E5321836708001FE543 /* EventMonitor.swift */; };
 		5A289E582183ADFD001FE543 /* Demo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5A289E572183ADFD001FE543 /* Demo.mp4 */; };
-		BF_127671831555 /* FirstRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_158734516808 /* FirstRun.swift */; };
+		5A7BC8502184C01700BBA2AA /* FirstRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BC84F2184C01700BBA2AA /* FirstRun.swift */; };
 		BF_176493698303 /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_313939739558 /* LaunchAtLogin.framework */; };
 		BF_186471333246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FR_554209460677 /* Assets.xcassets */; };
 		BF_215361843810 /* BoardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_156989833044 /* BoardingScreen.swift */; };
@@ -78,9 +78,9 @@
 		5A289E4A21835487001FE543 /* GetLastMenuItemXPositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLastMenuItemXPositionTests.swift; sourceTree = "<group>"; };
 		5A289E5321836708001FE543 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		5A289E572183ADFD001FE543 /* Demo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Demo.mp4; sourceTree = "<group>"; };
+		5A7BC84F2184C01700BBA2AA /* FirstRun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstRun.swift; sourceTree = "<group>"; };
 		FR_114064246828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FR_156989833044 /* BoardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingScreen.swift; sourceTree = "<group>"; };
-		FR_158734516808 /* FirstRun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRun.swift; sourceTree = "<group>"; };
 		FR_166801309717 /* DozerStatusItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DozerStatusItemTests.swift; sourceTree = "<group>"; };
 		FR_181633778992 /* bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bridging-header.h"; sourceTree = "<group>"; };
 		FR_223307118636 /* HandleMouseMovedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleMouseMovedTests.swift; sourceTree = "<group>"; };
@@ -171,10 +171,10 @@
 			isa = PBXGroup;
 			children = (
 				FR_281835805159 /* Cooldown.swift */,
-				FR_158734516808 /* FirstRun.swift */,
 				FR_848264009291 /* HandleMouseMoved.swift */,
 				FR_273519345937 /* StatusBarIconController.swift */,
 				5A289E4821835446001FE543 /* GetLastMenuItemXPosition.swift */,
+				5A7BC84F2184C01700BBA2AA /* FirstRun.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -450,13 +450,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7BC8502184C01700BBA2AA /* FirstRun.swift in Sources */,
 				BF_402919444426 /* AboutVC.swift in Sources */,
 				BF_762364267611 /* AppDelegate.swift in Sources */,
 				5A289E4921835446001FE543 /* GetLastMenuItemXPosition.swift in Sources */,
 				BF_215361843810 /* BoardingScreen.swift in Sources */,
 				BF_621086584827 /* Cooldown.swift in Sources */,
 				BF_803584487163 /* DozerStatusItem.swift in Sources */,
-				BF_127671831555 /* FirstRun.swift in Sources */,
 				BF_495210081770 /* GeneralVC.swift in Sources */,
 				BF_441468167138 /* HandleMouseMoved.swift in Sources */,
 				BF_641418428753 /* PreferencesVC.swift in Sources */,
