@@ -1,9 +1,9 @@
 import Cocoa
 
 func isMouseInStatusBar(with mouseLocation:NSPoint) -> Bool {
-  
+
   let statusBarHeight = NSStatusBar.system.thickness
-  
+
   for screen in NSScreen.screens {
     var frame = screen.frame
     frame.origin.y = frame.origin.y + frame.height - statusBarHeight - 2
@@ -12,18 +12,18 @@ func isMouseInStatusBar(with mouseLocation:NSPoint) -> Bool {
       return true
     }
   }
-  
+
   return false
 }
 
-class listenForMouseExit {
-  
-  static let shared = listenForMouseExit()
-  
+class ListenForMouseExit {
+
+  static let shared = ListenForMouseExit()
+
   var mouseHasExited:Bool
-  
+
   private init() {
     mouseHasExited = false
   }
-  
+
 }

@@ -32,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       return event
     }
     
-    NSEvent.addGlobalMonitorForEvents(matching: .mouseMoved) { (event) in
+    NSEvent.addGlobalMonitorForEvents(matching: .mouseMoved) { (_) in
       if !UserDefaults.standard.bool(forKey: UserDefaultKeys.ShowIconsOnHover.defaultKey) {
         return
       }
@@ -50,7 +50,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       return event
     }
     
-    NSEvent.addGlobalMonitorForEvents(matching: .leftMouseUp) { (event) in
+    NSEvent.addGlobalMonitorForEvents(matching: .leftMouseUp) { (_) in
       if UserDefaults.standard.bool(forKey: UserDefaultKeys.ShowIconsOnHover.defaultKey) {
         return
       }
@@ -59,14 +59,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     // bind global shortcut
-    MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: UserDefaultKeys.Shortcuts.ToggleMenuItems, toAction: {
-      dozerStatusItem.toggle()
+    MASShortcutBinder.shared()?.bindShortcut(
+      withDefaultsKey: UserDefaultKeys.Shortcuts.ToggleMenuItems,
+      toAction: {
+        dozerStatusItem.toggle()
     })
     
     SUUpdater.shared()?.automaticallyChecksForUpdates = true
   }
 
-  
   @objc func showPreferences() {
     PreferencesController.shared.showPreferencesPane()
   }

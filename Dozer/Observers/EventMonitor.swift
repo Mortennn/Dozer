@@ -32,7 +32,12 @@ import Cocoa
 //  self.eventMonitor = EventMonitor(mask: TrackingService.inactivityEvents) {event in
 //    print("event detected: \(event)")
 //    if self.isTracking() {
-//      self.idleTimer = Timer.scheduledTimer(timeInterval: 2 * 60, target: self, selector: #selector(TimeTrackingService.inactivityDetected(_:)), userInfo: nil, repeats: false)
+//      self.idleTimer = Timer.scheduledTimer(
+//        timeInterval: 2 * 60,
+//        target: self,
+//        selector: #selector(TimeTrackingService.inactivityDetected(_:)),
+//        userInfo: nil,
+//        repeats: false)
 //    } else {
 //      self.unpauseTracking()
 //    }

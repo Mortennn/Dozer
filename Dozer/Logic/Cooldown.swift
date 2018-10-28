@@ -18,12 +18,9 @@ class Cooldown {
   }
   
   var isFinished:Bool {
-    get {
-      let now = Date().timeIntervalSince1970
-      let limit = startTime + cooldownPeriod
-      return (now > limit)
-    }
+    let now = Date().timeIntervalSince1970
+    let limit = startTime + cooldownPeriod
+    return (now > limit)
   }
-  
   
 }

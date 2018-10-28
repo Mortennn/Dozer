@@ -3,9 +3,7 @@ import Cocoa
 struct Icons {
   
   var statusBarIcon:NSImage {
-    get {
-      return create(image: "StatusBarIcon", 10, 10)
-    }
+    return create(image: "StatusBarIcon", 10, 10)
   }
   
   internal func create(image name:String, _ width:Int, _ height:Int) -> NSImage {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A7BC8542184E2A500BBA2AA /* CheckAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BC8532184E2A500BBA2AA /* CheckAccessibility.swift */; };
 		BF_127671831555 /* FirstRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_158734516808 /* FirstRun.swift */; };
 		BF_176493698303 /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_313939739558 /* LaunchAtLogin.framework */; };
 		BF_186471333246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FR_554209460677 /* Assets.xcassets */; };
@@ -32,6 +31,7 @@
 		BF_583701331972 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_861919633272 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_590185752771 /* MASShortcut.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_562443839300 /* MASShortcut.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_621086584827 /* Cooldown.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_281835805159 /* Cooldown.swift */; };
+		BF_631936102066 /* CheckAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_524977524420 /* CheckAccessibility.swift */; };
 		BF_641418428753 /* PreferencesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_739745727701 /* PreferencesVC.swift */; };
 		BF_644826466386 /* AXSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_541606073039 /* AXSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_690663366521 /* Fabric.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_496120547107 /* Fabric.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -46,7 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5A7BC8512184DC3100BBA2AA /* PBXContainerItemProxy */ = {
+		5AC9AEAD2184E6AA008B45FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = P_4799458375734 /* Project object */;
 			proxyType = 1;
@@ -75,7 +75,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5A7BC8532184E2A500BBA2AA /* CheckAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAccessibility.swift; sourceTree = "<group>"; };
 		FR_114064246828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FR_126152028234 /* GetLastMenuItemXPositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLastMenuItemXPositionTests.swift; sourceTree = "<group>"; };
 		FR_156989833044 /* BoardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingScreen.swift; sourceTree = "<group>"; };
@@ -97,6 +96,7 @@
 		FR_479945837573 /* Dozer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dozer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_496120547107 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Frameworks/Fabric.framework; sourceTree = "<group>"; };
 		FR_517557359719 /* GeneralVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralVC.swift; sourceTree = "<group>"; };
+		FR_524977524420 /* CheckAccessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAccessibility.swift; sourceTree = "<group>"; };
 		FR_541606073039 /* AXSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AXSwift.framework; sourceTree = "<group>"; };
 		FR_554209460677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FR_558612881203 /* DozerStatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DozerStatusItem.swift; sourceTree = "<group>"; };
@@ -164,12 +164,12 @@
 		G_2554562156446 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				FR_524977524420 /* CheckAccessibility.swift */,
 				FR_281835805159 /* Cooldown.swift */,
 				FR_158734516808 /* FirstRun.swift */,
 				FR_418230197523 /* GetLastMenuItemXPosition.swift */,
 				FR_848264009291 /* HandleMouseMoved.swift */,
 				FR_273519345937 /* StatusBarIconController.swift */,
-				5A7BC8532184E2A500BBA2AA /* CheckAccessibility.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -319,12 +319,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = "CL_479945837573-1" /* Build configuration list for PBXNativeTarget "Dozer" */;
 			buildPhases = (
+				SSBP_6009087431 /* Unused */,
+				5A46492E2185BF1B00FA83C7 /* SwiftLint */,
 				SBP_47994583757 /* Sources */,
 				RBP_47994583757 /* Resources */,
 				FBP_47994583757 /* Frameworks */,
 				CFBP_8437081002 /* Embed Frameworks */,
 				SSBP_8188862981 /* LaunchAtLogin */,
-				SSBP_6009087431 /* Unused */,
 				SSBP_6606162705 /* LinkFabric */,
 			);
 			buildRules = (
@@ -345,7 +346,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				5A7BC8522184DC3100BBA2AA /* PBXTargetDependency */,
+				5AC9AEAE2184E6AA008B45FF /* PBXTargetDependency */,
 			);
 			name = DozerTests_macOS;
 			productName = DozerTests_macOS;
@@ -404,6 +405,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5A46492E2185BF1B00FA83C7 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		SSBP_6009087431 /* Unused */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,7 +435,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "chmod +x ./Scripts/Unused.rb;\n./Scripts/Unused.rb xcode";
+			shellScript = "chmod +x ./Scripts/Unused.rb;\n./Scripts/Unused.rb xcode --ignore \"Carthage/\"\n";
 		};
 		SSBP_6606162705 /* LinkFabric */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -456,9 +475,9 @@
 				BF_402919444426 /* AboutVC.swift in Sources */,
 				BF_762364267611 /* AppDelegate.swift in Sources */,
 				BF_215361843810 /* BoardingScreen.swift in Sources */,
+				BF_631936102066 /* CheckAccessibility.swift in Sources */,
 				BF_621086584827 /* Cooldown.swift in Sources */,
 				BF_803584487163 /* DozerStatusItem.swift in Sources */,
-				5A7BC8542184E2A500BBA2AA /* CheckAccessibility.swift in Sources */,
 				BF_553481373512 /* EventMonitor.swift in Sources */,
 				BF_127671831555 /* FirstRun.swift in Sources */,
 				BF_495210081770 /* GeneralVC.swift in Sources */,
@@ -485,10 +504,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5A7BC8522184DC3100BBA2AA /* PBXTargetDependency */ = {
+		5AC9AEAE2184E6AA008B45FF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = NT_479945837573 /* Dozer */;
-			targetProxy = 5A7BC8512184DC3100BBA2AA /* PBXContainerItemProxy */;
+			targetProxy = 5AC9AEAD2184E6AA008B45FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

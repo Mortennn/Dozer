@@ -6,7 +6,7 @@ func getLastMenuItemXPosition(from app:NSRunningApplication) -> CGFloat {
   guard let uiApp = Application(app) else {
     return 0
   }
-  
+
   var menuItemRightPosition:[CGFloat] = [0]
   do {
     if let menuBar: UIElement = try uiApp.attribute(.menuBar) {
@@ -29,4 +29,3 @@ func getLastMenuItemXPosition(from app:NSRunningApplication) -> CGFloat {
   
   return closestMenuItemFrame
 }
-

@@ -66,23 +66,19 @@ class DozerStatusItem {
   }
   
   var isShown:Bool {
-    get {
-      return (statusItem.length == shownLength)
-    }
+    return (statusItem.length == shownLength)
   }
   
   var isHidden:Bool {
-    get {
-      return (statusItem.length == hiddenLength)
-    }
+    return (statusItem.length == hiddenLength)
   }
   
   internal func handleMouseMoved(mouseLocation:NSPoint) {
-    if isMouseInStatusBar(with: mouseLocation) && listenForMouseExit.shared.mouseHasExited {
+    if isMouseInStatusBar(with: mouseLocation) && ListenForMouseExit.shared.mouseHasExited {
       self.show()
-      listenForMouseExit.shared.mouseHasExited = false
+      ListenForMouseExit.shared.mouseHasExited = false
     } else if !isMouseInStatusBar(with: mouseLocation) {
-      listenForMouseExit.shared.mouseHasExited = true
+      ListenForMouseExit.shared.mouseHasExited = true
     }
   }
   
@@ -114,13 +110,11 @@ class DozerStatusItem {
   }
   
   internal var xPositionOnScreen:CGFloat {
-    get {
-      guard let dozerIconFrame = statusItem.button?.window?.frame else {
-        return 0
-      }
-      let dozerIconXPosition = dozerIconFrame.origin.x + dozerIconFrame.width - shownLength
-      return dozerIconXPosition
+    guard let dozerIconFrame = statusItem.button?.window?.frame else {
+      return 0
     }
+    let dozerIconXPosition = dozerIconFrame.origin.x + dozerIconFrame.width - shownLength
+    return dozerIconXPosition
   }
   
 }

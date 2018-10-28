@@ -12,7 +12,7 @@ class GeneralVC: NSViewController {
     
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height)
+    self.preferredContentSize = NSSize(width:self.view.frame.size.width, height: self.view.frame.size.height)
     
     // create hotkey view
     ToggleMenuItemsView.associatedUserDefaultsKey = UserDefaultKeys.Shortcuts.ToggleMenuItems
@@ -75,9 +75,7 @@ extension NSButton {
   }
   
   var isOn:Bool {
-    get {
-      return (state == .on)
-    }
+    return (state == .on)
   }
   
 }

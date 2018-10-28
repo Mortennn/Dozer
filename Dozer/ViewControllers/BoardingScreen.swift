@@ -11,7 +11,7 @@ class BoardingScreen: NSViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height)
+    self.preferredContentSize = NSSize(width: self.view.frame.size.width, height: self.view.frame.size.height)
     
     // button config
     ContinueButton.focusRingType = .none
@@ -28,9 +28,12 @@ class BoardingScreen: NSViewController {
     moveDozer.controlsStyle = .none
     moveDozer.player?.actionAtItemEnd = .none
     
-    NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: moveDozer.player?.currentItem, queue: .main) { _ in
-      self.moveDozer.player?.seek(to: CMTime.zero)
-      self.moveDozer.player?.play()
+    NotificationCenter.default.addObserver(
+      forName: .AVPlayerItemDidPlayToEndTime,
+      object: moveDozer.player?.currentItem,
+      queue: .main) { _ in
+        self.moveDozer.player?.seek(to: CMTime.zero)
+        self.moveDozer.player?.play()
     }
   }
   
@@ -40,7 +43,13 @@ class BoardingScreen: NSViewController {
   }
 
   func show() {
-    let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height), styleMask: [.titled, .miniaturizable], backing: .buffered, defer: false)
+    let window = NSWindow(
+      contentRect: NSRect(x: 0, y: 0,
+      width: self.view.frame.width,
+      height: self.view.frame.height),
+      styleMask: [.titled, .miniaturizable],
+      backing: .buffered,
+      defer: false)
     window.contentView?.addSubview(self.view)
     window.makeKeyAndOrderFront(nil)
     NSApp.activate(ignoringOtherApps: true)
@@ -60,7 +69,7 @@ class BoardingScreen: NSViewController {
   }
   
   @IBAction func OpenAccessibility(_ sender: NSButton) {
-    let _ = UIElement.isProcessTrusted(withPrompt: true)
+    _ = UIElement.isProcessTrusted(withPrompt: true)
   }
   
 }

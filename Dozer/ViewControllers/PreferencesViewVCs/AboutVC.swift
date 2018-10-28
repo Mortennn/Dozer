@@ -8,7 +8,7 @@ class AboutVC: NSViewController {
   
   override func viewDidLoad() {
   super.viewDidLoad()
-    self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height)
+    self.preferredContentSize = NSSize(width: self.view.frame.size.width, height: self.view.frame.size.height)
     
     // check for updates button
     CheckForUpdates.target = SUUpdater.shared()!
