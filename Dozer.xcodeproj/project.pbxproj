@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AF60A78218663C1002450BD /* TestingValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF60A77218663C1002450BD /* TestingValues.swift */; };
 		BF_127671831555 /* FirstRun.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_158734516808 /* FirstRun.swift */; };
 		BF_176493698303 /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_313939739558 /* LaunchAtLogin.framework */; };
 		BF_186471333246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FR_554209460677 /* Assets.xcassets */; };
@@ -24,7 +25,6 @@
 		BF_441468167138 /* HandleMouseMoved.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_848264009291 /* HandleMouseMoved.swift */; };
 		BF_457832268999 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_861919633272 /* Sparkle.framework */; };
 		BF_495210081770 /* GeneralVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_517557359719 /* GeneralVC.swift */; };
-		BF_515285622931 /* DozerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_363539180751 /* DozerTests.swift */; };
 		BF_548360096900 /* AXSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_541606073039 /* AXSwift.framework */; };
 		BF_553481373512 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_431735724916 /* EventMonitor.swift */; };
 		BF_565824401567 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_496120547107 /* Fabric.framework */; };
@@ -75,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5AF60A77218663C1002450BD /* TestingValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingValues.swift; sourceTree = "<group>"; };
 		FR_114064246828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FR_126152028234 /* GetLastMenuItemXPositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLastMenuItemXPositionTests.swift; sourceTree = "<group>"; };
 		FR_156989833044 /* BoardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingScreen.swift; sourceTree = "<group>"; };
@@ -87,7 +88,6 @@
 		FR_273519345937 /* StatusBarIconController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarIconController.swift; sourceTree = "<group>"; };
 		FR_281835805159 /* Cooldown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cooldown.swift; sourceTree = "<group>"; };
 		FR_313939739558 /* LaunchAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LaunchAtLogin.framework; sourceTree = "<group>"; };
-		FR_363539180751 /* DozerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DozerTests.swift; sourceTree = "<group>"; };
 		FR_418230197523 /* GetLastMenuItemXPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLastMenuItemXPosition.swift; sourceTree = "<group>"; };
 		FR_431735724916 /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		FR_465314535169 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 		G_2589714072103 /* DozerTests */ = {
 			isa = PBXGroup;
 			children = (
-				FR_363539180751 /* DozerTests.swift */,
+				5AF60A77218663C1002450BD /* TestingValues.swift */,
 				FR_648707474633 /* Info.plist */,
 				G_1804179293831 /* LogicTests */,
 				G_7070042654754 /* ObjectsTests */,
@@ -495,8 +495,8 @@
 			files = (
 				BF_806926818292 /* CooldownTests.swift in Sources */,
 				BF_223642774034 /* DozerStatusItemTests.swift in Sources */,
-				BF_515285622931 /* DozerTests.swift in Sources */,
 				BF_260473327869 /* GetLastMenuItemXPositionTests.swift in Sources */,
+				5AF60A78218663C1002450BD /* TestingValues.swift in Sources */,
 				BF_364218488136 /* HandleMouseMovedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

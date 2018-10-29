@@ -7,8 +7,8 @@
 	<a href="https://img.shields.io/badge/platform-macOS-lightgrey.svg">
  		<img src="https://img.shields.io/badge/platform-macOS-lightgrey.svg" alt="platform">
 	</a>
-	<a href="https://img.shields.io/badge/requirements-macOS Sierra+-ff69b4.svg">
- 		<img src="https://img.shields.io/badge/requirements-macOS Sierra+-ff69b4.svg" alt="systemrequirements">
+	<a href="https://img.shields.io/badge/requirements-macOS High Sierra+-ff69b4.svg">
+ 		<img src="https://img.shields.io/badge/requirements-macOS High Sierra+-ff69b4.svg" alt="systemrequirements">
 	</a>
 	<a href="https://swift.org/">
  		<img src="https://img.shields.io/badge/code-Swift-yellow.svg" alt="code">
@@ -43,4 +43,6 @@ Manual:
 - Right click the Dozer icon to open preferences.
 
 ## Requirements
-macOS version >= 10.12
+macOS version >= 10.13 
+
+(Dozer might still run on macOS Sierra, but some are experiencing issues with it)
