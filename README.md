@@ -13,6 +13,9 @@
 	<a href="https://swift.org/">
  		<img src="https://img.shields.io/badge/code-Swift-yellow.svg" alt="code">
 	</a>
+	<a href="http://hits.dwyl.io/Mortennn/Mortennn/Dozer.svg">
+ 		<img width="0" src="http://hits.dwyl.io/Mortennn/Mortennn/Dozer.svg" alt="HitCount">
+	</a>
 </p>
 
 ## 🚀 Dozer
