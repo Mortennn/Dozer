@@ -41,15 +41,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     // Menu Bar Click
-    NSEvent.addLocalMonitorForEvents(matching: .leftMouseUp) { (event) -> NSEvent? in
-      if UserDefaults.standard.bool(forKey: UserDefaultKeys.ShowIconsOnHover.defaultKey) {
-        return event
-      }
-      let mouseLocation = NSEvent.mouseLocation
-      dozerStatusItem.handleClickOnMenuBar(mouseLocation: mouseLocation)
-      return event
-    }
-    
     NSEvent.addGlobalMonitorForEvents(matching: .leftMouseUp) { (_) in
       if UserDefaults.standard.bool(forKey: UserDefaultKeys.ShowIconsOnHover.defaultKey) {
         return
