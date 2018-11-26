@@ -1,5 +1,5 @@
 <p align="center">
-	<img width="200" height="200" margin-right="100%" src="https://github.com/Mortennn/Dozer/blob/master/Dozer/Resources/Assets.xcassets/AppIcon.appiconset/Icon_512x512%402x.png">
+	<img width="200" height="200" margin-right="100%" src="https://github.com/Mortennn/Dozer/blob/master/AppIcon.png">
 </p>
 <p align="center">
 <a href="https://github.com/Mortennn/Dozer/releases/latest">
@@ -47,5 +47,3 @@ Manual:
 
 ## Requirements
 macOS version >= 10.13 
-
-(Dozer might still run on macOS Sierra, but some are experiencing issues with it)
