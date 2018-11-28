@@ -10,9 +10,6 @@
 	<a href="https://img.shields.io/badge/requirements-macOS High Sierra+-ff69b4.svg">
  		<img src="https://img.shields.io/badge/requirements-macOS High Sierra+-ff69b4.svg" alt="systemrequirements">
 	</a>
-	<a href="https://swift.org/">
- 		<img src="https://img.shields.io/badge/code-Swift-yellow.svg" alt="code">
-	</a>
 	<a href="http://hits.dwyl.io/Mortennn/Mortennn/Dozer.svg">
  		<img width="0" src="http://hits.dwyl.io/Mortennn/Mortennn/Dozer.svg" alt="HitCount">
 	</a>
