@@ -37,7 +37,7 @@ Manual:
 1. [Download](https://github.com/Mortennn/Dozer/releases/latest), open, and drag the app to the Applications folder.
 2. Open Dozer and drag the icon in your menu bar (hold CMD) to the right so it is between some other icons.
 
-**Important: Dozer needs to be allowed in the accessibility preferences to work properly.**
+**IMPORTANT: Dozer needs to be allowed in the accessibility preferences to work properly. Also, please restart Dozer afterwards for the changes to take effect.**
 
 ## Usage
 - (CMD+drag) to move Dozer around in the menu bar.
