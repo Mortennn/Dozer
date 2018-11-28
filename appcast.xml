@@ -23,5 +23,14 @@
 <pubDate>mon., 26 nov. 2018 22:04:10 +0100</pubDate>
 <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
 <enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.2.0/Dozer.2.2.0.dmg" sparkle:version="10" sparkle:shortVersionString="2.2.0" length="10588489" type="application/octet-stream" sparkle:edSignature="y6RMetJhkMfwsd90Dlw0fqz6S2/7BLFzH4V05fPGePLuOfrmQpT9RQW1q4vWWbdJLeQ4QZ+Muw9/vLaY/DWfDg=="/>
+<sparkle:deltas>
+<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.2.0/Dozer10-9.delta" sparkle:version="10" sparkle:shortVersionString="2.2.0" sparkle:deltaFrom="9" length="2106895" type="application/octet-stream" sparkle:edSignature="OHtx6VjbywbRBSZF/TIZq0e7eobKQdPvkJ3nVSi2CR8C8gOrlEWpTAXE0xwzEI/jDd+stPQIV6ACUnh+Db+GBA=="/></sparkle:deltas>
 </item>
+<item>
+<title>2.1.0</title>
+<pubDate>fri., 26 oct. 2018 23:01:14 +0200</pubDate>
+<sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
+<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.1.0/Dozer.2.1.0.dmg" sparkle:version="9" sparkle:shortVersionString="2.1.0" length="10145525" type="application/octet-stream" sparkle:edSignature="IvwhNnd/l1F3k+XmrX2/SWt9FHdVLRKv7OYmMO3pbkBv8UiJnInLL6Bhszdp98sN4xU6+kouk5JDEJk6qWAMCQ=="/>
+</item>
+
 </channel></rss>
