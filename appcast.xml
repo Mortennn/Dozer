@@ -2,6 +2,21 @@
 <channel>
 <title>Dozer</title>
 <item>
+<title>2.2.2</title>
+<description><![CDATA[
+<h2>1 bug fix</h2>
+<p>Quick update which solves an issue where Dozer would request for accessibility access even when it was already given.</p>
+]]>
+</description>
+<pubDate>lør., 01 dec. 2018 17:18:40 +0100</pubDate>
+<sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
+<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.2.2/Dozer.2.2.2.dmg" sparkle:version="12" sparkle:shortVersionString="2.2.2" length="10604954" type="application/octet-stream" sparkle:edSignature="LpF0NSPomPAVLboSd18GMaD23SHDNIXKrma1V0slA26oH2wB6+aP/L+d2WzXIOI2iOHjWL63QVQXN7SPPNaWBQ=="/>
+<sparkle:deltas>
+<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.2.2/Dozer12-11.delta" sparkle:version="12" sparkle:shortVersionString="2.2.2" sparkle:deltaFrom="11" length="78351" type="application/octet-stream" sparkle:edSignature="eZAIN8vgsSj0+9lAoRRCCddN8B3EmjmU+hCiiFBzXLwIiZG5fR6DPU6Q67vBjCZSVpoEnWjARaxgCeRZyN3RCQ=="/>
+<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.2.2/Dozer12-10.delta" sparkle:version="12" sparkle:shortVersionString="2.2.2" sparkle:deltaFrom="10" length="129121" type="application/octet-stream" sparkle:edSignature="NSJmP10KZDkV+kcJlltjI+aR9NyVhKx1C0KDrkfF4jUbcA0/h2ME3CYjxbh7tEEH+vGAeX5bQ5PfzLg2tL8dBQ=="/>
+<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.2.2/Dozer12-9.delta" sparkle:version="12" sparkle:shortVersionString="2.2.2" sparkle:deltaFrom="9" length="2135982" type="application/octet-stream" sparkle:edSignature="DJiDVkZiTTREBmCCnBnKhbnkDn07r3fAbjWmNQlaabN4TZu9uw7Cw19FX9ZhKDoBqmGc39wcu81mHh4bRnBrCw=="/></sparkle:deltas>
+</item>
+<item>
 <title>2.2.1</title>
 <description><![CDATA[
 <h2>Version 2.2.1</h2>
