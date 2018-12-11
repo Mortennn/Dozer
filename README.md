@@ -34,13 +34,10 @@ Manual:
 1. [Download](https://github.com/Mortennn/Dozer/releases/latest), open, and drag the app to the Applications folder.
 2. Open Dozer and drag the icon in your menu bar (hold CMD) to the right so it is between some other icons.
 
-**IMPORTANT: Dozer needs to be allowed in the accessibility preferences to work properly. Also, please restart Dozer afterwards for the changes to take effect.**
-
 ## Usage
-- (CMD+drag) to move Dozer around in the menu bar.
-- Click the Dozer icon to hide menu bar items.
-- Click menu bar (where there are no icons) to show the menu items again.
-- Right click the Dozer icon to open preferences.
+<li>(CMD+drag) to move the Dozer icons around in the menu bar.</li>
+<li>Click any of the Dozer icons to hide menu bar items.</li>
+<li>Right-click the Dozer icon to open the about page of Dozer.</li>
 
 ## Requirements
 macOS version >= 10.13 

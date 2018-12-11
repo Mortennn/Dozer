@@ -2,63 +2,27 @@
 <channel>
 <title>Dozer</title>
 <item>
-<title>2.2.2</title>
+<title>3.0.0</title>
 <description><![CDATA[
-<h2>1 bug fix</h2>
-<p>Quick update which solves an issue where Dozer would request for accessibility access even when it was already given.</p>
-]]>
-</description>
-<pubDate>lør., 01 dec. 2018 17:18:40 +0100</pubDate>
-<sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.2.2/Dozer.2.2.2.dmg" sparkle:version="12" sparkle:shortVersionString="2.2.2" length="10604954" type="application/octet-stream" sparkle:edSignature="LpF0NSPomPAVLboSd18GMaD23SHDNIXKrma1V0slA26oH2wB6+aP/L+d2WzXIOI2iOHjWL63QVQXN7SPPNaWBQ=="/>
-<sparkle:deltas>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.2.2/Dozer12-11.delta" sparkle:version="12" sparkle:shortVersionString="2.2.2" sparkle:deltaFrom="11" length="78351" type="application/octet-stream" sparkle:edSignature="eZAIN8vgsSj0+9lAoRRCCddN8B3EmjmU+hCiiFBzXLwIiZG5fR6DPU6Q67vBjCZSVpoEnWjARaxgCeRZyN3RCQ=="/>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.2.2/Dozer12-10.delta" sparkle:version="12" sparkle:shortVersionString="2.2.2" sparkle:deltaFrom="10" length="129121" type="application/octet-stream" sparkle:edSignature="NSJmP10KZDkV+kcJlltjI+aR9NyVhKx1C0KDrkfF4jUbcA0/h2ME3CYjxbh7tEEH+vGAeX5bQ5PfzLg2tL8dBQ=="/>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.2.2/Dozer12-9.delta" sparkle:version="12" sparkle:shortVersionString="2.2.2" sparkle:deltaFrom="9" length="2135982" type="application/octet-stream" sparkle:edSignature="DJiDVkZiTTREBmCCnBnKhbnkDn07r3fAbjWmNQlaabN4TZu9uw7Cw19FX9ZhKDoBqmGc39wcu81mHh4bRnBrCw=="/></sparkle:deltas>
-</item>
-<item>
-<title>2.2.1</title>
-<description><![CDATA[
-<h2>Version 2.2.1</h2>
-<p>A small update which improves prompting for accessibility access and fixes a critical bug in the previous version, where you could end up in an infinite loop of prompts for accessibility access.</p>
-]]>
-</description>
-<pubDate>tor., 29 nov. 2018 20:32:16 +0100</pubDate>
-<sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.2.1/Dozer.2.2.1.dmg" sparkle:version="11" sparkle:shortVersionString="2.2.1" length="10604589" type="application/octet-stream" sparkle:edSignature="50bgiI7eJYLnXIbsC8g29siNDkhzpkK0jeWXLNjAmVbBtHLaSrPHzUII+NjGPHl4Nq58XdUYTnZ9lB/45cAgAw=="/>
-<sparkle:deltas>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.2.1/Dozer11-10.delta" sparkle:version="11" sparkle:shortVersionString="2.2.1" sparkle:deltaFrom="10" length="108457" type="application/octet-stream" sparkle:edSignature="wHTbsFNh19e+2WkClMfgdEChta9HE9Nbp4sGgnu5/fWylbigLAySzCqTKkq2qQQrt+FE1cX5siLJRcFAeEqJCQ=="/>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.2.1/Dozer11-9.delta" sparkle:version="11" sparkle:shortVersionString="2.2.1" sparkle:deltaFrom="9" length="2127800" type="application/octet-stream" sparkle:edSignature="OJsPiYNdKk/KftXRfAd71h055iwFrOcyV9txCmXi4VQWqg5IXrXKhMw0LSLi9+jHYfqmk9qwyJLxAa2ACUUZAQ=="/></sparkle:deltas>
-</item>
-
-<item>
-<title>2.2.0</title>
-<description><![CDATA[
-<h2>Version 2.2.0</h2>
-<p>This update brings a lot of bug fixes and overall stability improvements. Now, development will finally be focused on adding new features.</p>
+<h1>Version 3</h1>
+<p>This update brings a lot of bug fixes and overall stability improvements. The functionality of Dozer has also changed, so please read the new usage guide</p>
+<h2>How to use Dozer v3</h2>
+<p>There are now two Dozer icons. The icon to the left hides all icons on the left side and disappears when doing so. Show the menu bar icons again by clicking the other Dozer icon.</p>
 <ul>
-    <li>Removed ”show icons on hover” due to too much CPU usage.</li>
-    <li>CPU usage is now significantly less when listening for click on empty space on the menu bar.</li>
-    <li>Dozer will not be triggered unintentionally on drag.</li>
-    <li>Improved onboarding.</li>
-    <li>Improved prompting for accessibility access.</li>
-    <li>Fixed bug where the Dozer preferences window randomly disappeared when clicking the Dozer menu bar icon.</li>
-    <li>Fixed update alert, so it will not be hidden behind Dozer preferences window.</li>
-    <li>Fixed click detection on menu bar empty space with multiple screens.</li>
-    <li>Fixed issue where dozer would be triggered unintentionally when in fullscreen.</li>
+    <li>(CMD+drag) to move the Dozer icons around in the menu bar.</li>
+    <li>Click any of the Dozer icons to hide menu bar items.</li>
+    <li>Right-click the Dozer icon to open the about page of Dozer.</li>
 </ul>
-<p>I have decided to only publish the compiled app for now. I will share the codebase later on, when it is more organized, so people actually can understand how the code works, and eventually help to develop the app. It takes time to keep the code synced with Github, and I would rather use that time developing the app.</p>
+<h2>What have been improved</h2>
+<ul>
+    <li>Dozer does not need accessibility access anymore.</li>
+    <li>The CPU usage is now significantly less.</li>
+    <li>Fixed bug where Dozer would interrupt popups.</li>
+</ul>
 ]]>
 </description>
-<pubDate>ons., 28 nov. 2018 22:48:55 +0100</pubDate>
+<pubDate>tue., 11 dec. 2018 20:58:24 +0100</pubDate>
 <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.2.0/Dozer.2.2.0.dmg" sparkle:version="10" sparkle:shortVersionString="2.2.0" length="10598748" type="application/octet-stream" sparkle:edSignature="B78jAmm7wM521VmOXcT5nwj/MNoeKvinY2HgomVpRv7o9Dwnjwab6YSMewQd0nqjk/2BVDL6/RLIUUAgGio2Dg=="/>
-</item>
-
-<item>
-<title>2.1.0</title>
-<pubDate>fre., 26 okt. 2018 23:01:14 +0200</pubDate>
-<sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/2.1.0/Dozer.2.1.0.dmg" sparkle:version="9" sparkle:shortVersionString="2.1.0" length="10145525" type="application/octet-stream" sparkle:edSignature="IvwhNnd/l1F3k+XmrX2/SWt9FHdVLRKv7OYmMO3pbkBv8UiJnInLL6Bhszdp98sN4xU6+kouk5JDEJk6qWAMCQ=="/>
+<enclosure url="https://github.com/Mortennn/Dozer/releases/download/3.0.0/Dozer.3.0.0.dmg" sparkle:version="14" sparkle:shortVersionString="3.0.0" length="5983710" type="application/octet-stream" sparkle:edSignature="/44EmFgNQhS1C+gj+6hG1BfcqF08dAUbfLYH6AQG9LCnx+4vtGMSI3l4pYbCGDf9dFO+IWqflvBGJcNEqOA/BQ=="/>
 </item>
 </channel></rss>
