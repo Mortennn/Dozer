@@ -2,41 +2,14 @@
 <channel>
 <title>Dozer</title>
 <item>
-<title>3.0.0</title>
+<title>3.0.2</title>
 <description><![CDATA[
-<h1>Version 3</h1>
-<p>This update brings a lot of bug fixes and overall stability improvements. The functionality of Dozer has also changed, so please read the new usage guide</p>
-<h2>How to use Dozer v3</h2>
-<p>There are now two Dozer icons. The icon to the left hides all icons on the left side and disappears when doing so. Show the menu bar icons again by clicking the other Dozer icon.</p>
-<ul>
-    <li>(CMD+drag) to move the Dozer icons around in the menu bar.</li>
-    <li>Click any of the Dozer icons to hide menu bar items.</li>
-    <li>Right-click the Dozer icon to open the about page of Dozer.</li>
-</ul>
-<h2>What have been improved</h2>
-<ul>
-    <li>Dozer does not need accessibility access anymore.</li>
-    <li>The CPU usage is now significantly less.</li>
-    <li>Fixed bug where Dozer would interrupt popups.</li>
-</ul>
+<h1>Version 3.0.2</h1>
+<p>Quick update again, which disables the boarding screen.</p>
 ]]>
 </description>
-<pubDate>tue., 11 dec. 2018 20:58:24 +0100</pubDate>
+<pubDate>wed., 12 dec. 2018 05:39:06 +0100</pubDate>
 <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/3.0.0/Dozer.3.0.0.dmg" sparkle:version="14" sparkle:shortVersionString="3.0.0" length="5983710" type="application/octet-stream" sparkle:edSignature="/44EmFgNQhS1C+gj+6hG1BfcqF08dAUbfLYH6AQG9LCnx+4vtGMSI3l4pYbCGDf9dFO+IWqflvBGJcNEqOA/BQ=="/>
+<enclosure url="https://github.com/Mortennn/Dozer/releases/download/3.0.2/Dozer3.0.2.dmg" sparkle:version="16" sparkle:shortVersionString="3.0.2" length="9307698" type="application/octet-stream" sparkle:edSignature="/w9GNVNSMTh4h4/H7s6LiDfsvZwpcLVzCQsMjsQWlXrew2M8YG/QQ/Qn6FkUyIdJnPH5qtKbF6A4W8LHQBxWDg=="/>
 </item>
-<item>
-<title>3.0.1</title>
-<description><![CDATA[
-<h1>Version 3.0.1</h1>
-<p>Quick fix for boarding screen getting stuck. I apologize!</p>
-]]>
-</description>
-<pubDate>wed., 12 dec. 2018 00:15:24 +0100</pubDate>
-<sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/3.0.1/Dozer.3.0.1.dmg" sparkle:version="15" sparkle:shortVersionString="3.0.1" length="9314875" type="application/octet-stream" sparkle:edSignature="KOAG9Gkr/VE3PIJxoqvUoOwZD/7L+LoheUl4JD7Yy3rXrcE/cll0e4cevqEFO8Xa56qi0ske+ytA6NbUbwnwCw=="/>
-<sparkle:deltas>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/3.0.1/Dozer15-14.delta" sparkle:version="15" sparkle:shortVersionString="3.0.1" sparkle:deltaFrom="14" length="3314644" type="application/octet-stream" sparkle:edSignature="OMKpHU2s6BHoI4h+GpGC6Omj6EoPdsVxEyaaUZER2kXIH1iexeHijWDjmKPz4wVhUFZpwvniiRcu8kD1o31xBA=="/></sparkle:deltas>
-</item>
-
 </channel></rss>
