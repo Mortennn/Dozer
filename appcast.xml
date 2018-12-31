@@ -2,14 +2,9 @@
 <channel>
 <title>Dozer</title>
 <item>
-<title>3.0.2</title>
-<description><![CDATA[
-<h1>Version 3.0.2</h1>
-<p>Quick update again, which disables the boarding screen.</p>
-]]>
-</description>
-<pubDate>wed., 12 dec. 2018 05:39:06 +0100</pubDate>
+<title>3.0.3</title>
+<pubDate>sun., 30 dec. 2018 20:13:42 +0100</pubDate>
 <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/3.0.2/Dozer.3.0.2.dmg" sparkle:version="16" sparkle:shortVersionString="3.0.2" length="9307698" type="application/octet-stream" sparkle:edSignature="/w9GNVNSMTh4h4/H7s6LiDfsvZwpcLVzCQsMjsQWlXrew2M8YG/QQ/Qn6FkUyIdJnPH5qtKbF6A4W8LHQBxWDg=="/>
-</item>
+<enclosure url="https://github.com/Mortennn/Dozer/releases/download/3.0.3/Dozer.3.0.3.dmg" sparkle:version="17" sparkle:shortVersionString="3.0.3" length="9315236" type="application/octet-stream" sparkle:edSignature="61+6GWHatOeFrA4BzQlpbWmrfr7tqAEx9QBBxJ0QYRvWHqS+CiZ8m5xOReDaJz1vvb6gsRj1LTGWmY4ZQ4bcDQ=="/>
+<sparkle:releaseNotesLink>https://raw.githubusercontent.com/Mortennn/Dozer/master/changelog.html</sparkle:releaseNotesLink></item>
 </channel></rss>
