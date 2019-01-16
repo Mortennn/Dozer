@@ -2,14 +2,10 @@
 <channel>
 <title>Dozer</title>
 <item>
-<title>3.0.3</title>
-<description>
-<![CDATA[
-<ul> <li>Small bug fixes and minor improvements.</li> <li>Fixes an issue where all Dozer icons would be hidden.</li> </ul>
-]]>
-</description>
-<pubDate>sun., 30 dec. 2018 20:13:42 +0100</pubDate>
+<title>3.0.4</title>
+<description><![CDATA[<ul><li>Every release will now be notarized by Apple which improves security.</li><li>Minor improvements.</li></ul>]]></description>
+<pubDate>wed., 16 jan. 2019 16:25:47 +0100</pubDate>
 <sparkle:minimumSystemVersion>10.12</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/v3.0.3/Dozer.3.0.3.dmg" sparkle:version="17" sparkle:shortVersionString="3.0.3" length="9315236" type="application/octet-stream" sparkle:edSignature="61+6GWHatOeFrA4BzQlpbWmrfr7tqAEx9QBBxJ0QYRvWHqS+CiZ8m5xOReDaJz1vvb6gsRj1LTGWmY4ZQ4bcDQ=="/>
+<enclosure url="https://github.com/Mortennn/Dozer/releases/download/v3.0.4/Dozer.3.0.4.dmg" sparkle:version="18" sparkle:shortVersionString="3.0.4" length="8333774" type="application/octet-stream" sparkle:edSignature="LTwpDKrHHkmgthTAHBV1ROOjhi1FTH2xGFA+2nxY3WsXjUyWKt0kFSA9PLTSlFIWPFDO+TzkhGuj3b6FCdP/Ag=="/>
 </item>
 </channel></rss>
