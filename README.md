@@ -32,7 +32,7 @@ Manual:
 2. Open Dozer and drag the icon in your menu bar (hold CMD) to the right so it is between some other icons.
 
 ## Usage
-* `⌘`  + Drag to move the Dozer icons around in the menu bar.
+* `⌘` + drag to move the Dozer icons around in the menu bar.
 * Click any of the Dozer icons to hide menu bar items.
 * Right-click the Dozer icon to open the about page of Dozer.
 
