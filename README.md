@@ -1,5 +1,5 @@
 <p align="center">
-	<img width="200" height="200" margin-right="100%" src="https://github.com/Mortennn/Dozer/blob/master/AppIcon.png">
+	<img width="200" height="200" margin-right="100%" src="https://raw.githubusercontent.com/Mortennn/Dozer/master/AppIcon.png">
 </p>
 <p align="center">
 <a href="https://github.com/Mortennn/Dozer/releases/latest">
@@ -9,9 +9,6 @@
 	</a>
 	<a href="https://img.shields.io/badge/requirements-macOS High Sierra+-ff69b4.svg">
  		<img src="https://img.shields.io/badge/requirements-macOS High Sierra+-ff69b4.svg" alt="systemrequirements">
-	</a>
-	<a href="http://hits.dwyl.io/Mortennn/Mortennn/Dozer.svg">
- 		<img width="0" src="http://hits.dwyl.io/Mortennn/Mortennn/Dozer.svg" alt="HitCount">
 	</a>
 </p>
 
@@ -35,7 +32,7 @@ Manual:
 2. Open Dozer and drag the icon in your menu bar (hold CMD) to the right so it is between some other icons.
 
 ## Usage
-<li>(CMD+drag) to move the Dozer icons around in the menu bar.</li>
+<li>`⌘` + Drag to move the Dozer icons around in the menu bar.</li>
 <li>Click any of the Dozer icons to hide menu bar items.</li>
 <li>Right-click the Dozer icon to open the about page of Dozer.</li>
 
