@@ -15,7 +15,7 @@
 ## 🚀 Dozer
 Dozer lets you hide menu bar items to give your Mac a cleaner look.
 
-###### You might also like [FiScript](https://github.com/Mortennn/FiScript), which lets you execute custom scripts on your files/folders from the context menu in Finder.
+###### You might also like [FiScript](https://github.com/Mortennn/FiScript) which lets you execute custom scripts on your files/folders from the context menu in Finder.
 <p align="center">
 	<img height="100" min-width="100" src="https://github.com/Mortennn/Dozer/raw/master/demo/demo.gif" alt="desktop-image">
 </p>
