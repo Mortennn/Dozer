@@ -2,7 +2,7 @@
 <channel>
 <title>Dozer</title>
 <item>
-<title>3.0.5</title>
+<title>3.0.4</title>
 <description><![CDATA[<ul><li>New welcome screen.</li><li>Improved layout in preferences.</li><li>Minor improvements.</li></ul>]]></description>
 <pubDate>sun., 14 apr. 2019 17:56:27 +0200</pubDate>
 <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
