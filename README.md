@@ -36,5 +36,7 @@ Manual:
 * Click any of the Dozer icons to hide menu bar items.
 * Right-click the Dozer icon to open the about page of Dozer.
 
+(N.B.: Just as shown in the demo gif, you are supposed to put the icons to hide to the left of both dots, not between them, as [some](https://github.com/Mortennn/Dozer/issues/50) might have mistakenly thought at first sight.)
+
 ## Requirements
 macOS version >= 10.13 
