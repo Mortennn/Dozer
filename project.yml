@@ -1,0 +1,52 @@
+name: Dozer
+options:
+  usesTabs: false
+  tabWidth: 4
+  createIntermediateGroups: true
+  xcodeVersion: 10.2.1
+  deploymentTarget: 10.13
+targets:
+  Dozer:
+    type: application
+    platform: macOS
+    deploymentTarget: 
+      macOS: 10.13
+    configFiles:
+      Debug: Configs/Debug.xcconfig
+      Release: Configs/Release.xcconfig
+    sources:
+      - Dozer
+    postBuildScripts:
+      - path: Scripts/LaunchAtLogin.sh
+        name: Launch At Login
+        runOnlyWhenInstalling: true
+      - path: Scripts/SignFrameworks.sh
+        name: Sign Frameworks
+        runOnlyWhenInstalling: true
+      - script: /usr/local/bin/swiftgen
+        name: Generate files using SwiftGen
+      - script: Scripts/Swiftlint.sh
+        name: Swiftlint
+    settings:
+      base:
+        CODE_SIGN_ENTITLEMENTS: Dozer/Other/Dozer.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: "com.mortennn.Dozer"
+        SWIFT_VERSION: 5
+        DEBUG_INFORMATION_FORMAT: "dwarf-with-dsym"
+        ENABLE_HARDENED_RUNTIME: true
+        MACOSX_DEPLOYMENT_TARGET: 10.13
+    dependencies:
+      - carthage: LaunchAtLogin
+      - carthage: Defaults
+      - carthage: Preferences
+      - carthage: MASShortcut
+      - carthage: Sparkle
+      - carthage: Crashlytics
+        embed: false
+      - carthage: Fabric
+        embed: false
+schemes:
+  Dozer:
+    build:
+      targets:
+        Dozer: all

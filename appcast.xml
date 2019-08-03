@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+<channel>
+<title>Dozer</title>
+<item>
+<title>3.0.5</title>
+<description><![CDATA[<ul><li>New welcome screen.</li><li>Improved layout in preferences.</li><li>Minor improvements.</li></ul>]]></description>
+<pubDate>sun., 14 apr. 2019 17:56:27 +0200</pubDate>
+<sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
+<enclosure url="https://github.com/Mortennn/Dozer/releases/download/v3.0.5/Dozer.3.0.5.dmg" sparkle:version="19" sparkle:shortVersionString="3.0.5" length="12378694" type="application/octet-stream" sparkle:edSignature="Yxy+Y0AZdu/eHz2FtV2+AU3xLYOGSs5Mhn0lxCTOyZKdvHE1B565QYq9rgQPmsPyGw392gAQw/fVW9qi3Q2YCw=="/>
+</item>
+</channel></rss>
