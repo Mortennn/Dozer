@@ -1,6 +1,7 @@
 build:
 	@brew bundle
 	@carthage bootstrap --cache-builds --platform osx
+	@mkdir Dozer/Other/Generated
 	@swiftgen
 	@xcodegen 
 	@xed "."
