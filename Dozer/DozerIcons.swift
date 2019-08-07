@@ -15,6 +15,7 @@ public final class DozerIcons {
     private init() {
         mouseEvents.add(.init(mask: [.leftMouseDown], handler: leftMouseDown))
         mouseEvents.add(.init(mask: [.leftMouseUp], handler: leftMouseUp))
+        mouseEvents.start()
 
         dozerIcons.append(NormalStatusIcon())
 
