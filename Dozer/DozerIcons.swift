@@ -9,7 +9,7 @@ public final class DozerIcons {
     static var shared = DozerIcons()
     private var dozerIcons: [HelperstatusIcon] = []
     private var timerToHideDozerIcons = Timer()
-    private var dragState = DragState.none
+    private var dragState = DragState.off
     private let mouseEvents = EventMonitors()
 
     private init() {

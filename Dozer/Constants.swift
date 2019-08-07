@@ -43,7 +43,6 @@ struct AppInfo {
 enum DragState {
     case on
     case off
-    case none
 }
 
 enum StatusIconAction {
