@@ -9,14 +9,8 @@ public final class DozerIcons {
     static var shared = DozerIcons()
     private var dozerIcons: [HelperstatusIcon] = []
     private var timerToHideDozerIcons = Timer()
-    private var dragState = DragState.off
-    private let mouseEvents = EventMonitors()
 
     private init() {
-        mouseEvents.add(.init(mask: [.leftMouseDown], handler: leftMouseDown))
-        mouseEvents.add(.init(mask: [.leftMouseUp], handler: leftMouseUp))
-        mouseEvents.start()
-
         dozerIcons.append(NormalStatusIcon())
 
         if !hideBothDozerIcons {
@@ -129,53 +123,22 @@ public final class DozerIcons {
         }
     }
 
-    // MARK: Mouse events
-    private func leftMouseDown(event: NSEvent) {
-        guard
-            event.modifierFlags.contains(.command) &&
-                !event.modifierFlags.contains(.shift) &&
-                !event.modifierFlags.contains(.option) else {
-                    dragState = .off
-                    return
-        }
-
-        dragState = .on
-
-        DozerIcons.shared.show()
-    }
-
-    private func leftMouseUp(event: NSEvent) {
-        if dragState == .on {
-            DozerIcons.shared.show()
-            resetTimer()
-        }
-
-        dragState = .off
-    }
-
     // MARK: Show/hide lifecycle
     private func didShowStatusBarIcons() {
         startTimer()
-        mouseEvents.start()
     }
 
     private func didHideStatusBarIcons() {
         stopTimer()
-        mouseEvents.stop()
     }
 
     private func willHideStatusBarIcons() {
         guard defaults[.hideAfterDelayEnabled] else {
             return
         }
+
         // don't hide on user interaction with status bar
         guard !isUserInteractingWithStatusBar() else {
-            resetTimer()
-            return
-        }
-
-        // don't hide on drag events
-        guard dragState == .off else {
             resetTimer()
             return
         }

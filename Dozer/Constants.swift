@@ -40,11 +40,6 @@ struct AppInfo {
     }
 }
 
-enum DragState {
-    case on
-    case off
-}
-
 enum StatusIconAction {
     case show
     case hide
