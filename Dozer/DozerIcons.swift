@@ -24,6 +24,12 @@ public final class DozerIcons {
         if hideStatusBarIconsAfterDelay {
             startTimer()
         }
+
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { _ in
+            if self.isUserInteractingWithStatusBar() {
+                self.resetTimer()
+            }
+        }
     }
 
     // MARK: Observe changes to settings
