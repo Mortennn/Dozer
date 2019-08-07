@@ -5,8 +5,8 @@
 import Cocoa
 import Defaults
 
-public final class DozerStatusIconController {
-    static var shared = DozerStatusIconController()
+public final class DozerIcons {
+    static var shared = DozerIcons()
     private var dozerIcons: [HelperstatusIcon] = []
     private var timerToHideDozerIcons = Timer()
     private var dragState = DragState.none
@@ -112,16 +112,16 @@ public final class DozerStatusIconController {
 
     public func handleOptionClick() {
         if get(dozerIcon: .normalLeft).isShown {
-            DozerStatusIconController.shared.perform(
+            DozerIcons.shared.perform(
                 action: .toggle,
                 statusIcon: .remove
             )
         } else {
-            DozerStatusIconController.shared.perform(
+            DozerIcons.shared.perform(
                 action: .show,
                 statusIcon: .normalLeft
             )
-            DozerStatusIconController.shared.perform(
+            DozerIcons.shared.perform(
                 action: .show,
                 statusIcon: .remove
             )
@@ -140,12 +140,12 @@ public final class DozerStatusIconController {
 
         dragState = .on
 
-        DozerStatusIconController.shared.show()
+        DozerIcons.shared.show()
     }
 
     private func leftMouseUp(event: NSEvent) {
         if dragState == .on {
-            DozerStatusIconController.shared.show()
+            DozerIcons.shared.show()
             resetTimer()
         }
 
@@ -179,7 +179,7 @@ public final class DozerStatusIconController {
             return
         }
 
-        DozerStatusIconController.shared.hide()
+        DozerIcons.shared.hide()
     }
 
     // MARK: timerToHideDozerIcons methods

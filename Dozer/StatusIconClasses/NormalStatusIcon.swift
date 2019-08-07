@@ -19,14 +19,14 @@ class NormalStatusIcon: HelperstatusIcon {
         if currentEvent.modifierFlags.contains(.option) &&
             !currentEvent.modifierFlags.contains(.control) &&
             !currentEvent.modifierFlags.contains(.command) {
-            DozerStatusIconController.shared.handleOptionClick()
+            DozerIcons.shared.handleOptionClick()
 
             return
         }
 
         switch currentEvent.type {
         case .leftMouseDown:
-            DozerStatusIconController.shared.toggle()
+            DozerIcons.shared.toggle()
         case .rightMouseDown:
             appDelegate.preferencesWindowController.show(preferencePane: .general)
         default:

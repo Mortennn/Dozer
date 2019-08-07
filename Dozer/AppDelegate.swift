@@ -19,15 +19,16 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         #endif
 
         MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: UserDefaultKeys.Shortcuts.ToggleMenuItems) { [unowned self] in
-            DozerStatusIconController.shared.toggle()
+            DozerIcons.shared.toggle()
         }
 
-        _ = DozerStatusIconController.shared
+        // Initalize Dozer Icons
+        _ = DozerIcons.shared
     }
 
     // Show all Dozer icons when opening Dozer from Finder etc.
     func applicationOpenUntitledFile(_ sender: NSApplication) -> Bool {
-        DozerStatusIconController.shared.showAll()
+        DozerIcons.shared.showAll()
         return true
     }
 

@@ -64,14 +64,14 @@ final class General: NSViewController, PreferencePane {
     }
 
     @IBAction private func hideStatusBarIconsAfterDelayClicked(_ sender: NSButton) {
-        DozerStatusIconController.shared.hideStatusBarIconsAfterDelay = HideStatusBarIconsAfterDelayCheckbox.isChecked
+        DozerIcons.shared.hideStatusBarIconsAfterDelay = HideStatusBarIconsAfterDelayCheckbox.isChecked
     }
 
     @IBAction private func hideBothDozerIconsClicked(_ sender: NSButton) {
-        DozerStatusIconController.shared.hideBothDozerIcons = HideBothDozerIconsCheckbox.isChecked
+        DozerIcons.shared.hideBothDozerIcons = HideBothDozerIconsCheckbox.isChecked
     }
 
     @IBAction private func enableRemoveDozerIconClicked(_ sender: NSButton) {
-        DozerStatusIconController.shared.enableRemoveDozerIcon = EnableRemoveDozerIconCheckbox.isChecked
+        DozerIcons.shared.enableRemoveDozerIcon = EnableRemoveDozerIconCheckbox.isChecked
     }
 }

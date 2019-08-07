@@ -18,7 +18,7 @@ class RemoveStatusIcon: HelperstatusIcon {
 
         switch currentEvent.type {
         case .leftMouseDown:
-            DozerStatusIconController.shared.toggleRemove()
+            DozerIcons.shared.toggleRemove()
         case .rightMouseDown:
             appDelegate.preferencesWindowController.show(preferencePane: .general)
         default:
