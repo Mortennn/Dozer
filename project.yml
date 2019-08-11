@@ -23,9 +23,12 @@ targets:
       - path: Scripts/SignFrameworks.sh
         name: Sign Frameworks
         runOnlyWhenInstalling: true
+      - path: Scripts/Crashlytics.sh
+        name: Crashlytics
+        runOnlyWhenInstalling: true
       - script: /usr/local/bin/swiftgen
         name: Generate files using SwiftGen
-      - script: Scripts/Swiftlint.sh
+      - path: Scripts/Swiftlint.sh
         name: Swiftlint
     settings:
       base:
@@ -35,6 +38,8 @@ targets:
         DEBUG_INFORMATION_FORMAT: "dwarf-with-dsym"
         ENABLE_HARDENED_RUNTIME: true
         MACOSX_DEPLOYMENT_TARGET: 10.13
+        VERSIONING_SYSTEM: apple-generic
+        CURRENT_PROJECT_VERSION: 3.1.0
     dependencies:
       - carthage: LaunchAtLogin
       - carthage: Defaults

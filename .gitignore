@@ -1,4 +1,5 @@
 build/
+.build/
 Releases/
 Dozer.xcodeproj/
 Credentials/
@@ -6,6 +7,7 @@ Carthage/
 
 # Fastlane
 fastlane/
+fastlaneLegacy/
 Gemfile
 Gemfile.lock
 
