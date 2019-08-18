@@ -227,7 +227,12 @@ public final class DozerIcons {
         var statusBarAppsWindowInfo: [Window] = []
 
         for windowInfo in windowInfoList {
-            guard let window = Window(windowInfo) else { continue }
+            guard let window = Window(windowInfo),
+                // If the preferences window are close to the status bar it won't auto hide
+                window.owner != "Dozer" else {
+                    continue
+            }
+
             if window.isStatusIcon {
                 statusBarAppsWindowInfo.append(window)
             }
