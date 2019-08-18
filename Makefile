@@ -8,6 +8,6 @@ build:
 
 release:
 	@echo "Running Fastlane deploy"
-	@bundle exec fastlane deploy submit:true
+	@bundle exec fastlane release
 
 .PHONY: build release 
