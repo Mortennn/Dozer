@@ -1,6 +1,6 @@
 # Change Log
 
-## Next Version
+## Version 4
 New features:
 * ”Remove”-icon. Additional icon to hide/show icons with `option+click`
 * Auto-hide status bar icons #22
