@@ -6,6 +6,6 @@
 <description><![CDATA[<h2>New features in version 4:</h2><ul><li>”Remove”-icon. Additional icon to hide/show icons with `option+click`</li><li>Auto-hide status bar icons #22</li><li>”No Icon”-mode. Hide/show only using keyboard shortcut</li></ul><h2>Other:</h2><ul><li>Improved UI in preferences</li></ul><ul>]]></description>
 <pubDate>Tue, 20 Aug 2019 13:01:53 +0200</pubDate>
 <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
-<enclosure url="https://github.com/Mortennn/Dozer/releases/download/v4.0.0/Dozer.4.0.0.dmg" sparkle:version="27" sparkle:shortVersionString="4.0.0" length="8079974" type="application/octet-stream" sparkle:edSignature="rb/v6rtm7aryeWfal8i0iOQxGE5Faoc1TAnJ4Vf0aU85w8dAPPO+fAbWY0puFqk9Kg/92JAgiuSIDHu+6S7CBw=="/>
+<enclosure url="https://github.com/Mortennn/Dozer/releases/download/v4.0.0/Dozer.4.0.0.dmg" sparkle:version="27" sparkle:shortVersionString="4.0.0" length="8081734" type="application/octet-stream" sparkle:edSignature="CFXdt4FjQxevj6FfjDlpXQyHV7rYm8RGBRV8uw+nE6EulKvt04rLb8VBwjywG5GgqooXW78y073hO079KGkhAQ=="/>
 </item>
 </channel></rss>
