@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "mac",
-      "filename" : "icons8-filled-circle-24.png",
+      "filename" : "disclosureArrowSingleRight24.png",
       "scale" : "1x"
     },
     {
@@ -13,8 +13,5 @@
   "info" : {
     "version" : 1,
     "author" : "xcode"
-  },
-  "properties" : {
-    "template-rendering-intent" : "original"
   }
 }
