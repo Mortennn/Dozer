@@ -21,6 +21,7 @@
 <p align="center">
 	<img height="100" min-width="100" src="https://github.com/Mortennn/Dozer/raw/master/Stuff/demo.gif" alt="demo">
 </p>
+<a href="https://www.buymeacoffee.com/mortennn" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 <p align="center"></p>
 
 ## ⚙️ Install
