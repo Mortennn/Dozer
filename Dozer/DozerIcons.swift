@@ -8,6 +8,7 @@ import Defaults
 public final class DozerIcons {
     static var shared = DozerIcons()
     private var dozerIcons: [HelperstatusIcon] = []
+    private var timerToCheckUserInteraction = Timer()
     private var timerToHideDozerIcons = Timer()
 
     private init() {
@@ -24,12 +25,22 @@ public final class DozerIcons {
         if hideStatusBarIconsAfterDelay {
             startTimer()
         }
-
-        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { _ in
+    }
+    
+    private func startUserInteractionTimer() {
+        guard defaults[.hideAfterDelayEnabled] else {
+            stopUserInteractionTimer()
+            return
+        }
+        timerToCheckUserInteraction = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { _ in
             if self.isUserInteractingWithStatusBar() {
                 self.resetTimer()
             }
         }
+    }
+    
+    private func stopUserInteractionTimer() {
+        timerToCheckUserInteraction.invalidate()
     }
 
     // MARK: Observe changes to settings
@@ -133,10 +144,12 @@ public final class DozerIcons {
     // MARK: Show/hide lifecycle
     private func didShowStatusBarIcons() {
         startTimer()
+        startUserInteractionTimer()
     }
 
     private func didHideStatusBarIcons() {
         stopTimer()
+        stopUserInteractionTimer()
     }
 
     private func willHideStatusBarIcons() {
