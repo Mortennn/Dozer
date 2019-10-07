@@ -13,7 +13,7 @@ private struct StatusIconLength {
 class HelperstatusIcon {
     var type: StatusIconType
 
-    let statusIcon: NSStatusItem = NSStatusBar.system.statusItem(withLength: 18)
+    let statusIcon: NSStatusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
 
     init() {
         type = .normal
