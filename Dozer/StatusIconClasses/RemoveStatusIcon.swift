@@ -26,7 +26,7 @@ class RemoveStatusIcon: HelperstatusIcon {
         }
     }
 
-    override func setIcon() {
+    override func setIcon(imageIndex: Int) {
         guard let statusIconButton = statusIcon.button else {
             fatalError("helper status item button failed")
         }

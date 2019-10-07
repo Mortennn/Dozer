@@ -67,6 +67,20 @@ public final class DozerIcons {
             showAll()
         }
     }
+    
+    public var selectPrimaryDozerIcon: Int = defaults[.primaryDozerIcon] {
+        didSet {
+            defaults[.primaryDozerIcon] = self.selectPrimaryDozerIcon
+            showAll()
+        }
+    }
+    
+    public var selectSecondaryDozerIcon: Int = defaults[.secondaryDozerIcon] {
+        didSet {
+            defaults[.secondaryDozerIcon] = self.selectSecondaryDozerIcon
+            showAll()
+        }
+    }
 
     // MARK: Public methods
     public func hide() {

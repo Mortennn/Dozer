@@ -43,6 +43,14 @@ final class General: NSViewController, PreferencePane {
         HideBothDozerIconsCheckbox.isChecked = defaults[.noIconMode]
         EnableRemoveDozerIconCheckbox.isChecked = defaults[.removeDozerIconEnabled]
 
+        selectPrimaryDozerIcon.removeAllItems()
+        selectPrimaryDozerIcon.addItems(withTitles: iconList)
+        selectPrimaryDozerIcon.selectItem(at: defaults[.primaryDozerIcon])
+        
+        selectSecondaryDozerIcon.removeAllItems()
+        selectSecondaryDozerIcon.addItems(withTitles: iconList)
+        selectSecondaryDozerIcon.selectItem(at: defaults[.secondaryDozerIcon])
+        
         ToggleMenuItemsView.associatedUserDefaultsKey = UserDefaultKeys.Shortcuts.ToggleMenuItems
         view.addSubview(ToggleMenuItemsView)
 
@@ -74,4 +82,10 @@ final class General: NSViewController, PreferencePane {
     @IBAction private func enableRemoveDozerIconClicked(_ sender: NSButton) {
         DozerIcons.shared.enableRemoveDozerIcon = EnableRemoveDozerIconCheckbox.isChecked
     }
+    
+    @IBOutlet weak var selectPrimaryDozerIcon: NSPopUpButton!
+    @IBOutlet weak var selectSecondaryDozerIcon: NSPopUpButton!
+    
+    fileprivate let iconList = ["Circle", "Single Left Arrow", "Double Left Arrow", "Single Right Arrow", "Double Right Arrow"]
+    
 }

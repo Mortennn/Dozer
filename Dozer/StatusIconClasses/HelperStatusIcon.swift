@@ -26,7 +26,7 @@ class HelperstatusIcon {
 
         statusIconButton.target = self
         statusIconButton.action = #selector(statusIconClicked(_:))
-        setIcon()
+        setIcon(imageIndex: defaults[.primaryDozerIcon])
         statusIconButton.sendAction(on: [.leftMouseDown, .rightMouseDown])
     }
 
@@ -50,12 +50,28 @@ class HelperstatusIcon {
         }
     }
 
-    func setIcon() {
+    func setIcon(imageIndex: Int) {
         guard let statusIconButton = statusIcon.button else {
             fatalError("helper status item button failed")
         }
-        statusIconButton.image = Icons().helperstatusIcon
-        statusIconButton.image!.isTemplate = true
+        
+        switch imageIndex {
+        case 1:
+            statusIconButton.image = Icons().helperstatusIcon
+            statusIconButton.image!.isTemplate = true
+        case 2:
+            statusIconButton.image = Icons().helperstatusIcon
+            statusIconButton.image!.isTemplate = true
+        case 3:
+            statusIconButton.image = Icons().helperstatusIcon
+            statusIconButton.image!.isTemplate = true
+        case 4:
+            statusIconButton.image = Icons().helperstatusIcon
+            statusIconButton.image!.isTemplate = true
+        default:
+            statusIconButton.image = Icons().helperstatusIcon
+            statusIconButton.image!.isTemplate = true
+        }
     }
 
     func showRemoveIcons() {}
