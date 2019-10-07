@@ -25,6 +25,8 @@ final class General: NSViewController, PreferencePane {
     @IBOutlet private var HideStatusBarIconsAfterDelayCheckbox: NSButton!
     @IBOutlet private var HideBothDozerIconsCheckbox: NSButton!
     @IBOutlet private var EnableRemoveDozerIconCheckbox: NSButton!
+    @IBOutlet private var selectPrimaryDozerIcon: NSPopUpButton!
+    @IBOutlet private var selectSecondaryDozerIcon: NSPopUpButton!
     @IBOutlet private var ToggleMenuItemsView: MASShortcutView!
 
     override func viewDidLoad() {
@@ -82,10 +84,15 @@ final class General: NSViewController, PreferencePane {
     @IBAction private func enableRemoveDozerIconClicked(_ sender: NSButton) {
         DozerIcons.shared.enableRemoveDozerIcon = EnableRemoveDozerIconCheckbox.isChecked
     }
-    
-    @IBOutlet weak var selectPrimaryDozerIcon: NSPopUpButton!
-    @IBOutlet weak var selectSecondaryDozerIcon: NSPopUpButton!
-    
+
+    @IBAction func primaryDozerIconSet(_ sender: NSPopUpButton) {
+        DozerIcons.shared.selectPrimaryDozerIcon = selectPrimaryDozerIcon.indexOfSelectedItem
+    }
+
+    @IBAction func secondaryDozerIconSet(_ sender: NSPopUpButton) {
+        DozerIcons.shared.selectSecondaryDozerIcon = selectSecondaryDozerIcon.indexOfSelectedItem
+    }
+
     fileprivate let iconList = ["Circle", "Single Left Arrow", "Double Left Arrow", "Single Right Arrow", "Double Right Arrow"]
-    
+
 }

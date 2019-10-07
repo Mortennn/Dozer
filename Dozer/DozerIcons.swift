@@ -71,6 +71,7 @@ public final class DozerIcons {
     public var selectPrimaryDozerIcon: Int = defaults[.primaryDozerIcon] {
         didSet {
             defaults[.primaryDozerIcon] = self.selectPrimaryDozerIcon
+            refreshIcons()
             showAll()
         }
     }
@@ -78,6 +79,7 @@ public final class DozerIcons {
     public var selectSecondaryDozerIcon: Int = defaults[.secondaryDozerIcon] {
         didSet {
             defaults[.secondaryDozerIcon] = self.selectSecondaryDozerIcon
+            refreshIcons()
             showAll()
         }
     }
@@ -141,6 +143,12 @@ public final class DozerIcons {
                 action: .show,
                 statusIcon: .remove
             )
+        }
+    }
+
+    public func refreshIcons() {
+        for icon in dozerIcons {
+            icon.setIcon()
         }
     }
 
