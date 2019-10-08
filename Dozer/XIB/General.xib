@@ -100,7 +100,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </box>
                 <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-v7-wV4">
-                    <rect key="frame" x="18" y="38" width="361" height="5"/>
+                    <rect key="frame" x="20" y="74" width="361" height="5"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </box>
                 <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Dt-wS-aZ8" customClass="MASShortcutView">
@@ -119,7 +119,7 @@
                     </connections>
                 </button>
                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5u1-CP-dnd">
-                    <rect key="frame" x="18" y="46" width="52" height="25"/>
+                    <rect key="frame" x="18" y="37" width="53" height="24"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <popUpButtonCell key="cell" type="push" bezelStyle="rounded" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" state="mixed" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Mff-Sc-cYg" id="mZq-pr-P1m">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -139,7 +139,7 @@
                     </connections>
                 </popUpButton>
                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cO0-hI-3yu">
-                    <rect key="frame" x="73" y="46" width="52" height="25"/>
+                    <rect key="frame" x="76" y="37" width="53" height="24"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <popUpButtonCell key="cell" type="push" bezelStyle="rounded" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Lqj-Nq-Da6" id="pnl-7V-MpR">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -168,7 +168,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-dO-j1m">
-                    <rect key="frame" x="128" y="52" width="143" height="16"/>
+                    <rect key="frame" x="132" y="42" width="143" height="16"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Select status bar icons" id="IjU-MA-4oC">
                         <font key="font" metaFont="system"/>
