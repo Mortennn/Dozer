@@ -45,14 +45,11 @@ final class General: NSViewController, PreferencePane {
         HideBothDozerIconsCheckbox.isChecked = defaults[.noIconMode]
         EnableRemoveDozerIconCheckbox.isChecked = defaults[.removeDozerIconEnabled]
 
-        selectPrimaryDozerIcon.removeAllItems()
-        selectPrimaryDozerIcon.addItems(withTitles: iconList)
-        selectPrimaryDozerIcon.selectItem(at: defaults[.primaryDozerIcon])
-        
-        selectSecondaryDozerIcon.removeAllItems()
-        selectSecondaryDozerIcon.addItems(withTitles: iconList)
-        selectSecondaryDozerIcon.selectItem(at: defaults[.secondaryDozerIcon])
-        
+        selectPrimaryDozerIcon.menu = buildMenu()
+        selectSecondaryDozerIcon.menu = buildMenu()
+        selectPrimaryDozerIcon.imagePosition = .imageOnly
+        selectSecondaryDozerIcon.imagePosition = .imageOnly
+
         ToggleMenuItemsView.associatedUserDefaultsKey = UserDefaultKeys.Shortcuts.ToggleMenuItems
         view.addSubview(ToggleMenuItemsView)
 
@@ -93,6 +90,18 @@ final class General: NSViewController, PreferencePane {
         DozerIcons.shared.selectSecondaryDozerIcon = selectSecondaryDozerIcon.indexOfSelectedItem
     }
 
-    fileprivate let iconList = ["Circle", "Single Left Arrow", "Double Left Arrow", "Single Right Arrow", "Double Right Arrow"]
+    private func buildMenu() -> NSMenu {
+        let menu = NSMenu()
+
+        for name in iconList {
+            let item = NSMenuItem(title: name, action: nil, keyEquivalent: "")
+            item.image = NSImage(named: name)
+            menu.addItem(item)
+        }
+
+        return menu
+    }
+
+    fileprivate let iconList = ["HelperStatusItemIcon", "statusIconSingleLeft", "statusIconDoubleLeft", "statusIconSingleRight", "statusIconDoubleRight"]
 
 }

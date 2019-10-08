@@ -119,18 +119,18 @@
                     </connections>
                 </button>
                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5u1-CP-dnd">
-                    <rect key="frame" x="18" y="46" width="45" height="25"/>
+                    <rect key="frame" x="18" y="46" width="52" height="25"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <popUpButtonCell key="cell" type="push" title="o" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Mff-Sc-cYg" id="mZq-pr-P1m">
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="mixed" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Mff-Sc-cYg" id="mZq-pr-P1m">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="menu"/>
                         <menu key="menu" id="JAc-ME-NMC">
                             <items>
-                                <menuItem title="o" state="on" id="Mff-Sc-cYg"/>
-                                <menuItem title="&lt;" id="bre-C1-0X3"/>
-                                <menuItem title="&lt;&lt;" id="hqk-i8-UHN"/>
-                                <menuItem title="&gt;" id="wq7-GV-pMY"/>
-                                <menuItem title="&gt;&gt;" id="khh-QP-rld"/>
+                                <menuItem state="mixed" image="HelperStatusItemIcon" id="Mff-Sc-cYg"/>
+                                <menuItem image="statusIconSingleLeft" id="bre-C1-0X3"/>
+                                <menuItem image="statusIconDoubleLeft" id="hqk-i8-UHN"/>
+                                <menuItem image="statusIconSingleRight" id="wq7-GV-pMY"/>
+                                <menuItem image="statusIconDoubleRight" id="khh-QP-rld"/>
                             </items>
                         </menu>
                     </popUpButtonCell>
@@ -139,18 +139,18 @@
                     </connections>
                 </popUpButton>
                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cO0-hI-3yu">
-                    <rect key="frame" x="66" y="46" width="45" height="25"/>
+                    <rect key="frame" x="73" y="46" width="52" height="25"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <popUpButtonCell key="cell" type="push" title="o" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Lqj-Nq-Da6" id="pnl-7V-MpR">
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Lqj-Nq-Da6" id="pnl-7V-MpR">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" metaFont="menu"/>
                         <menu key="menu" id="rhY-0W-D4P">
                             <items>
-                                <menuItem title="o" state="on" id="Lqj-Nq-Da6"/>
-                                <menuItem title="&lt;" id="5W4-io-rJ0"/>
-                                <menuItem title="&lt;&lt;" id="eP9-lj-zPI"/>
-                                <menuItem title="&gt;" id="Lwn-Cg-1It"/>
-                                <menuItem title="&gt;&gt;" id="TF0-uk-YCQ"/>
+                                <menuItem state="on" image="HelperStatusItemIcon" id="Lqj-Nq-Da6"/>
+                                <menuItem image="statusIconSingleLeft" id="5W4-io-rJ0"/>
+                                <menuItem image="statusIconDoubleLeft" id="eP9-lj-zPI"/>
+                                <menuItem image="statusIconSingleRight" id="Lwn-Cg-1It"/>
+                                <menuItem image="statusIconDoubleRight" id="TF0-uk-YCQ"/>
                             </items>
                         </menu>
                     </popUpButtonCell>
@@ -158,19 +158,19 @@
                         <action selector="secondaryDozerIconSet:" target="-2" id="XcG-ns-J8d"/>
                     </connections>
                 </popUpButton>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-dO-j1m">
-                    <rect key="frame" x="114" y="52" width="143" height="16"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ECa-cB-tNa">
+                    <rect key="frame" x="132" y="9" width="249" height="17"/>
                     <autoresizingMask key="autoresizingMask"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" title="Select status bar icons" id="IjU-MA-4oC">
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Show/hide status bar icons" id="TnK-2l-aCU">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ECa-cB-tNa">
-                    <rect key="frame" x="132" y="9" width="249" height="17"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-dO-j1m">
+                    <rect key="frame" x="128" y="52" width="143" height="16"/>
                     <autoresizingMask key="autoresizingMask"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Show/hide status bar icons" id="TnK-2l-aCU">
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Select status bar icons" id="IjU-MA-4oC">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -184,4 +184,11 @@
             <point key="canvasLocation" x="138.5" y="124"/>
         </customView>
     </objects>
+    <resources>
+        <image name="HelperStatusItemIcon" width="12" height="12"/>
+        <image name="statusIconDoubleLeft" width="24" height="24"/>
+        <image name="statusIconDoubleRight" width="24" height="24"/>
+        <image name="statusIconSingleLeft" width="24" height="24"/>
+        <image name="statusIconSingleRight" width="24" height="24"/>
+    </resources>
 </document>
