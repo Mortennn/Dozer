@@ -18,14 +18,14 @@ extension NSButton {
 
 struct Icons {
     var helperstatusIcon: NSImage {
-        return selectIconImage(iconName: IconList.list[defaults[.primaryDozerIcon]]) // 5 then in
+        return selectIconImage(iconName: IconList.list[defaults[.primaryDozerIcon]])
     }
 
     var removeStatusIcon: NSImage {
         return selectIconImage(iconName: IconList.list[defaults[.secondaryDozerIcon]])
     }
 
-    private func selectIconImage(iconName: String) -> NSImage {
+    func selectIconImage(iconName: String) -> NSImage {
         switch iconName {
         case "SingleLeftStatusIcon":
             return create(image: iconName, 8, 8)

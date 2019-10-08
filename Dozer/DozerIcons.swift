@@ -6,8 +6,8 @@ import Cocoa
 import Defaults
 
 public final class DozerIcons {
-    
-    static var shared = DozerIcons() // 2 then in
+
+    static var shared = DozerIcons()
     private var dozerIcons: [HelperstatusIcon] = []
     private var timerToHideDozerIcons = Timer()
 

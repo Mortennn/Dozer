@@ -96,7 +96,7 @@ final class General: NSViewController, PreferencePane {
         for name in IconList.list {
             let item = NSMenuItem(title: "", action: nil, keyEquivalent: "")
             item.tag = IconList.list.firstIndex(of: name) ?? 0
-            item.image = NSImage(named: name)
+            item.image = Icons().selectIconImage(iconName: name)
             menu.addItem(item)
         }
 
