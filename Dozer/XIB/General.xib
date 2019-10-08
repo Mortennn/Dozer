@@ -186,9 +186,9 @@
     </objects>
     <resources>
         <image name="HelperStatusItemIcon" width="12" height="12"/>
-        <image name="statusIconDoubleLeft" width="24" height="24"/>
-        <image name="statusIconDoubleRight" width="24" height="24"/>
-        <image name="statusIconSingleLeft" width="24" height="24"/>
-        <image name="statusIconSingleRight" width="24" height="24"/>
+        <image name="statusIconDoubleLeft" width="12" height="12"/>
+        <image name="statusIconDoubleRight" width="12" height="12"/>
+        <image name="statusIconSingleLeft" width="12" height="12"/>
+        <image name="statusIconSingleRight" width="12" height="12"/>
     </resources>
 </document>

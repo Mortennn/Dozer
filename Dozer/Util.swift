@@ -18,25 +18,25 @@ extension NSButton {
 
 struct Icons {
     var helperstatusIcon: NSImage {
-        return selectIconImage(imageIndex: defaults[.primaryDozerIcon])
+        return selectIconImage(iconName: defaults[.primaryDozerIcon])
     }
 
     var removeStatusIcon: NSImage {
-        return selectIconImage(imageIndex: defaults[.secondaryDozerIcon])
+        return selectIconImage(iconName: defaults[.secondaryDozerIcon])
     }
 
-    private func selectIconImage(imageIndex: Int) -> NSImage {
-        switch imageIndex {
-        case 1:
-            return create(image: Assets.statusIconSingleLeft.name, 8, 8)
-        case 2:
-            return create(image: Assets.statusIconDoubleLeft.name, 8, 8)
-        case 3:
-            return create(image: Assets.statusIconSingleRight.name, 8, 8)
-        case 4:
-            return create(image: Assets.statusIconDoubleRight.name, 8, 8)
+    private func selectIconImage(iconName: String) -> NSImage {
+        switch iconName {
+        case "SingleLeftStatusIcon":
+            return create(image: iconName, 8, 8)
+        case "DoubleLeftStatusIcon":
+            return create(image: iconName, 8, 8)
+        case "SingleRightStatusIcon":
+            return create(image: iconName, 8, 8)
+        case "DoubleRightStatusIcon":
+            return create(image: iconName, 8, 8)
         default:
-            return create(image: Assets.helperStatusItemIcon.name, 8, 8)
+            return create(image: Assets.circleStatusIcon.name, 8, 8)
         }
     }
 

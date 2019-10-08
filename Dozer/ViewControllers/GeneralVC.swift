@@ -46,8 +46,10 @@ final class General: NSViewController, PreferencePane {
         EnableRemoveDozerIconCheckbox.isChecked = defaults[.removeDozerIconEnabled]
 
         selectPrimaryDozerIcon.menu = buildMenu()
-        selectSecondaryDozerIcon.menu = buildMenu()
+        selectPrimaryDozerIcon.selectItem(withTitle: defaults[.primaryDozerIcon])
         selectPrimaryDozerIcon.imagePosition = .imageOnly
+        selectSecondaryDozerIcon.menu = buildMenu()
+        selectSecondaryDozerIcon.selectItem(withTitle: defaults[.secondaryDozerIcon])
         selectSecondaryDozerIcon.imagePosition = .imageOnly
 
         ToggleMenuItemsView.associatedUserDefaultsKey = UserDefaultKeys.Shortcuts.ToggleMenuItems
@@ -83,11 +85,11 @@ final class General: NSViewController, PreferencePane {
     }
 
     @IBAction func primaryDozerIconSet(_ sender: NSPopUpButton) {
-        DozerIcons.shared.selectPrimaryDozerIcon = selectPrimaryDozerIcon.indexOfSelectedItem
+        DozerIcons.shared.selectPrimaryDozerIcon = selectPrimaryDozerIcon.titleOfSelectedItem!
     }
 
     @IBAction func secondaryDozerIconSet(_ sender: NSPopUpButton) {
-        DozerIcons.shared.selectSecondaryDozerIcon = selectSecondaryDozerIcon.indexOfSelectedItem
+        DozerIcons.shared.selectSecondaryDozerIcon = selectSecondaryDozerIcon.titleOfSelectedItem!
     }
 
     private func buildMenu() -> NSMenu {
@@ -102,6 +104,6 @@ final class General: NSViewController, PreferencePane {
         return menu
     }
 
-    fileprivate let iconList = ["HelperStatusItemIcon", "statusIconSingleLeft", "statusIconDoubleLeft", "statusIconSingleRight", "statusIconDoubleRight"]
+    fileprivate let iconList = ["CircleStatusIcon", "SingleLeftStatusIcon", "DoubleLeftStatusIcon", "SingleRightStatusIcon", "DoubleRightStatusIcon"]
 
 }

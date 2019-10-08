@@ -67,16 +67,16 @@ public final class DozerIcons {
             showAll()
         }
     }
-    
-    public var selectPrimaryDozerIcon: Int = defaults[.primaryDozerIcon] {
+
+    public var selectPrimaryDozerIcon: String = defaults[.primaryDozerIcon] {
         didSet {
             defaults[.primaryDozerIcon] = self.selectPrimaryDozerIcon
             refreshIcons()
             showAll()
         }
     }
-    
-    public var selectSecondaryDozerIcon: Int = defaults[.secondaryDozerIcon] {
+
+    public var selectSecondaryDozerIcon: String = defaults[.secondaryDozerIcon] {
         didSet {
             defaults[.secondaryDozerIcon] = self.selectSecondaryDozerIcon
             refreshIcons()

@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "mac",
-      "filename" : "disclosureArrowSingleLeft24.png",
       "scale" : "1x"
     },
     {
       "idiom" : "mac",
+      "filename" : "disclosureArrowSingleLeft24.png",
       "scale" : "2x"
     }
   ],
