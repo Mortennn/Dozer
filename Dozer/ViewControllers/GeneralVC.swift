@@ -46,11 +46,9 @@ final class General: NSViewController, PreferencePane {
         EnableRemoveDozerIconCheckbox.isChecked = defaults[.removeDozerIconEnabled]
 
         selectPrimaryDozerIcon.menu = buildMenu()
-        selectPrimaryDozerIcon.selectItem(withTitle: defaults[.primaryDozerIcon])
-        selectPrimaryDozerIcon.imagePosition = .imageOnly
+        selectPrimaryDozerIcon.selectItem(withTag: defaults[.primaryDozerIcon])
         selectSecondaryDozerIcon.menu = buildMenu()
-        selectSecondaryDozerIcon.selectItem(withTitle: defaults[.secondaryDozerIcon])
-        selectSecondaryDozerIcon.imagePosition = .imageOnly
+        selectSecondaryDozerIcon.selectItem(withTag: defaults[.secondaryDozerIcon])
 
         ToggleMenuItemsView.associatedUserDefaultsKey = UserDefaultKeys.Shortcuts.ToggleMenuItems
         view.addSubview(ToggleMenuItemsView)
@@ -84,26 +82,24 @@ final class General: NSViewController, PreferencePane {
         DozerIcons.shared.enableRemoveDozerIcon = EnableRemoveDozerIconCheckbox.isChecked
     }
 
-    @IBAction func primaryDozerIconSet(_ sender: NSPopUpButton) {
-        DozerIcons.shared.selectPrimaryDozerIcon = selectPrimaryDozerIcon.titleOfSelectedItem!
+    @IBAction private func primaryDozerIconSet(_ sender: NSPopUpButton) {
+        DozerIcons.shared.selectPrimaryDozerIcon = selectPrimaryDozerIcon.selectedTag()
     }
 
-    @IBAction func secondaryDozerIconSet(_ sender: NSPopUpButton) {
-        DozerIcons.shared.selectSecondaryDozerIcon = selectSecondaryDozerIcon.titleOfSelectedItem!
+    @IBAction private func secondaryDozerIconSet(_ sender: NSPopUpButton) {
+        DozerIcons.shared.selectSecondaryDozerIcon = selectSecondaryDozerIcon.selectedTag()
     }
 
     private func buildMenu() -> NSMenu {
         let menu = NSMenu()
 
-        for name in iconList {
-            let item = NSMenuItem(title: name, action: nil, keyEquivalent: "")
+        for name in IconList.list {
+            let item = NSMenuItem(title: "", action: nil, keyEquivalent: "")
+            item.tag = IconList.list.firstIndex(of: name) ?? 0
             item.image = NSImage(named: name)
             menu.addItem(item)
         }
 
         return menu
     }
-
-    fileprivate let iconList = ["CircleStatusIcon", "SingleLeftStatusIcon", "DoubleLeftStatusIcon", "SingleRightStatusIcon", "DoubleRightStatusIcon"]
-
 }

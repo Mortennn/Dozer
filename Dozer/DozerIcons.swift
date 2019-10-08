@@ -6,7 +6,8 @@ import Cocoa
 import Defaults
 
 public final class DozerIcons {
-    static var shared = DozerIcons()
+    
+    static var shared = DozerIcons() // 2 then in
     private var dozerIcons: [HelperstatusIcon] = []
     private var timerToHideDozerIcons = Timer()
 
@@ -68,7 +69,7 @@ public final class DozerIcons {
         }
     }
 
-    public var selectPrimaryDozerIcon: String = defaults[.primaryDozerIcon] {
+    public var selectPrimaryDozerIcon: Int = defaults[.primaryDozerIcon] {
         didSet {
             defaults[.primaryDozerIcon] = self.selectPrimaryDozerIcon
             refreshIcons()
@@ -76,7 +77,7 @@ public final class DozerIcons {
         }
     }
 
-    public var selectSecondaryDozerIcon: String = defaults[.secondaryDozerIcon] {
+    public var selectSecondaryDozerIcon: Int = defaults[.secondaryDozerIcon] {
         didSet {
             defaults[.secondaryDozerIcon] = self.selectSecondaryDozerIcon
             refreshIcons()

@@ -18,11 +18,11 @@ extension NSButton {
 
 struct Icons {
     var helperstatusIcon: NSImage {
-        return selectIconImage(iconName: defaults[.primaryDozerIcon])
+        return selectIconImage(iconName: IconList.list[defaults[.primaryDozerIcon]]) // 5 then in
     }
 
     var removeStatusIcon: NSImage {
-        return selectIconImage(iconName: defaults[.secondaryDozerIcon])
+        return selectIconImage(iconName: IconList.list[defaults[.secondaryDozerIcon]])
     }
 
     private func selectIconImage(iconName: String) -> NSImage {
@@ -35,6 +35,8 @@ struct Icons {
             return create(image: iconName, 8, 8)
         case "DoubleRightStatusIcon":
             return create(image: iconName, 8, 8)
+        case "BigCircleStatusIcon":
+            return create(image: Assets.circleStatusIcon.name, 12, 12)
         default:
             return create(image: Assets.circleStatusIcon.name, 8, 8)
         }
