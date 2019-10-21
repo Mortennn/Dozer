@@ -22,6 +22,7 @@ final class General: NSViewController, PreferencePane {
 
     @IBOutlet private var LaunchAtLoginCheckbox: NSButton!
     @IBOutlet private var CheckForUpdatesCheckbox: NSButton!
+    @IBOutlet private var HideStatusBarIconsAtLaunchCheckbox: NSButton!
     @IBOutlet private var HideStatusBarIconsAfterDelayCheckbox: NSButton!
     @IBOutlet private var HideBothDozerIconsCheckbox: NSButton!
     @IBOutlet private var EnableRemoveDozerIconCheckbox: NSButton!
@@ -39,6 +40,7 @@ final class General: NSViewController, PreferencePane {
             CheckForUpdatesCheckbox.isChecked = false
         }
 
+        HideStatusBarIconsAtLaunchCheckbox.isChecked = defaults[.hideAtLaunchEnabled]
         HideStatusBarIconsAfterDelayCheckbox.isChecked = defaults[.hideAfterDelayEnabled]
         HideBothDozerIconsCheckbox.isChecked = defaults[.noIconMode]
         EnableRemoveDozerIconCheckbox.isChecked = defaults[.removeDozerIconEnabled]
@@ -61,6 +63,10 @@ final class General: NSViewController, PreferencePane {
             return
         }
         SUUpdater.shared()!.automaticallyChecksForUpdates = CheckForUpdatesCheckbox.isChecked
+    }
+    
+    @IBAction private func hideStatusBarIconsAtLaunchClicked(_ sender: NSButton) {
+        DozerIcons.shared.hideStatusBarIconsAtLaunch = HideStatusBarIconsAtLaunchCheckbox.isChecked
     }
 
     @IBAction private func hideStatusBarIconsAfterDelayClicked(_ sender: NSButton) {

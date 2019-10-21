@@ -44,6 +44,12 @@ public final class DozerIcons {
     }
 
     // MARK: Observe changes to settings
+    public var hideStatusBarIconsAtLaunch: Bool = defaults[.hideAtLaunchEnabled] {
+        didSet {
+            defaults[.hideAtLaunchEnabled] = self.hideStatusBarIconsAtLaunch
+        }
+    }
+
     public var hideStatusBarIconsAfterDelay: Bool = defaults[.hideAfterDelayEnabled] {
         didSet {
             defaults[.hideAfterDelayEnabled] = self.hideStatusBarIconsAfterDelay

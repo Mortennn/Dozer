@@ -8,6 +8,7 @@ import Defaults
 
 extension Defaults.Keys {
     static let hideOnLogin: Defaults.Key<Bool> = Key<Bool>("hideOnLogin", default: false)
+    static let hideAtLaunchEnabled: Defaults.Key<Bool> = Key<Bool>("hideAtLaunchEnabled", default: false)
     static let hideAfterDelayEnabled: Defaults.Key<Bool> = Key<Bool>("hideAfterDelayEnabled", default: false)
     static let hideAfterDelay: Defaults.Key<TimeInterval> = Key<TimeInterval>("hideAfterDelay", default: 10)
     static let noIconMode: Defaults.Key<Bool> = Key<Bool>("noIconMode", default: false)
