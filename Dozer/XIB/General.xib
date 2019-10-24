@@ -11,6 +11,7 @@
                 <outlet property="EnableRemoveDozerIconCheckbox" destination="pDX-1f-4hl" id="uHk-1U-HG9"/>
                 <outlet property="HideBothDozerIconsCheckbox" destination="w7z-Qa-kqw" id="L5J-6S-jtb"/>
                 <outlet property="HideStatusBarIconsAfterDelayCheckbox" destination="hOy-nu-Sy0" id="aNv-vt-dQL"/>
+                <outlet property="HideStatusBarIconsAtLaunchCheckbox" destination="phN-BY-WEC" id="zff-cm-aik"/>
                 <outlet property="LaunchAtLoginCheckbox" destination="29f-2D-VsY" id="X2Z-FE-7IA"/>
                 <outlet property="ToggleMenuItemsView" destination="4Dt-wS-aZ8" id="PAm-fa-zGy"/>
                 <outlet property="view" destination="c22-O7-iKe" id="buC-Sz-vlD"/>
@@ -19,10 +20,10 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView translatesAutoresizingMaskIntoConstraints="NO" id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="397" height="281"/>
+            <rect key="frame" x="0.0" y="0.0" width="397" height="303"/>
             <subviews>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="29f-2D-VsY">
-                    <rect key="frame" x="18" y="245" width="361" height="18"/>
+                    <rect key="frame" x="18" y="267" width="361" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Launch at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="qB0-b5-ye2">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -59,6 +60,17 @@
                     </buttonCell>
                     <connections>
                         <action selector="hideStatusBarIconsAfterDelayClicked:" target="-2" id="XYy-w6-La0"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="phN-BY-WEC">
+                    <rect key="frame" x="18" y="206" width="357" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Hide status bar icons at launch" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="24v-K4-mhc">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="hideStatusBarIconsAtLaunchClicked:" target="-2" id="9pu-qd-GaG"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w7z-Qa-kqw">
@@ -102,7 +114,7 @@
                     </textFieldCell>
                 </textField>
                 <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="ayr-kp-VXW">
-                    <rect key="frame" x="20" y="211" width="361" height="5"/>
+                    <rect key="frame" x="20" y="233" width="361" height="5"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </box>
                 <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-v7-wV4">
@@ -114,7 +126,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </customView>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="htn-2c-54s">
-                    <rect key="frame" x="18" y="225" width="361" height="18"/>
+                    <rect key="frame" x="18" y="247" width="361" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Automatically check for updates" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="3Mj-bx-k9f">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -127,9 +139,9 @@
             </subviews>
             <constraints>
                 <constraint firstAttribute="width" constant="397" id="WEJ-WZ-mea"/>
-                <constraint firstAttribute="height" constant="281" id="ieY-Q5-nHf"/>
+                <constraint firstAttribute="height" constant="303" id="ieY-Q5-nHf"/>
             </constraints>
-            <point key="canvasLocation" x="138.5" y="108.5"/>
+            <point key="canvasLocation" x="138.5" y="119.5"/>
         </customView>
     </objects>
 </document>

@@ -24,6 +24,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
         // Initalize Dozer Icons
         _ = DozerIcons.shared
+        if DozerIcons.shared.hideStatusBarIconsAtLaunch {
+            DozerIcons.shared.hide()
+        }
     }
 
     // Show all Dozer icons when opening Dozer from Finder etc.
