@@ -126,11 +126,11 @@
                     </connections>
                 </button>
                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1VR-GS-JxV">
-                    <rect key="frame" x="205" y="183" width="98" height="19"/>
+                    <rect key="frame" x="203" y="183" width="102" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <popUpButtonCell key="cell" type="roundRect" title="3 seconds" bezelStyle="roundedRect" imagePosition="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" selectedItem="44M-7y-g7c" id="GUr-ZR-Crv">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="label" size="12"/>
+                        <font key="font" size="12" name="HelveticaNeue"/>
                         <menu key="menu" id="gLI-Tf-X9i">
                             <items>
                                 <menuItem title="3 seconds" state="on" id="44M-7y-g7c" userLabel="3 seconds"/>
