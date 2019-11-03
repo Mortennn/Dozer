@@ -33,9 +33,9 @@ public final class DozerIcons {
     }
 
     // MARK: Observe changes to settings
-    public var hideStatusBarIconsAfterDelay: Bool = defaults[.hideAfterDelayEnabled] {
+    public var hideStatusBarIconsAfterDelay: Bool = Defaults[.hideAfterDelayEnabled] {
         didSet {
-            defaults[.hideAfterDelayEnabled] = self.hideStatusBarIconsAfterDelay
+            Defaults[.hideAfterDelayEnabled] = self.hideStatusBarIconsAfterDelay
             if hideStatusBarIconsAfterDelay {
                 startTimer()
             } else {
@@ -44,9 +44,9 @@ public final class DozerIcons {
         }
     }
 
-    public var hideBothDozerIcons: Bool = defaults[.noIconMode] {
+    public var hideBothDozerIcons: Bool = Defaults[.noIconMode] {
         didSet {
-            defaults[.noIconMode] = self.hideBothDozerIcons
+            Defaults[.noIconMode] = self.hideBothDozerIcons
             if hideBothDozerIcons {
                 let rightDozerIconXPos = get(dozerIcon: .normalRight).xPositionOnScreen
                 dozerIcons.removeAll(where: { $0.xPositionOnScreen == rightDozerIconXPos })
@@ -56,9 +56,9 @@ public final class DozerIcons {
         }
     }
 
-    public var enableRemoveDozerIcon: Bool = defaults[.removeDozerIconEnabled] {
+    public var enableRemoveDozerIcon: Bool = Defaults[.removeDozerIconEnabled] {
         didSet {
-            defaults[.removeDozerIconEnabled] = self.enableRemoveDozerIcon
+            Defaults[.removeDozerIconEnabled] = self.enableRemoveDozerIcon
             if enableRemoveDozerIcon {
                 dozerIcons.append(RemoveStatusIcon())
             } else {
@@ -72,7 +72,7 @@ public final class DozerIcons {
     public func hide() {
         perform(action: .hide, statusIcon: .remove)
         perform(action: .hide, statusIcon: .normalLeft)
-        if defaults[.noIconMode] {
+        if Defaults[.noIconMode] {
             perform(action: .hide, statusIcon: .normalRight)
         }
         didHideStatusBarIcons()
@@ -81,7 +81,7 @@ public final class DozerIcons {
     public func show() {
         perform(action: .hide, statusIcon: .remove)
         perform(action: .show, statusIcon: .normalLeft)
-        if defaults[.noIconMode] {
+        if Defaults[.noIconMode] {
             perform(action: .show, statusIcon: .normalRight)
         }
         didShowStatusBarIcons()
@@ -140,7 +140,7 @@ public final class DozerIcons {
     }
 
     private func willHideStatusBarIcons() {
-        guard defaults[.hideAfterDelayEnabled] else {
+        guard Defaults[.hideAfterDelayEnabled] else {
             return
         }
 
@@ -155,11 +155,11 @@ public final class DozerIcons {
 
     // MARK: timerToHideDozerIcons methods
     private func startTimer() {
-        guard defaults[.hideAfterDelayEnabled] else {
+        guard Defaults[.hideAfterDelayEnabled] else {
             stopTimer()
             return
         }
-        timerToHideDozerIcons = Timer.scheduledTimer(withTimeInterval: defaults[.hideAfterDelay], repeats: false) { (_: Timer) -> Void in
+        timerToHideDozerIcons = Timer.scheduledTimer(withTimeInterval: Defaults[.hideAfterDelay], repeats: false) { (_: Timer) -> Void in
             self.willHideStatusBarIcons()
         }
     }
@@ -177,7 +177,7 @@ public final class DozerIcons {
     /// Will fail silently if statusIcon does not exist
     private func perform(action: StatusIconAction, statusIcon: DozerIcon) {
         if statusIcon == .remove {
-            guard defaults[.removeDozerIconEnabled] else {
+            guard Defaults[.removeDozerIconEnabled] else {
                 return
             }
         }

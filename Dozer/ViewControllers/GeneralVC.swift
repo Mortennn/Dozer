@@ -39,9 +39,9 @@ final class General: NSViewController, PreferencePane {
             CheckForUpdatesCheckbox.isChecked = false
         }
 
-        HideStatusBarIconsAfterDelayCheckbox.isChecked = defaults[.hideAfterDelayEnabled]
-        HideBothDozerIconsCheckbox.isChecked = defaults[.noIconMode]
-        EnableRemoveDozerIconCheckbox.isChecked = defaults[.removeDozerIconEnabled]
+        HideStatusBarIconsAfterDelayCheckbox.isChecked = Defaults[.hideAfterDelayEnabled]
+        HideBothDozerIconsCheckbox.isChecked = Defaults[.noIconMode]
+        EnableRemoveDozerIconCheckbox.isChecked = Defaults[.removeDozerIconEnabled]
 
         ToggleMenuItemsView.associatedUserDefaultsKey = UserDefaultKeys.Shortcuts.ToggleMenuItems
         view.addSubview(ToggleMenuItemsView)
@@ -70,11 +70,11 @@ final class General: NSViewController, PreferencePane {
     @IBAction private func hideStatusBarIconsAfterDelayTime(_ sender: NSPopUpButton) {
         switch sender.indexOfSelectedItem {
         case 0:
-            defaults[.hideAfterDelay] = 3
+            Defaults[.hideAfterDelay] = 3
         case 1:
-            defaults[.hideAfterDelay] = 5
+            Defaults[.hideAfterDelay] = 5
         case 2:
-            defaults[.hideAfterDelay] = 10
+            Defaults[.hideAfterDelay] = 10
         default:
             return
         }
