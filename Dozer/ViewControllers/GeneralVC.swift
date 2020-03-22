@@ -25,6 +25,7 @@ final class General: NSViewController, PreferencePane {
     @IBOutlet private var HideStatusBarIconsAtLaunchCheckbox: NSButton!
     @IBOutlet private var HideStatusBarIconsAfterDelayCheckbox: NSButton!
     @IBOutlet private var HideBothDozerIconsCheckbox: NSButton!
+    @IBOutlet private var VisualizeRightAsArrowCheckbox: NSButton!
     @IBOutlet private var EnableRemoveDozerIconCheckbox: NSButton!
     @IBOutlet private var ToggleMenuItemsView: MASShortcutView!
 
@@ -43,6 +44,7 @@ final class General: NSViewController, PreferencePane {
         HideStatusBarIconsAtLaunchCheckbox.isChecked = defaults[.hideAtLaunchEnabled]
         HideStatusBarIconsAfterDelayCheckbox.isChecked = defaults[.hideAfterDelayEnabled]
         HideBothDozerIconsCheckbox.isChecked = defaults[.noIconMode]
+        VisualizeRightAsArrowCheckbox.isChecked = defaults[.rightIconArrow]
         EnableRemoveDozerIconCheckbox.isChecked = defaults[.removeDozerIconEnabled]
 
         ToggleMenuItemsView.associatedUserDefaultsKey = UserDefaultKeys.Shortcuts.ToggleMenuItems
@@ -75,6 +77,15 @@ final class General: NSViewController, PreferencePane {
 
     @IBAction private func hideBothDozerIconsClicked(_ sender: NSButton) {
         DozerIcons.shared.hideBothDozerIcons = HideBothDozerIconsCheckbox.isChecked
+        if HideBothDozerIconsCheckbox.isChecked {
+            VisualizeRightAsArrowCheckbox.isChecked = false
+            DozerIcons.shared.rightIconAsArrow = VisualizeRightAsArrowCheckbox.isChecked
+        }
+        VisualizeRightAsArrowCheckbox.isEnabled = !HideBothDozerIconsCheckbox.isChecked
+    }
+    
+    @IBAction private func visualizeRightAsArrowClicked(_ sender: NSButton) {
+        DozerIcons.shared.rightIconAsArrow = VisualizeRightAsArrowCheckbox.isChecked
     }
 
     @IBAction private func enableRemoveDozerIconClicked(_ sender: NSButton) {
