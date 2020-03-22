@@ -84,6 +84,15 @@ public final class DozerIcons {
             showAll()
         }
     }
+    
+    public var iconFontSize: Int = defaults[.iconSize] {
+        didSet {
+            defaults[.iconSize] = self.iconFontSize
+            for icon in dozerIcons {
+                icon.setSize()
+            }
+        }
+    }
 
     // MARK: Public methods
     public func hide() {

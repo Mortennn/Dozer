@@ -57,6 +57,19 @@ class HelperstatusIcon {
         statusIconButton.image = Icons().helperstatusIcon
         statusIconButton.image!.isTemplate = true
     }
+    
+    func setSize() {
+        guard let statusIconButton = statusIcon.button else {
+            fatalError("helper status item button failed")
+        }
+        let image = statusIconButton.image
+        var size = DozerIcons.shared.iconFontSize
+        if self.type == .remove {
+            size /= 2
+        }
+        image?.size = NSSize(width: size, height: size)
+        statusIconButton.image = image
+    }
 
     func showRemoveIcons() {}
 

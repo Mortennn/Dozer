@@ -26,6 +26,7 @@ final class General: NSViewController, PreferencePane {
     @IBOutlet private var HideStatusBarIconsAfterDelayCheckbox: NSButton!
     @IBOutlet private var HideBothDozerIconsCheckbox: NSButton!
     @IBOutlet private var EnableRemoveDozerIconCheckbox: NSButton!
+    @IBOutlet private var FontSizePopUpButton: NSPopUpButton!
     @IBOutlet private var ToggleMenuItemsView: MASShortcutView!
 
     override func viewDidLoad() {
@@ -44,6 +45,7 @@ final class General: NSViewController, PreferencePane {
         HideStatusBarIconsAfterDelayCheckbox.isChecked = defaults[.hideAfterDelayEnabled]
         HideBothDozerIconsCheckbox.isChecked = defaults[.noIconMode]
         EnableRemoveDozerIconCheckbox.isChecked = defaults[.removeDozerIconEnabled]
+        FontSizePopUpButton.selectItem(withTag: defaults[.iconSize])
 
         ToggleMenuItemsView.associatedUserDefaultsKey = UserDefaultKeys.Shortcuts.ToggleMenuItems
         view.addSubview(ToggleMenuItemsView)
@@ -77,6 +79,10 @@ final class General: NSViewController, PreferencePane {
         DozerIcons.shared.hideBothDozerIcons = HideBothDozerIconsCheckbox.isChecked
     }
 
+    @IBAction func fontSizeChanged(_ sender: NSPopUpButton) {
+        DozerIcons.shared.iconFontSize = FontSizePopUpButton.selectedTag()
+    }
+    
     @IBAction private func enableRemoveDozerIconClicked(_ sender: NSButton) {
         DozerIcons.shared.enableRemoveDozerIcon = EnableRemoveDozerIconCheckbox.isChecked
     }
