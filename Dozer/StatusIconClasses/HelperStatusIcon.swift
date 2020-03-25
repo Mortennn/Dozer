@@ -6,14 +6,18 @@ import Cocoa
 import Defaults
 
 private struct StatusIconLength {
-    static let show: CGFloat = 25
+    static var show: CGFloat {
+        get {
+            return defaults[.buttonPadding]
+        }
+    }
     static let hide: CGFloat = 10_000
 }
 
 class HelperstatusIcon {
     var type: StatusIconType
 
-    let statusIcon: NSStatusItem = NSStatusBar.system.statusItem(withLength: 25)
+    let statusIcon: NSStatusItem = NSStatusBar.system.statusItem(withLength: StatusIconLength.show)
 
     init() {
         type = .normal
@@ -59,6 +63,9 @@ class HelperstatusIcon {
     }
     
     func setSize() {
+        if statusIcon.length != StatusIconLength.hide {
+            statusIcon.length = StatusIconLength.show
+        }
         guard let statusIconButton = statusIcon.button else {
             fatalError("helper status item button failed")
         }
