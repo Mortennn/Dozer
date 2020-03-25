@@ -12,6 +12,7 @@ extension Defaults.Keys {
     static let hideAfterDelayEnabled: Defaults.Key<Bool> = Key<Bool>("hideAfterDelayEnabled", default: false)
     static let hideAfterDelay: Defaults.Key<TimeInterval> = Key<TimeInterval>("hideAfterDelay", default: 10)
     static let noIconMode: Defaults.Key<Bool> = Key<Bool>("noIconMode", default: false)
+    static let rightIconArrow: Defaults.Key<Bool> = Key<Bool>("rightIconArrow", default: false)
     static let removeDozerIconEnabled: Defaults.Key<Bool> = Key<Bool>("removeStatusIconEnabled", default: false)
     static let animationEnabled: Defaults.Key<Bool> = Key<Bool>("animationEnabeld", default: false)
 }
