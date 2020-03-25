@@ -123,7 +123,8 @@ public final class DozerIcons {
         perform(action: .hide, statusIcon: .remove)
         perform(action: .show, statusIcon: .normalLeft)
         let leftIcon = get(dozerIcon: .normalLeft)
-        if leftIcon.statusIcon.image?.name() == NSImage(named: NSImage.goRightTemplateName)?.name() {
+        if leftIcon.statusIcon.image?.name() == NSImage(named: NSImage.goRightTemplateName)?.name() ||
+            leftIcon.statusIcon.image?.name() == NSImage(named: NSImage.goLeftTemplateName)?.name() {
             leftIcon.setIcon()
         }
         if defaults[.noIconMode] {
