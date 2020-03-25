@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -12,6 +13,7 @@
                 <outlet property="HideBothDozerIconsCheckbox" destination="w7z-Qa-kqw" id="L5J-6S-jtb"/>
                 <outlet property="HideStatusBarIconsAfterDelayCheckbox" destination="hOy-nu-Sy0" id="aNv-vt-dQL"/>
                 <outlet property="HideStatusBarIconsAtLaunchCheckbox" destination="phN-BY-WEC" id="zff-cm-aik"/>
+                <outlet property="HideStatusBarIconsSecondsPopUpButton" destination="Ziw-so-qpj" id="iWr-jc-Wbb"/>
                 <outlet property="LaunchAtLoginCheckbox" destination="29f-2D-VsY" id="X2Z-FE-7IA"/>
                 <outlet property="ToggleMenuItemsView" destination="4Dt-wS-aZ8" id="PAm-fa-zGy"/>
                 <outlet property="view" destination="c22-O7-iKe" id="buC-Sz-vlD"/>
@@ -52,9 +54,9 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hOy-nu-Sy0">
-                    <rect key="frame" x="18" y="184" width="361" height="18"/>
+                    <rect key="frame" x="18" y="184" width="183" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="check" title="Hide status bar icons after 10 seconds" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="hS1-gl-Pc1">
+                    <buttonCell key="cell" type="check" title="Hide status bar icons after" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="hS1-gl-Pc1">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -136,6 +138,27 @@
                         <action selector="automaticallyCheckForUpdatesClicked:" target="-2" id="TJa-HP-dNZ"/>
                     </connections>
                 </button>
+                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ziw-so-qpj" userLabel="10 seconds">
+                    <rect key="frame" x="205" y="179" width="114" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <popUpButtonCell key="cell" type="push" title="10 seconds" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="10" imageScaling="proportionallyDown" inset="2" selectedItem="OdJ-mZ-u0T" id="JbX-Xw-iVE" userLabel="10 seconds">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                        <menu key="menu" id="fJp-Cl-42M">
+                            <items>
+                                <menuItem title="30 seconds" tag="30" id="dAj-2T-ECp"/>
+                                <menuItem title="20 seconds" tag="20" id="tfP-VF-MG8"/>
+                                <menuItem title="15 seconds" tag="15" id="EK8-vh-0H9"/>
+                                <menuItem title="10 seconds" state="on" tag="10" id="OdJ-mZ-u0T"/>
+                                <menuItem title="5 seconds" tag="5" id="Uqk-BC-hfK"/>
+                                <menuItem title="3 seconds" tag="3" id="ven-uH-a0W"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="hideStatusBarIconsSecondsUpdated:" target="-2" id="07d-zi-l5c"/>
+                    </connections>
+                </popUpButton>
             </subviews>
             <constraints>
                 <constraint firstAttribute="width" constant="397" id="WEJ-WZ-mea"/>

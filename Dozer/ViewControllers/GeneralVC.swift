@@ -24,6 +24,7 @@ final class General: NSViewController, PreferencePane {
     @IBOutlet private var CheckForUpdatesCheckbox: NSButton!
     @IBOutlet private var HideStatusBarIconsAtLaunchCheckbox: NSButton!
     @IBOutlet private var HideStatusBarIconsAfterDelayCheckbox: NSButton!
+    @IBOutlet private var HideStatusBarIconsSecondsPopUpButton: NSPopUpButton!
     @IBOutlet private var HideBothDozerIconsCheckbox: NSButton!
     @IBOutlet private var EnableRemoveDozerIconCheckbox: NSButton!
     @IBOutlet private var ToggleMenuItemsView: MASShortcutView!
@@ -42,6 +43,7 @@ final class General: NSViewController, PreferencePane {
 
         HideStatusBarIconsAtLaunchCheckbox.isChecked = defaults[.hideAtLaunchEnabled]
         HideStatusBarIconsAfterDelayCheckbox.isChecked = defaults[.hideAfterDelayEnabled]
+        HideStatusBarIconsSecondsPopUpButton.selectItem(withTag: Int(defaults[.hideAfterDelay]))
         HideBothDozerIconsCheckbox.isChecked = defaults[.noIconMode]
         EnableRemoveDozerIconCheckbox.isChecked = defaults[.removeDozerIconEnabled]
 
@@ -72,7 +74,12 @@ final class General: NSViewController, PreferencePane {
     @IBAction private func hideStatusBarIconsAfterDelayClicked(_ sender: NSButton) {
         DozerIcons.shared.hideStatusBarIconsAfterDelay = HideStatusBarIconsAfterDelayCheckbox.isChecked
     }
-
+    
+    @IBAction func hideStatusBarIconsSecondsUpdated(_ sender: NSPopUpButton) {
+        defaults[.hideAfterDelay] = TimeInterval(HideStatusBarIconsSecondsPopUpButton.selectedTag())
+        DozerIcons.shared.resetTimer()
+    }
+    
     @IBAction private func hideBothDozerIconsClicked(_ sender: NSButton) {
         DozerIcons.shared.hideBothDozerIcons = HideBothDozerIconsCheckbox.isChecked
     }

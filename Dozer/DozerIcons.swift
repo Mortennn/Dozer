@@ -187,7 +187,7 @@ public final class DozerIcons {
         timerToHideDozerIcons.invalidate()
     }
 
-    private func resetTimer() {
+    func resetTimer() {
         self.stopTimer()
         self.startTimer()
     }
