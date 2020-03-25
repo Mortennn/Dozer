@@ -7,9 +7,7 @@ import Defaults
 
 private struct StatusIconLength {
     static var show: CGFloat {
-        get {
-            return defaults[.buttonPadding]
-        }
+        return defaults[.buttonPadding]
     }
     static let hide: CGFloat = 10_000
 }
