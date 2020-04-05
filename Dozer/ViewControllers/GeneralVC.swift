@@ -14,9 +14,7 @@ final class General: NSViewController, PreferencePane {
     let preferencePaneTitle: String = "General"
     let toolbarItemIcon = NSImage(named: NSImage.preferencesGeneralName)!
 
-    override var nibName: NSNib.Name? {
-        return "General"
-    }
+    override var nibName: NSNib.Name? { "General" }
 
     fileprivate var userShortCut: MASShortcut!
 
@@ -64,7 +62,7 @@ final class General: NSViewController, PreferencePane {
         }
         SUUpdater.shared()!.automaticallyChecksForUpdates = CheckForUpdatesCheckbox.isChecked
     }
-    
+
     @IBAction private func hideStatusBarIconsAtLaunchClicked(_ sender: NSButton) {
         DozerIcons.shared.hideStatusBarIconsAtLaunch = HideStatusBarIconsAtLaunchCheckbox.isChecked
     }

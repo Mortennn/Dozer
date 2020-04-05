@@ -26,7 +26,7 @@ public final class DozerIcons {
             startTimer()
         }
     }
-    
+
     private func startUserInteractionTimer() {
         guard Defaults[.hideAfterDelayEnabled] else {
             stopUserInteractionTimer()
@@ -66,7 +66,7 @@ public final class DozerIcons {
             Defaults[.noIconMode] = self.hideBothDozerIcons
             if hideBothDozerIcons {
                 let rightDozerIconXPos = get(dozerIcon: .normalRight).xPositionOnScreen
-                dozerIcons.removeAll(where: { $0.xPositionOnScreen == rightDozerIconXPos })
+                dozerIcons.removeAll { $0.xPositionOnScreen == rightDozerIconXPos }
             } else {
                 dozerIcons.append(NormalStatusIcon())
             }
@@ -79,7 +79,7 @@ public final class DozerIcons {
             if enableRemoveDozerIcon {
                 dozerIcons.append(RemoveStatusIcon())
             } else {
-                dozerIcons.removeAll(where: { $0.type == .remove })
+                dozerIcons.removeAll { $0.type == .remove }
             }
             showAll()
         }

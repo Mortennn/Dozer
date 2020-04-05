@@ -60,14 +60,15 @@ class HelperstatusIcon {
 
     func showRemoveIcons() {}
 
-    @objc func statusIconClicked(_ sender: AnyObject?) {}
+    @objc
+    func statusIconClicked(_ sender: AnyObject?) {}
 
     var isShown: Bool {
-        return (statusIcon.length == StatusIconLength.show)
+        statusIcon.length == StatusIconLength.show
     }
 
     var isHidden: Bool {
-        return (statusIcon.length == StatusIconLength.hide)
+        statusIcon.length == StatusIconLength.hide
     }
 
     var xPositionOnScreen: CGFloat {

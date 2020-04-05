@@ -11,9 +11,7 @@ final class Dozer: NSViewController, PreferencePane {
     let preferencePaneTitle: String = "Dozer"
     let toolbarItemIcon = NSImage(named: "AppIcon")!
 
-    override var nibName: NSNib.Name? {
-        return "Dozer"
-    }
+    override var nibName: NSNib.Name? { "Dozer" }
 
     @IBOutlet private var versionLabel: NSTextField!
     @IBOutlet private var checkForUpdates: NSButton!

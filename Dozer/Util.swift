@@ -7,7 +7,7 @@ import Cocoa
 extension NSButton {
     var isChecked: Bool {
         get {
-            return state == .on
+            state == .on
         }
         set {
             state = newValue ? .on : .off
@@ -17,11 +17,11 @@ extension NSButton {
 
 struct Icons {
     var helperstatusIcon: NSImage {
-        return create(image: Assets.helperStatusItemIcon.name, 10, 10)
+        create(image: Assets.helperStatusItemIcon.name, 10, 10)
     }
 
     var removeStatusIcon: NSImage {
-        return create(image: Assets.helperStatusItemIcon.name, 5, 5)
+        create(image: Assets.helperStatusItemIcon.name, 5, 5)
     }
 
     private func create(image name: String, _ width: Int, _ height: Int) -> NSImage {
