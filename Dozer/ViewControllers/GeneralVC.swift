@@ -40,10 +40,10 @@ final class General: NSViewController, PreferencePane {
             CheckForUpdatesCheckbox.isChecked = false
         }
 
-        HideStatusBarIconsAtLaunchCheckbox.isChecked = defaults[.hideAtLaunchEnabled]
-        HideStatusBarIconsAfterDelayCheckbox.isChecked = defaults[.hideAfterDelayEnabled]
-        HideBothDozerIconsCheckbox.isChecked = defaults[.noIconMode]
-        EnableRemoveDozerIconCheckbox.isChecked = defaults[.removeDozerIconEnabled]
+        HideStatusBarIconsAtLaunchCheckbox.isChecked = Defaults[.hideAtLaunchEnabled]
+        HideStatusBarIconsAfterDelayCheckbox.isChecked = Defaults[.hideAfterDelayEnabled]
+        HideBothDozerIconsCheckbox.isChecked = Defaults[.noIconMode]
+        EnableRemoveDozerIconCheckbox.isChecked = Defaults[.removeDozerIconEnabled]
 
         ToggleMenuItemsView.associatedUserDefaultsKey = UserDefaultKeys.Shortcuts.ToggleMenuItems
         view.addSubview(ToggleMenuItemsView)
