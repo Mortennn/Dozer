@@ -73,7 +73,7 @@ final class General: NSViewController, PreferencePane {
     }
     
     @IBAction func hideStatusBarIconsSecondsUpdated(_ sender: NSPopUpButton) {
-        defaults[.hideAfterDelay] = TimeInterval(HideStatusBarIconsSecondsPopUpButton.selectedTag())
+        Defaults[.hideAfterDelay] = TimeInterval(HideStatusBarIconsSecondsPopUpButton.selectedTag())
         DozerIcons.shared.resetTimer()
     }
     
