@@ -1,6 +1,6 @@
 # Change Log
 
-## Version X
+## Version 4.2.0
 New features:
 * Configure amount of seconds to hide the icons after #104.
 
