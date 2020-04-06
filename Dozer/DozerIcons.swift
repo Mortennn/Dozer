@@ -86,18 +86,18 @@ public final class DozerIcons {
         }
     }
     
-    public var iconFontSize: Int = defaults[.iconSize] {
+    public var iconFontSize: Int = Defaults[.iconSize] {
         didSet {
-            defaults[.iconSize] = self.iconFontSize
+            Defaults[.iconSize] = self.iconFontSize
             for icon in dozerIcons {
                 icon.setSize()
             }
         }
     }
     
-    public var buttonPadding: CGFloat = defaults[.buttonPadding] {
+    public var buttonPadding: CGFloat = Defaults[.buttonPadding] {
         didSet {
-            defaults[.buttonPadding] = self.buttonPadding
+            Defaults[.buttonPadding] = self.buttonPadding
             for icon in dozerIcons {
                 icon.setSize()
             }
