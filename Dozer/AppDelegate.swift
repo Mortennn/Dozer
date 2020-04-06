@@ -3,8 +3,6 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import Cocoa
-import Crashlytics
-import Fabric
 import MASShortcut
 import Sparkle
 import Defaults
@@ -13,11 +11,6 @@ import Preferences
 
 final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_: Notification) {
-        #if !DEBUG
-            UserDefaults.standard.register(defaults: ["NSApplicationCrashOnExceptions": true])
-            Fabric.with([Crashlytics.self])
-        #endif
-
         MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: UserDefaultKeys.Shortcuts.ToggleMenuItems) { [unowned self] in
             DozerIcons.shared.toggle()
         }

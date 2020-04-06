@@ -23,8 +23,6 @@ targets:
       - path: Scripts/SignFrameworks.sh
         name: Sign Frameworks
         runOnlyWhenInstalling: true
-      - path: Scripts/Crashlytics.sh
-        name: Crashlytics
         runOnlyWhenInstalling: true
       - script: /usr/local/bin/swiftgen
         name: Generate files using SwiftGen
@@ -46,10 +44,6 @@ targets:
       - carthage: Preferences
       - carthage: MASShortcut
       - carthage: Sparkle
-      - carthage: Crashlytics
-        embed: false
-      - carthage: Fabric
-        embed: false
 schemes:
   Dozer:
     build:
