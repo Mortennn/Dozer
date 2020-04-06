@@ -1,4 +1,4 @@
-# Change Log
+# Changelog
 
 ## Version 4.2.0
 New features:
