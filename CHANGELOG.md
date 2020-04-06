@@ -1,5 +1,11 @@
 # Change Log
 
+## Version X
+New features:
+* Configure amount of seconds to hide the icons after #104.
+
+Thank you @blakedgordon for the contributions🙌
+
 ## Version 4.1.0
 New features:
 * Hide status bar icons at launch #78. @aonez
