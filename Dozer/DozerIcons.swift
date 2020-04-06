@@ -68,6 +68,7 @@ public final class DozerIcons {
                 let rightDozerIconXPos = get(dozerIcon: .normalRight).xPositionOnScreen
                 dozerIcons.removeAll { $0.xPositionOnScreen == rightDozerIconXPos }
             } else {
+                show()
                 dozerIcons.append(NormalStatusIcon())
             }
         }

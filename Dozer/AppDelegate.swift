@@ -18,7 +18,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             Fabric.with([Crashlytics.self])
         #endif
 
-        MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: UserDefaultKeys.Shortcuts.ToggleMenuItems) { [unowned self] in
+        MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: UserDefaultKeys.Shortcuts.ToggleMenuItems) { () in
             DozerIcons.shared.toggle()
         }
 
