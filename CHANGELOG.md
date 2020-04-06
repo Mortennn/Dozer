@@ -1,8 +1,11 @@
 # Change Log
 
-## Version X
+## Next version
 New features:
-* Configure amount of seconds to hide the icons after #104.
+* Configure amount of seconds to hide the icons after #104. @blakedgordon
+
+Fixed:
+* Fix both dozer icons from being hidden #105. @blakedgordon
 
 Thank you @blakedgordon for the contributions🙌
 
