@@ -1,5 +1,3 @@
-binary "https://building42.github.io/Specs/Carthage/macOS/Crashlytics.json" "3.14.0"
-binary "https://building42.github.io/Specs/Carthage/macOS/Fabric.json" "1.10.2"
 github "shpakovski/MASShortcut" "2.4.0"
 github "sindresorhus/Defaults" "v3.1.1"
 github "sindresorhus/LaunchAtLogin" "v3.0.0"
