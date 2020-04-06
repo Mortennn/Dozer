@@ -39,7 +39,7 @@ targets:
         ENABLE_HARDENED_RUNTIME: true
         MACOSX_DEPLOYMENT_TARGET: 10.13
         VERSIONING_SYSTEM: apple-generic
-        CURRENT_PROJECT_VERSION: 4.2.0
+        CURRENT_PROJECT_VERSION: 30
     dependencies:
       - carthage: LaunchAtLogin
       - carthage: Defaults
