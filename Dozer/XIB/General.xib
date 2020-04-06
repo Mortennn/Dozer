@@ -40,7 +40,7 @@
                 <textField horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yjj-cw-XAs">
                     <rect key="frame" x="35" y="170" width="361" height="13"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="The delay resets when you interact with the status bar." id="vbw-Q7-ecG">
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Use the shortcut to show the status bar icons." id="vbw-Q7-ecG">
                         <font key="font" metaFont="system" size="10"/>
                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -82,7 +82,7 @@
                 <textField horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CNz-dE-9vs">
                     <rect key="frame" x="37" y="213" width="342" height="13"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Use the shortcut to show the status bar icons." id="QoH-wj-4Bo">
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="The delay resets when you interact with the status bar." id="QoH-wj-4Bo">
                         <font key="font" metaFont="system" size="10"/>
                         <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
