@@ -25,6 +25,8 @@ final class General: NSViewController, PreferencePane {
     @IBOutlet private var HideStatusBarIconsSecondsPopUpButton: NSPopUpButton!
     @IBOutlet private var HideBothDozerIconsCheckbox: NSButton!
     @IBOutlet private var EnableRemoveDozerIconCheckbox: NSButton!
+    @IBOutlet private var FontSizePopUpButton: NSPopUpButton!
+    @IBOutlet private var ButtonPaddingPopUpButton: NSPopUpButton!
     @IBOutlet private var ToggleMenuItemsView: MASShortcutView!
 
     override func viewDidLoad() {
@@ -81,6 +83,14 @@ final class General: NSViewController, PreferencePane {
         DozerIcons.shared.hideBothDozerIcons = HideBothDozerIconsCheckbox.isChecked
     }
 
+    @IBAction func fontSizeChanged(_ sender: NSPopUpButton) {
+        DozerIcons.shared.iconFontSize = FontSizePopUpButton.selectedTag()
+    }
+    
+    @IBAction func buttonPaddingChanged(_ sender: NSPopUpButton) {
+        DozerIcons.shared.buttonPadding = CGFloat(ButtonPaddingPopUpButton.selectedTag())
+    }
+    
     @IBAction private func enableRemoveDozerIconClicked(_ sender: NSButton) {
         DozerIcons.shared.enableRemoveDozerIcon = EnableRemoveDozerIconCheckbox.isChecked
     }

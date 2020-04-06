@@ -3,6 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import Cocoa
+import Defaults
 
 extension NSButton {
     var isChecked: Bool {
@@ -17,11 +18,13 @@ extension NSButton {
 
 struct Icons {
     var helperstatusIcon: NSImage {
-        create(image: Assets.helperStatusItemIcon.name, 10, 10)
+        let size = defaults[.iconSize]
+        return create(image: Assets.helperStatusItemIcon.name, size, size)
     }
 
     var removeStatusIcon: NSImage {
-        create(image: Assets.helperStatusItemIcon.name, 5, 5)
+        let size = defaults[.iconSize] / 2
+        return create(image: Assets.helperStatusItemIcon.name, size, size)
     }
 
     private func create(image name: String, _ width: Int, _ height: Int) -> NSImage {
