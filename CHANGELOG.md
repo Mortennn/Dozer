@@ -3,6 +3,7 @@
 ## Version 4.2.0
 New features:
 * Configure amount of seconds to hide the icons after #104.
+* Resize icons and padding capability added #101. @blakedgordon
 
 Thank you @blakedgordon for the contributions🙌
 
