@@ -7,7 +7,7 @@ import Defaults
 
 private struct StatusIconLength {
     static var show: CGFloat {
-        return Defaults[.buttonPadding]
+        Defaults[.buttonPadding]
     }
     static let hide: CGFloat = 10_000
 }
@@ -59,7 +59,7 @@ class HelperstatusIcon {
         statusIconButton.image = Icons().helperstatusIcon
         statusIconButton.image!.isTemplate = true
     }
-    
+
     func setSize() {
         if statusIcon.length != StatusIconLength.hide {
             statusIcon.length = StatusIconLength.show

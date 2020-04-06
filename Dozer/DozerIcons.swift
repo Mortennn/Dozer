@@ -85,7 +85,7 @@ public final class DozerIcons {
             showAll()
         }
     }
-    
+
     public var iconFontSize: Int = Defaults[.iconSize] {
         didSet {
             Defaults[.iconSize] = self.iconFontSize
@@ -94,7 +94,7 @@ public final class DozerIcons {
             }
         }
     }
-    
+
     public var buttonPadding: CGFloat = Defaults[.buttonPadding] {
         didSet {
             Defaults[.buttonPadding] = self.buttonPadding

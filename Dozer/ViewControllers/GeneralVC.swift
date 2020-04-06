@@ -73,24 +73,24 @@ final class General: NSViewController, PreferencePane {
     @IBAction private func hideStatusBarIconsAfterDelayClicked(_ sender: NSButton) {
         DozerIcons.shared.hideStatusBarIconsAfterDelay = HideStatusBarIconsAfterDelayCheckbox.isChecked
     }
-    
-    @IBAction func hideStatusBarIconsSecondsUpdated(_ sender: NSPopUpButton) {
+
+    @IBAction private func hideStatusBarIconsSecondsUpdated(_ sender: NSPopUpButton) {
         Defaults[.hideAfterDelay] = TimeInterval(HideStatusBarIconsSecondsPopUpButton.selectedTag())
         DozerIcons.shared.resetTimer()
     }
-    
+
     @IBAction private func hideBothDozerIconsClicked(_ sender: NSButton) {
         DozerIcons.shared.hideBothDozerIcons = HideBothDozerIconsCheckbox.isChecked
     }
 
-    @IBAction func fontSizeChanged(_ sender: NSPopUpButton) {
+    @IBAction private func fontSizeChanged(_ sender: NSPopUpButton) {
         DozerIcons.shared.iconFontSize = FontSizePopUpButton.selectedTag()
     }
-    
-    @IBAction func buttonPaddingChanged(_ sender: NSPopUpButton) {
+
+    @IBAction private func buttonPaddingChanged(_ sender: NSPopUpButton) {
         DozerIcons.shared.buttonPadding = CGFloat(ButtonPaddingPopUpButton.selectedTag())
     }
-    
+
     @IBAction private func enableRemoveDozerIconClicked(_ sender: NSButton) {
         DozerIcons.shared.enableRemoveDozerIcon = EnableRemoveDozerIconCheckbox.isChecked
     }
