@@ -1,1 +1,0 @@
-./Carthage/Build/Mac/Fabric.framework/run 67eb7732a60d9f8f534b1e54b18079643f8bf5ac 1e7f5d52e8cbdf6bd2b6950cfa3ae171c2e43c10142f569eb3428bf45701ba7d

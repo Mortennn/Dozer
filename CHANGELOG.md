@@ -1,9 +1,12 @@
-# Change Log
+# Changelog
 
 ## Version 4.2.0
 New features:
-* Configure amount of seconds to hide the icons after #104.
+* Configure amount of seconds to hide the icons after #104. @blakedgordon
 * Resize icons and padding capability added #101. @blakedgordon
+
+Fixed:
+* Fix both dozer icons from being hidden #105. @blakedgordon
 
 Thank you @blakedgordon for the contributions🙌
 
