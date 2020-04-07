@@ -144,7 +144,7 @@
                     </connections>
                 </popUpButton>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nmU-jA-Ht8">
-                    <rect key="frame" x="130" y="15" width="249" height="17"/>
+                    <rect key="frame" x="130" y="16" width="249" height="17"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Show/hide status bar icons" id="HZP-sl-H5I">
                         <font key="font" metaFont="system"/>
