@@ -10,7 +10,7 @@ import Sparkle
 import Defaults
 
 final class General: NSViewController, PreferencePane {
-    let preferencePaneIdentifier = PreferencePaneIdentifier.general
+    let preferencePaneIdentifier = Preferences.PaneIdentifier.dozer
     let preferencePaneTitle: String = "General"
     let toolbarItemIcon = NSImage(named: NSImage.preferencesGeneralName)!
 
@@ -51,9 +51,11 @@ final class General: NSViewController, PreferencePane {
 
         ToggleMenuItemsView.associatedUserDefaultsKey = UserDefaultKeys.Shortcuts.ToggleMenuItems
         view.addSubview(ToggleMenuItemsView)
+        configureEnabledNoIconCheckbox()
 
         ToggleMenuItemsView.shortcutValueChange = { _ -> Void in
             self.userShortCut = self.ToggleMenuItemsView.shortcutValue
+            self.configureEnabledNoIconCheckbox()
         }
     }
 
@@ -96,5 +98,16 @@ final class General: NSViewController, PreferencePane {
 
     @IBAction private func enableRemoveDozerIconClicked(_ sender: NSButton) {
         DozerIcons.shared.enableRemoveDozerIcon = EnableRemoveDozerIconCheckbox.isChecked
+    }
+
+    /// disables the noIcon-checkbox if no shortcut is set and keeps track whether shortcut is set
+    private func configureEnabledNoIconCheckbox() {
+        if ToggleMenuItemsView.shortcutValue == nil {
+            HideBothDozerIconsCheckbox.isEnabled = false
+            Defaults[.isShortcutSet] = false
+        } else {
+            HideBothDozerIconsCheckbox.isEnabled = true
+            Defaults[.isShortcutSet] = true
+        }
     }
 }

@@ -14,7 +14,7 @@ public final class DozerIcons {
     private init() {
         dozerIcons.append(NormalStatusIcon())
 
-        if !hideBothDozerIcons {
+        if !hideBothDozerIcons  || !Defaults[.isShortcutSet] {
             dozerIcons.append(NormalStatusIcon())
         }
 
@@ -25,6 +25,11 @@ public final class DozerIcons {
         if hideStatusBarIconsAfterDelay {
             startTimer()
         }
+
+        Defaults.observe(.isShortcutSet) { change in
+            self.triggerHideBothDozerIcons()
+        }
+        .tieToLifetime(of: self)
     }
 
     private func startUserInteractionTimer() {
@@ -64,14 +69,24 @@ public final class DozerIcons {
     public var hideBothDozerIcons: Bool = Defaults[.noIconMode] {
         didSet {
             Defaults[.noIconMode] = self.hideBothDozerIcons
-            if hideBothDozerIcons {
+            triggerHideBothDozerIcons()
+        }
+    }
+
+    public func triggerHideBothDozerIcons() {
+        let normalStatusIconsCount = dozerIcons.filter { $0.type == .normal}.count
+        if hideBothDozerIcons && Defaults[.isShortcutSet] {
+            if normalStatusIconsCount == 2 {
                 let rightDozerIconXPos = get(dozerIcon: .normalRight).xPositionOnScreen
                 dozerIcons.removeAll { $0.xPositionOnScreen == rightDozerIconXPos }
-            } else {
+            }
+        } else if !hideBothDozerIcons && Defaults[.isShortcutSet] || !Defaults[.isShortcutSet] {
+            if normalStatusIconsCount == 1 {
                 show()
                 dozerIcons.append(NormalStatusIcon())
             }
         }
+        show()
     }
 
     public var enableRemoveDozerIcon: Bool = Defaults[.removeDozerIconEnabled] {
@@ -108,7 +123,7 @@ public final class DozerIcons {
     public func hide() {
         perform(action: .hide, statusIcon: .remove)
         perform(action: .hide, statusIcon: .normalLeft)
-        if Defaults[.noIconMode] {
+        if Defaults[.noIconMode] && Defaults[.isShortcutSet] {
             perform(action: .hide, statusIcon: .normalRight)
         }
         didHideStatusBarIcons()

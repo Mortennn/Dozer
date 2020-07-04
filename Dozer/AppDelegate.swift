@@ -15,6 +15,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             DozerIcons.shared.toggle()
         }
 
+        preferencesWindowController.show(preferencePane: .general)
+
         // Initalize Dozer Icons
         _ = DozerIcons.shared
         if DozerIcons.shared.hideStatusBarIconsAtLaunch {
