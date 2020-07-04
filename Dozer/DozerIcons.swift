@@ -175,7 +175,6 @@ public final class DozerIcons {
                 action: .toggle,
                 statusIcon: .remove
             )
-            resetTimer()
         } else {
             DozerIcons.shared.perform(
                 action: .show,
@@ -186,6 +185,7 @@ public final class DozerIcons {
                 statusIcon: .remove
             )
         }
+        resetTimer()
     }
 
     // MARK: Show/hide lifecycle
