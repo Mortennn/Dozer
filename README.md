@@ -45,8 +45,8 @@ There are 2 or 3, numbered from right to left:
 
 ## 👨‍💻 Usage
 
-* Move the icons you want to hide until clicked to the left of the second Dozer icons
-* Move the icons you want to hide until clicked to the left of the second Dozer icons
+* Move the icons you want to hide until clicked to the left of the second Dozer icon
+* Move the icons you want to hide until option-clicked to the left of the third Dozer icon
 
 **N.B. hold command (`⌘`) then drag to move the menu bar icons.**
 
