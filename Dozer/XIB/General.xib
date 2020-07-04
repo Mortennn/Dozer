@@ -170,7 +170,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </box>
                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lku-wR-aPA">
-                    <rect key="frame" x="18" y="80" width="76" height="25"/>
+                    <rect key="frame" x="18" y="79" width="76" height="25"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <popUpButtonCell key="cell" type="push" title="10 px" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="10" imageScaling="proportionallyDown" inset="2" selectedItem="K1H-GX-dgi" id="dMj-ju-7Q7">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -223,7 +223,7 @@
                     </connections>
                 </popUpButton>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tB7-K2-Gts">
-                    <rect key="frame" x="95" y="54" width="131" height="16"/>
+                    <rect key="frame" x="95" y="55" width="131" height="16"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" title="Width of Dozer icons" id="y67-Ov-Fvx">
                         <font key="font" metaFont="system"/>
@@ -240,7 +240,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </customView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nmU-jA-Ht8">
-                    <rect key="frame" x="130" y="15" width="249" height="17"/>
+                    <rect key="frame" x="130" y="17" width="249" height="17"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Show/hide menu bar icons" id="HZP-sl-H5I">
                         <font key="font" metaFont="system"/>
