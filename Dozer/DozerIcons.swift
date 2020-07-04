@@ -86,6 +86,12 @@ public final class DozerIcons {
         }
     }
 
+    public var enableIconAndMenu: Bool = Defaults[.showIconAndMenuEnabled] {
+        didSet {
+            Defaults[.showIconAndMenuEnabled] = self.enableIconAndMenu
+        }
+    }
+
     public var iconFontSize: Int = Defaults[.iconSize] {
         didSet {
             Defaults[.iconSize] = self.iconFontSize
@@ -142,12 +148,16 @@ public final class DozerIcons {
     }
 
     public func showIconAndMenu() {
-        _ = DozerIcons.toggleDockIcon(showIcon: true)
-        NSApp.activate(ignoringOtherApps: true)
+        if Defaults[.showIconAndMenuEnabled] {
+            _ = DozerIcons.toggleDockIcon(showIcon: true)
+            NSApp.activate(ignoringOtherApps: true)
+        }
     }
 
     public func hideIconAndMenu() {
-        _ = DozerIcons.toggleDockIcon(showIcon: false)
+        if Defaults[.showIconAndMenuEnabled] {
+            _ = DozerIcons.toggleDockIcon(showIcon: false)
+        }
     }
 
     /// Force show all Dozer status bar icons
