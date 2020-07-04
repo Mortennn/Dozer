@@ -125,8 +125,10 @@ public final class DozerIcons {
 
     public func toggle() {
         if get(dozerIcon: .normalLeft).isShown {
+            hideIconAndMenu()
             hide()
         } else {
+            showIconAndMenu()
             show()
         }
     }
@@ -139,6 +141,15 @@ public final class DozerIcons {
         }
     }
 
+    public func showIconAndMenu() {
+        _ = DozerIcons.toggleDockIcon(showIcon: true)
+        NSApp.activate(ignoringOtherApps: true)
+    }
+
+    public func hideIconAndMenu() {
+        _ = DozerIcons.toggleDockIcon(showIcon: false)
+    }
+
     /// Force show all Dozer status bar icons
     public func showAll() {
         perform(action: .show, statusIcon: .remove)
@@ -148,6 +159,7 @@ public final class DozerIcons {
     }
 
     public func handleOptionClick() {
+        showIconAndMenu()
         if get(dozerIcon: .normalLeft).isShown {
             DozerIcons.shared.perform(
                 action: .toggle,
@@ -188,6 +200,7 @@ public final class DozerIcons {
             return
         }
 
+        hideIconAndMenu()
         DozerIcons.shared.hide()
     }
 
@@ -253,6 +266,17 @@ public final class DozerIcons {
             }
             return rightStatusIcon
         }
+    }
+
+    /// hide and show dock icon and thus its menu bar
+    public class func toggleDockIcon(showIcon state: Bool) -> Bool {
+        var result: Bool
+        if state {
+            result = NSApp.setActivationPolicy(NSApplication.ActivationPolicy.regular)
+        } else {
+            result = NSApp.setActivationPolicy(NSApplication.ActivationPolicy.accessory)
+        }
+        return result
     }
 
     /// Determines if the user is interacting with the status bar based on level, owner and y-coordinate
