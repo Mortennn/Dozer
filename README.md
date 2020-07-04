@@ -48,12 +48,12 @@ There are 2 or 3, numbered from right to left:
 * Move the icons you want to hide until clicked to the left of the second Dozer icons
 * Move the icons you want to hide until clicked to the left of the second Dozer icons
 
+**N.B. hold command (`⌘`) then drag to move the menu bar icons.**
+
 ## 👇 Interactions
 * Left-click one of the Dozer icons to hide/show the first group of menu bar icons
 * Option-Left-click one of the Dozer icons to show the second group of menu bar icons (optional)
 * Right-click one of the Dozer icons to open the settings
-
-**N.B. hold command (`⌘`) then drag to move the menu bar icons.**
 
 **Checkout [this GIF](https://raw.githubusercontent.com/Mortennn/Dozer/master/Stuff/demo.gif) to watch Dozer in action.**
 
