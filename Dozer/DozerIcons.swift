@@ -160,7 +160,7 @@ public final class DozerIcons {
         }
     }
 
-    /// Force show all Dozer status bar icons
+    /// Force show all Dozer icons
     public func showAll() {
         perform(action: .show, statusIcon: .remove)
         perform(action: .show, statusIcon: .normalLeft)
@@ -204,7 +204,7 @@ public final class DozerIcons {
             return
         }
 
-        // don't hide on user interaction with status bar
+        // don't hide on user interaction with menu bar
         guard !isUserInteractingWithStatusBar() else {
             resetTimer()
             return
@@ -253,7 +253,7 @@ public final class DozerIcons {
         }
     }
 
-    /// Will crash if trying to get ´DozerIcon´ which does not exist in the status bar
+    /// Will crash if trying to get ´DozerIcon´ which does not exist in the menu bar
     private func get(dozerIcon: DozerIcon) -> HelperstatusIcon {
         var normalStatusIconsXPosition: [CGFloat] = []
         for statusIcon in dozerIcons where statusIcon.type == .normal {
@@ -289,9 +289,9 @@ public final class DozerIcons {
         return result
     }
 
-    /// Determines if the user is interacting with the status bar based on level, owner and y-coordinate
+    /// Determines if the user is interacting with the menu bar based on level, owner and y-coordinate
     ///
-    /// - Returns: Returns whether the user is interacting with the status bar or not
+    /// - Returns: Returns whether the user is interacting with the menu bar or not
     private func isUserInteractingWithStatusBar() -> Bool {
         let windowListType = CGWindowListOption.optionOnScreenOnly
         guard let windowInfoList = CGWindowListCopyWindowInfo(windowListType, kCGNullWindowID) as NSArray? as? [[String: AnyObject]] else {
@@ -301,7 +301,7 @@ public final class DozerIcons {
 
         for windowInfo in windowInfoList {
             guard let window = Window(windowInfo),
-                // If the preferences window are close to the status bar it won't auto hide
+                // If the preferences window are close to the menu bar it won't auto hide
                 window.owner != "Dozer" else {
                     continue
             }
