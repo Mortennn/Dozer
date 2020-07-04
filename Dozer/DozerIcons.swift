@@ -278,7 +278,7 @@ public final class DozerIcons {
         }
     }
 
-    /// hide and show dock icon and thus its menu bar
+    /// hide and show dock icon and thus its menu bar: to free up space to show more menu bar icons
     public class func toggleDockIcon(showIcon state: Bool) -> Bool {
         var result: Bool
         if state {
