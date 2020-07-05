@@ -89,6 +89,10 @@ public final class DozerIcons {
     public var enableIconAndMenu: Bool = Defaults[.showIconAndMenuEnabled] {
         didSet {
             Defaults[.showIconAndMenuEnabled] = self.enableIconAndMenu
+            if self.enableIconAndMenu == false {
+                _ = DozerIcons.toggleDockIcon(showIcon: false)
+                appDelegate.preferencesWindowController.show(preferencePane: .general)
+            }
         }
     }
 
