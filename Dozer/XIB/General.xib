@@ -146,9 +146,9 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oAW-Yf-7fi">
-                    <rect key="frame" x="18" y="140" width="336" height="18"/>
+                    <rect key="frame" x="18" y="140" width="352" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="check" title="Use full screen width when showing menu bar icons" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="BFd-a4-rMo">
+                    <buttonCell key="cell" type="check" title="Use full width of screen when showing menu bar icons" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="BFd-a4-rMo">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
