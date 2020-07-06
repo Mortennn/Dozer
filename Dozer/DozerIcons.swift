@@ -122,23 +122,24 @@ public final class DozerIcons {
             perform(action: .hide, statusIcon: .normalRight)
         }
         didHideStatusBarIcons()
+        hideIconAndMenu()
     }
 
     public func show() {
+        resetTimer()
         perform(action: .hide, statusIcon: .remove)
         perform(action: .show, statusIcon: .normalLeft)
         if Defaults[.noIconMode] {
             perform(action: .show, statusIcon: .normalRight)
         }
         didShowStatusBarIcons()
+        showIconAndMenu()
     }
 
     public func toggle() {
         if get(dozerIcon: .normalLeft).isShown {
-            hideIconAndMenu()
             hide()
         } else {
-            showIconAndMenu()
             show()
         }
     }
@@ -214,7 +215,6 @@ public final class DozerIcons {
             return
         }
 
-        hideIconAndMenu()
         DozerIcons.shared.hide()
     }
 
