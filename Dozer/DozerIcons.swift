@@ -10,6 +10,7 @@ public final class DozerIcons {
     private var dozerIcons: [HelperstatusIcon] = []
     private var timerToCheckUserInteraction = Timer()
     private var timerToHideDozerIcons = Timer()
+    private var previousApp = NSRunningApplication()
 
     private init() {
         dozerIcons.append(NormalStatusIcon())
@@ -153,6 +154,9 @@ public final class DozerIcons {
     }
 
     public func showIconAndMenu() {
+        if NSWorkspace.shared.frontmostApplication?.bundleIdentifier != "com.mortennn.Dozer" {
+            previousApp = NSWorkspace.shared.frontmostApplication!
+        }
         if Defaults[.showIconAndMenuEnabled] {
             _ = DozerIcons.toggleDockIcon(showIcon: true)
             NSApp.activate(ignoringOtherApps: true)
@@ -162,6 +166,10 @@ public final class DozerIcons {
     public func hideIconAndMenu() {
         if Defaults[.showIconAndMenuEnabled] {
             _ = DozerIcons.toggleDockIcon(showIcon: false)
+            if NSWorkspace.shared.frontmostApplication?.bundleIdentifier == "com.mortennn.Dozer" {
+                previousApp.activate()
+            }
+            NSApp.hide(self)
         }
     }
 
