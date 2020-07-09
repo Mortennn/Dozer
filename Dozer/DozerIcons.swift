@@ -203,7 +203,7 @@ public final class DozerIcons {
 
     // MARK: Show/hide lifecycle
     private func didShowStatusBarIcons() {
-        startTimer()
+        //startTimer()
         startUserInteractionTimer()
     }
 
