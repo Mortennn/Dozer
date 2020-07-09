@@ -169,7 +169,6 @@ public final class DozerIcons {
             if NSWorkspace.shared.frontmostApplication?.bundleIdentifier == "com.mortennn.Dozer" {
                 previousApp.activate()
             }
-            NSApp.hide(self)
         }
     }
 
