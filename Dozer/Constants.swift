@@ -35,7 +35,7 @@ extension PreferencePaneIdentifier {
 }
 
 struct AppInfo {
-    static let bundleIdentifier: String = "com.mortennn.Dozer"
+    static let bundleIdentifier: String = Bundle.main.bundleIdentifier!
     static var releaseVersionNumber: String? {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     }

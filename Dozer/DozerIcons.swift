@@ -154,7 +154,7 @@ public final class DozerIcons {
     }
 
     public func showIconAndMenu() {
-        if NSWorkspace.shared.frontmostApplication?.bundleIdentifier != "com.mortennn.Dozer" {
+        if NSWorkspace.shared.frontmostApplication?.bundleIdentifier != AppInfo.bundleIdentifier {
             previousApp = NSWorkspace.shared.frontmostApplication!
         }
         if Defaults[.showIconAndMenuEnabled] {
@@ -166,7 +166,7 @@ public final class DozerIcons {
     public func hideIconAndMenu() {
         if Defaults[.showIconAndMenuEnabled] {
             _ = DozerIcons.toggleDockIcon(showIcon: false)
-            if NSWorkspace.shared.frontmostApplication?.bundleIdentifier == "com.mortennn.Dozer" {
+            if NSWorkspace.shared.frontmostApplication?.bundleIdentifier == AppInfo.bundleIdentifier {
                 previousApp.activate()
             }
         }
