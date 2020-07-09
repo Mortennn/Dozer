@@ -13,6 +13,7 @@ extension Defaults.Keys {
     static let hideAfterDelay: Defaults.Key<TimeInterval> = Key<TimeInterval>("hideAfterDelay", default: 10)
     static let noIconMode: Defaults.Key<Bool> = Key<Bool>("noIconMode", default: false)
     static let removeDozerIconEnabled: Defaults.Key<Bool> = Key<Bool>("removeStatusIconEnabled", default: false)
+    static let showIconAndMenuEnabled: Defaults.Key<Bool> = Key<Bool>("showIconAndMenuEnabled", default: false)
     static let iconSize: Defaults.Key<Int> = Key<Int>("fontSize", default: 10)
     static let buttonPadding: Defaults.Key<CGFloat> = Key<CGFloat>("buttonPadding", default: 25)
     static let animationEnabled: Defaults.Key<Bool> = Key<Bool>("animationEnabeld", default: false)
@@ -34,7 +35,7 @@ extension PreferencePaneIdentifier {
 }
 
 struct AppInfo {
-    static let bundleIdentifier: String = "com.mortennn.Dozer"
+    static let bundleIdentifier: String = Bundle.main.bundleIdentifier!
     static var releaseVersionNumber: String? {
         Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     }
