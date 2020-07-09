@@ -110,6 +110,10 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Hide both Dozer icons when menu bar icons are hidden" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="PrK-hp-6i2">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nmU-jA-Ht8">
+                    <rect key="frame" x="130" y="16" width="249" height="17"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Show/hide status bar icons" id="HZP-sl-H5I">
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
