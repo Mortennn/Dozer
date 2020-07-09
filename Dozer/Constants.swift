@@ -17,6 +17,7 @@ extension Defaults.Keys {
     static let iconSize: Defaults.Key<Int> = Key<Int>("fontSize", default: 10)
     static let buttonPadding: Defaults.Key<CGFloat> = Key<CGFloat>("buttonPadding", default: 25)
     static let animationEnabled: Defaults.Key<Bool> = Key<Bool>("animationEnabeld", default: false)
+    static let isShortcutSet: Defaults.Key<Bool> = Key<Bool>("isShortcutSet", default: false)
 }
 
 struct UserDefaultKeys {
@@ -29,9 +30,9 @@ extension NSStoryboard.Name {
     static let preferences: NSStoryboard.Name = NSStoryboard.Name("Preferences")
 }
 
-extension PreferencePaneIdentifier {
-    static let dozer = PreferencePaneIdentifier("dozer")
-    static let general = PreferencePaneIdentifier("general")
+extension Preferences.PaneIdentifier {
+    static let dozer = Self("dozer")
+    static let general = Self("general")
 }
 
 struct AppInfo {
