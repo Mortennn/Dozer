@@ -306,13 +306,11 @@ public final class DozerIcons {
 
     /// hide and show dock icon and thus its menu bar: to free up space to show more menu bar icons
     public class func toggleDockIcon(showIcon state: Bool) -> Bool {
-        var result: Bool
         if state {
-            result = NSApp.setActivationPolicy(NSApplication.ActivationPolicy.regular)
+            return NSApp.setActivationPolicy(NSApplication.ActivationPolicy.regular)
         } else {
-            result = NSApp.setActivationPolicy(NSApplication.ActivationPolicy.accessory)
+            return NSApp.setActivationPolicy(NSApplication.ActivationPolicy.accessory)
         }
-        return result
     }
 
     /// Determines if the user is interacting with the menu bar based on level, owner and y-coordinate
