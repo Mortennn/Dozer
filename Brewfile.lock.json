@@ -2,39 +2,35 @@
   "entries": {
     "brew": {
       "swiftformat": {
-        "version": "0.44.7",
+        "version": "0.44.16",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/swiftformat-0.44.7.catalina.bottle.tar.gz",
-              "sha256": "279acad5c3add211ea79dd7931e0157e4c423f9bafeb4c8737555bafd98ed324"
+              "url": "https://homebrew.bintray.com/bottles/swiftformat-0.44.16.catalina.bottle.tar.gz",
+              "sha256": "e03e40dbe228ee7136cc2dd57079b589a6c531f4f2a52fce8a0ad7aaa2e2a935"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/swiftformat-0.44.7.mojave.bottle.tar.gz",
-              "sha256": "53d82866cd08befaec7e5a2e93461ad4693bae07e42ec4617d3fc4ef04bfe230"
+              "url": "https://homebrew.bintray.com/bottles/swiftformat-0.44.16.mojave.bottle.tar.gz",
+              "sha256": "9b866de2516e8f68b1ad764f996f38cba31b2d2fc345ba683bdd1867e6a44091"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/swiftformat-0.44.7.high_sierra.bottle.tar.gz",
-              "sha256": "846c3e44701ce830a0310f67c928a2f670ee6c40c1ef2c514e25745756990bef"
+              "url": "https://homebrew.bintray.com/bottles/swiftformat-0.44.16.high_sierra.bottle.tar.gz",
+              "sha256": "eb111096afada9821c4cf1489706b5daf599670d8651719955998f763c6b9cdb"
             }
           }
         }
       },
       "swiftgen": {
-        "version": "6.1.0",
+        "version": "6.2.1",
         "bottle": {
           "cellar": ":any",
           "prefix": "/usr/local",
           "files": {
-            "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/swiftgen-6.1.0.mojave.bottle.tar.gz",
-              "sha256": "d3a00e098b7c4dd3e6add33e935976a52697a67384b0133b9c37e510f8ce4271"
-            },
-            "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/swiftgen-6.1.0.high_sierra.bottle.tar.gz",
-              "sha256": "786366406526b11d0958340597eb98e6e3d14971ca0a5097bfb11bae9a64cb03"
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/swiftgen-6.2.1.catalina.bottle.tar.gz",
+              "sha256": "0fde7ff65be044c1685ab5aa84514e45c594cbc8bad028b5ac8f2f6218cfd626"
             }
           }
         }
@@ -57,39 +53,39 @@
         }
       },
       "xcodegen": {
-        "version": "2.15.1",
+        "version": "2.16.0",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/xcodegen-2.15.1.catalina.bottle.tar.gz",
-              "sha256": "9dc6875065ddf5816c00312328f0f4f1c801ad11c8c40af7192d3068ec1edf27"
+              "url": "https://homebrew.bintray.com/bottles/xcodegen-2.16.0.catalina.bottle.tar.gz",
+              "sha256": "fc8f03f0f3968c6f913725629bdfa34a24a539a6868afdb1112b8f76cdbf5a55"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/xcodegen-2.15.1.mojave.bottle.tar.gz",
-              "sha256": "d6359a7e712f7a749184ad7f9285abaafdf1cc0187d01278645e46688f86bb8a"
+              "url": "https://homebrew.bintray.com/bottles/xcodegen-2.16.0.mojave.bottle.tar.gz",
+              "sha256": "a8eea29cb064ef817a1aae173b102eb689a263fc4039987a4592e9f15c4b1d85"
             }
           }
         }
       },
       "carthage": {
-        "version": "0.34.0",
+        "version": "0.35.0",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/carthage-0.34.0.catalina.bottle.tar.gz",
-              "sha256": "e3498577798d41c08522e1478e125c2c07fb1c1d1b9aadc447f9d028ec6b3e83"
+              "url": "https://homebrew.bintray.com/bottles/carthage-0.35.0.catalina.bottle.tar.gz",
+              "sha256": "fdaacafff1566fa7b1e42e68e108da69aa7578dc82f4736272dca10283c9cba2"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/carthage-0.34.0.mojave.bottle.tar.gz",
-              "sha256": "42ec7f8f09fa1701634ba5f8f162778102db7d03a114320296d3b58df8495a6a"
+              "url": "https://homebrew.bintray.com/bottles/carthage-0.35.0.mojave.bottle.tar.gz",
+              "sha256": "1da29ca0b1d8e79bec5e548f5ab2433890ebc3fc9007f5fdb70d9e3be281dbb7"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/carthage-0.34.0.high_sierra.bottle.tar.gz",
-              "sha256": "948811ce4d294c0deee78142c5606a6277b2436afe31f502fc4681acc62428ee"
+              "url": "https://homebrew.bintray.com/bottles/carthage-0.35.0.high_sierra.bottle.tar.gz",
+              "sha256": "130fcb9bc06ef8e7f1c5ac9af0d155bd347db039b2cf80fa0fef764b3627ffbf"
             }
           }
         }
@@ -99,12 +95,12 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.11-130-g6f50801",
+        "HOMEBREW_VERSION": "2.4.4-57-g6d2c395",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "f3715938ef59356b68be2f75d48655d61cc8bf32",
+        "Homebrew/homebrew-core": "a4ba652e5d0b5380df4f2edecc2f4d15cd15fc48",
         "CLT": "1103.0.32.29",
-        "Xcode": "11.4",
-        "macOS": "10.15.4"
+        "Xcode": "11.5",
+        "macOS": "10.15.5"
       }
     }
   }
