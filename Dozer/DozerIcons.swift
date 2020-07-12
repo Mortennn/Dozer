@@ -212,6 +212,8 @@ public final class DozerIcons {
                 statusIcon: .remove
             )
         }
+        stopUserInteractionTimer()
+        startUserInteractionTimer()
         resetTimer()
     }
 
