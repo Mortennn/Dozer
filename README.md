@@ -55,7 +55,8 @@ There are 2 or 3, numbered from right to left:
 * Option-Left-click one of the Dozer icons to show the second group of menu bar icons (optional)
 * Right-click one of the Dozer icons to open the settings
 
-**Checkout [this GIF](https://raw.githubusercontent.com/Mortennn/Dozer/master/Stuff/demo.gif) to watch Dozer in action.**
+<!-- GIF is commented out until it is redone -->
+<!-- **Checkout [this GIF](https://raw.githubusercontent.com/Mortennn/Dozer/master/Stuff/demo.gif) to watch Dozer in action.** -->
 
 ## 📄 Requirements
 macOS 10.13+
