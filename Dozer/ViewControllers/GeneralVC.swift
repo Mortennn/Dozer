@@ -10,7 +10,7 @@ import Sparkle
 import Defaults
 
 final class General: NSViewController, PreferencePane {
-    let preferencePaneIdentifier = Preferences.PaneIdentifier.general
+    let preferencePaneIdentifier = PreferencePaneIdentifier.general
     let preferencePaneTitle: String = "General"
     let toolbarItemIcon = NSImage(named: NSImage.preferencesGeneralName)!
 
