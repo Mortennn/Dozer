@@ -28,7 +28,7 @@
 ## ⚙️ Install
 Using [Homebrew Cask](https://caskroom.github.io/):
 ```shell
-brew cask install dozer
+brew install --cask dozer
 ```
 
 Manual:
