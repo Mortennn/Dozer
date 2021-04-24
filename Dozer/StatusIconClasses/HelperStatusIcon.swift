@@ -6,14 +6,16 @@ import Cocoa
 import Defaults
 
 private struct StatusIconLength {
-    static let show: CGFloat = 25
+    static var show: CGFloat {
+        Defaults[.buttonPadding]
+    }
     static let hide: CGFloat = 10_000
 }
 
 class HelperstatusIcon {
     var type: StatusIconType
 
-    let statusIcon: NSStatusItem = NSStatusBar.system.statusItem(withLength: 25)
+    let statusIcon: NSStatusItem = NSStatusBar.system.statusItem(withLength: StatusIconLength.show)
 
     init() {
         type = .normal
@@ -58,16 +60,33 @@ class HelperstatusIcon {
         statusIconButton.image!.isTemplate = true
     }
 
+    func setSize() {
+        if statusIcon.length != StatusIconLength.hide {
+            statusIcon.length = StatusIconLength.show
+        }
+        guard let statusIconButton = statusIcon.button else {
+            fatalError("helper status item button failed")
+        }
+        let image = statusIconButton.image
+        var size = DozerIcons.shared.iconFontSize
+        if self.type == .remove {
+            size /= 2
+        }
+        image?.size = NSSize(width: size, height: size)
+        statusIconButton.image = image
+    }
+
     func showRemoveIcons() {}
 
-    @objc func statusIconClicked(_ sender: AnyObject?) {}
+    @objc
+    func statusIconClicked(_ sender: AnyObject?) {}
 
     var isShown: Bool {
-        return (statusIcon.length == StatusIconLength.show)
+        statusIcon.length == StatusIconLength.show
     }
 
     var isHidden: Bool {
-        return (statusIcon.length == StatusIconLength.hide)
+        statusIcon.length == StatusIconLength.hide
     }
 
     var xPositionOnScreen: CGFloat {

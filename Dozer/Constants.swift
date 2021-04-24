@@ -13,7 +13,11 @@ extension Defaults.Keys {
     static let hideAfterDelay: Defaults.Key<TimeInterval> = Key<TimeInterval>("hideAfterDelay", default: 10)
     static let noIconMode: Defaults.Key<Bool> = Key<Bool>("noIconMode", default: false)
     static let removeDozerIconEnabled: Defaults.Key<Bool> = Key<Bool>("removeStatusIconEnabled", default: false)
+    static let showIconAndMenuEnabled: Defaults.Key<Bool> = Key<Bool>("showIconAndMenuEnabled", default: false)
+    static let iconSize: Defaults.Key<Int> = Key<Int>("fontSize", default: 10)
+    static let buttonPadding: Defaults.Key<CGFloat> = Key<CGFloat>("buttonPadding", default: 25)
     static let animationEnabled: Defaults.Key<Bool> = Key<Bool>("animationEnabeld", default: false)
+    static let isShortcutSet: Defaults.Key<Bool> = Key<Bool>("isShortcutSet", default: false)
 }
 
 struct UserDefaultKeys {
@@ -26,18 +30,18 @@ extension NSStoryboard.Name {
     static let preferences: NSStoryboard.Name = NSStoryboard.Name("Preferences")
 }
 
-extension PreferencePaneIdentifier {
-    static let dozer = PreferencePaneIdentifier("dozer")
-    static let general = PreferencePaneIdentifier("general")
+extension Preferences.PaneIdentifier {
+    static let dozer = Self("dozer")
+    static let general = Self("general")
 }
 
 struct AppInfo {
-    static let bundleIdentifier: String = "com.mortennn.Dozer"
+    static let bundleIdentifier: String = Bundle.main.bundleIdentifier!
     static var releaseVersionNumber: String? {
-        return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     }
     static var buildVersionNumber: String? {
-        return Bundle.main.infoDictionary?["CFBundleVersion"] as? String
+        Bundle.main.infoDictionary?["CFBundleVersion"] as? String
     }
 }
 

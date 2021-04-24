@@ -23,8 +23,6 @@ targets:
       - path: Scripts/SignFrameworks.sh
         name: Sign Frameworks
         runOnlyWhenInstalling: true
-      - path: Scripts/Crashlytics.sh
-        name: Crashlytics
         runOnlyWhenInstalling: true
       - script: /usr/local/bin/swiftgen
         name: Generate files using SwiftGen
@@ -39,17 +37,13 @@ targets:
         ENABLE_HARDENED_RUNTIME: true
         MACOSX_DEPLOYMENT_TARGET: 10.13
         VERSIONING_SYSTEM: apple-generic
-        CURRENT_PROJECT_VERSION: 4.0
+        CURRENT_PROJECT_VERSION: 30
     dependencies:
       - carthage: LaunchAtLogin
       - carthage: Defaults
       - carthage: Preferences
       - carthage: MASShortcut
       - carthage: Sparkle
-      - carthage: Crashlytics
-        embed: false
-      - carthage: Fabric
-        embed: false
 schemes:
   Dozer:
     build:

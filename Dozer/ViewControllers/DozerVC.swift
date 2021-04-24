@@ -7,13 +7,11 @@ import Sparkle
 import Preferences
 
 final class Dozer: NSViewController, PreferencePane {
-    let preferencePaneIdentifier = PreferencePaneIdentifier.dozer
+    let preferencePaneIdentifier = Preferences.PaneIdentifier.dozer
     let preferencePaneTitle: String = "Dozer"
     let toolbarItemIcon = NSImage(named: "AppIcon")!
 
-    override var nibName: NSNib.Name? {
-        return "Dozer"
-    }
+    override var nibName: NSNib.Name? { "Dozer" }
 
     @IBOutlet private var versionLabel: NSTextField!
     @IBOutlet private var checkForUpdates: NSButton!

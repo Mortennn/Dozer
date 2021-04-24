@@ -1,4 +1,23 @@
-# Change Log
+# Changelog
+
+## Version 4.2.0
+New features:
+* Configure amount of seconds to hide the icons after #104. @blakedgordon
+* Resize icons and padding capability added #101. @blakedgordon
+
+Fixed:
+* Fix both dozer icons from being hidden #105. @blakedgordon
+
+Thank you @blakedgordon for the contributions🙌
+
+## Version 4.1.0
+New features:
+* Hide status bar icons at launch #78. @aonez
+
+Fixed:
+* Reduce CPU usage when "Hide status bar icons after 10 seconds" is checked #78. @aonez
+
+Thank you @aonez for the contributions🙌
 
 ## Version 4
 New features:
