@@ -141,6 +141,18 @@ public final class DozerIcons {
         hideIconAndMenu()
     }
 
+    public func hideAtLaunch() {
+        if hideStatusBarIconsAtLaunch {
+            if #available(macOS 11.0, *) {
+                Timer.scheduledTimer(withTimeInterval: 0.15, repeats: false) { _ in
+                   self.hide()
+                }
+            } else {
+                self.hide()
+            }
+        }
+    }
+
     public func show() {
         resetTimer()
         perform(action: .hide, statusIcon: .remove)

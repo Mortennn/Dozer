@@ -17,9 +17,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
         // Initalize Dozer Icons
         _ = DozerIcons.shared
-        if DozerIcons.shared.hideStatusBarIconsAtLaunch {
-            DozerIcons.shared.hide()
-        }
+        
+        // If enabled hide menu bar icons at launch
+        DozerIcons.shared.hideAtLaunch()
 
         _ = DozerIcons.toggleDockIcon(showIcon: false)
     }
