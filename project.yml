@@ -4,28 +4,39 @@ options:
   tabWidth: 4
   createIntermediateGroups: true
   xcodeVersion: 10.2.1
-  deploymentTarget: 10.13
+  deploymentTarget: 13
+packages:
+  Defaults:
+    url: https://github.com/sindresorhus/Defaults
+    from: 7.3.1
+  Settings:
+    url: https://github.com/sindresorhus/Settings
+    version: 3.1.0
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle
+    version: 1.27.1
+  LaunchAtLogin:
+    url: https://github.com/sindresorhus/LaunchAtLogin-Modern
+    version: 1.0.0
+  KeyboardShortcuts:
+    url: https://github.com/sindresorhus/KeyboardShortcuts
+    version: 1.16.1
 targets:
   Dozer:
     type: application
     platform: macOS
     deploymentTarget: 
-      macOS: 10.13
+      macOS: 13
     configFiles:
       Debug: Configs/Debug.xcconfig
       Release: Configs/Release.xcconfig
     sources:
       - Dozer
     postBuildScripts:
-      - path: Scripts/LaunchAtLogin.sh
-        name: Launch At Login
-        runOnlyWhenInstalling: true
       - path: Scripts/SignFrameworks.sh
         name: Sign Frameworks
         runOnlyWhenInstalling: true
         runOnlyWhenInstalling: true
-      - script: /usr/local/bin/swiftgen
-        name: Generate files using SwiftGen
       - path: Scripts/Swiftlint.sh
         name: Swiftlint
     settings:
@@ -35,15 +46,16 @@ targets:
         SWIFT_VERSION: 5
         DEBUG_INFORMATION_FORMAT: "dwarf-with-dsym"
         ENABLE_HARDENED_RUNTIME: true
-        MACOSX_DEPLOYMENT_TARGET: 10.13
+        MACOSX_DEPLOYMENT_TARGET: 13
         VERSIONING_SYSTEM: apple-generic
-        CURRENT_PROJECT_VERSION: 30
+        CURRENT_PROJECT_VERSION: 31
     dependencies:
-      - carthage: LaunchAtLogin
-      - carthage: Defaults
-      - carthage: Preferences
-      - carthage: MASShortcut
-      - carthage: Sparkle
+      - package: KeyboardShortcuts
+      - package: LaunchAtLogin
+      - package: Defaults
+      - package: Settings
+      - package: Sparkle
+
 schemes:
   Dozer:
     build:
