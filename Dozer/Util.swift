@@ -19,12 +19,12 @@ extension NSButton {
 struct Icons {
     var helperstatusIcon: NSImage {
         let size = Defaults[.iconSize]
-        return create(image: Assets.helperStatusItemIcon.name, size, size)
+        return create(image: "AppIcon", size, size)
     }
 
     var removeStatusIcon: NSImage {
         let size = Defaults[.iconSize] / 2
-        return create(image: Assets.helperStatusItemIcon.name, size, size)
+        return create(image: "AppIcon", size, size)
     }
 
     private func create(image name: String, _ width: Int, _ height: Int) -> NSImage {

@@ -20,7 +20,7 @@ class RemoveStatusIcon: HelperstatusIcon {
         case .leftMouseDown:
             DozerIcons.shared.toggleRemove()
         case .rightMouseDown:
-            appDelegate.preferencesWindowController.show(preferencePane: .general)
+            appDelegate.preferencesWindowController.show(pane: .general)
         default:
             break
         }

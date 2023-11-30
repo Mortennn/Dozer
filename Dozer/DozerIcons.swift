@@ -107,7 +107,7 @@ public final class DozerIcons {
             Defaults[.showIconAndMenuEnabled] = self.enableIconAndMenu
             if self.enableIconAndMenu == false {
                 _ = DozerIcons.toggleDockIcon(showIcon: false)
-                appDelegate.preferencesWindowController.show(preferencePane: .general)
+                appDelegate.preferencesWindowController.show(pane: .general)
             }
         }
     }
