@@ -6,7 +6,7 @@ import Cocoa
 import MASShortcut
 import Sparkle
 import Defaults
-import Preferences
+import Settings
 
 
 final class AppDelegate: NSObject, NSApplicationDelegate {
@@ -30,15 +30,19 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
 
-    lazy var preferences: [PreferencePane] = [
+    lazy var panes: [SettingsPane] = [
         Dozer(),
         General()
     ]
 
-    lazy var preferencesWindowController = PreferencesWindowController(
-        preferencePanes: preferences,
+    lazy var settingsWindowController = SettingsWindowController(
+        panes: panes,
         style: .toolbarItems,
         animated: true,
         hidesToolbarForSingleItem: true
     )
+
+    func showGeneralSettings() {
+        settingsWindowController.show(pane: .general)
+    }
 }

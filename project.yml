@@ -4,30 +4,53 @@ options:
   tabWidth: 4
   createIntermediateGroups: true
   xcodeVersion: 10.2.1
-  deploymentTarget: 10.13
+  deploymentTarget: 10.15
+packages:
+  LaunchAtLogin:
+    url: https://github.com/sindresorhus/LaunchAtLogin
+    from: 5.0.0
+  Defaults:
+    url: https://github.com/sindresorhus/Defaults
+    from: 7.0.0
+  Preferences:
+    url: https://github.com/sindresorhus/Preferences
+    from: 3.0.0
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle
+    from: 2.0.0
 targets:
+  MASShortcut:
+    type: framework
+    platform: macOS
+    deploymentTarget:
+      macOS: 10.15
+    sources:
+      - path: Vendor/MASShortcut/Framework
+        headerVisibility: public
+        excludes:
+          - "**/*Tests.m"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: "com.shpakovski.MASShortcut"
+        SWIFT_VERSION: 5
+        DEFINES_MODULE: YES
+        MODULEMAP_FILE: Vendor/MASShortcut/Framework/MASShortcut.modulemap
+        INFOPLIST_FILE: Vendor/MASShortcut/Framework/Info.plist
   Dozer:
     type: application
     platform: macOS
-    deploymentTarget: 
-      macOS: 10.13
+    deploymentTarget:
+      macOS: 10.15
     configFiles:
       Debug: Configs/Debug.xcconfig
       Release: Configs/Release.xcconfig
     sources:
       - Dozer
     postBuildScripts:
-      - path: Scripts/LaunchAtLogin.sh
-        name: Launch At Login
-        runOnlyWhenInstalling: true
-      - path: Scripts/SignFrameworks.sh
-        name: Sign Frameworks
-        runOnlyWhenInstalling: true
-        runOnlyWhenInstalling: true
-      - script: /usr/local/bin/swiftgen
+      - script: /opt/homebrew/bin/swiftgen
         name: Generate files using SwiftGen
-      - path: Scripts/Swiftlint.sh
-        name: Swiftlint
+      # - path: Scripts/Swiftlint.sh
+      #   name: Swiftlint
     settings:
       base:
         CODE_SIGN_ENTITLEMENTS: Dozer/Other/Dozer.entitlements
@@ -35,15 +58,19 @@ targets:
         SWIFT_VERSION: 5
         DEBUG_INFORMATION_FORMAT: "dwarf-with-dsym"
         ENABLE_HARDENED_RUNTIME: true
-        MACOSX_DEPLOYMENT_TARGET: 10.13
+        MACOSX_DEPLOYMENT_TARGET: 10.15
         VERSIONING_SYSTEM: apple-generic
         CURRENT_PROJECT_VERSION: 30
+        ARCHS: $(ARCHS_STANDARD)
+        VALID_ARCHS: x86_64 arm64
     dependencies:
-      - carthage: LaunchAtLogin
-      - carthage: Defaults
-      - carthage: Preferences
-      - carthage: MASShortcut
-      - carthage: Sparkle
+      - target: MASShortcut
+      - package: LaunchAtLogin
+      - package: Defaults
+      - package: Preferences
+        product: Settings
+      - package: Sparkle
+        product: Sparkle
 schemes:
   Dozer:
     build:

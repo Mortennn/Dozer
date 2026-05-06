@@ -3,15 +3,15 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import Cocoa
-import Preferences
+import Settings
 import MASShortcut
 import LaunchAtLogin
 import Sparkle
 import Defaults
 
-final class General: NSViewController, PreferencePane {
-    let preferencePaneIdentifier = Preferences.PaneIdentifier.general
-    let preferencePaneTitle: String = "General"
+final class General: NSViewController, SettingsPane {
+    let paneIdentifier = Settings.PaneIdentifier.general
+    let paneTitle: String = "General"
     let toolbarItemIcon = NSImage(named: NSImage.preferencesGeneralName)!
 
     override var nibName: NSNib.Name? { "General" }

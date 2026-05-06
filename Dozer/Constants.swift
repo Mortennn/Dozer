@@ -3,7 +3,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import Cocoa
-import Preferences
+import Settings
 import Defaults
 
 extension Defaults.Keys {
@@ -30,7 +30,7 @@ extension NSStoryboard.Name {
     static let preferences: NSStoryboard.Name = NSStoryboard.Name("Preferences")
 }
 
-extension Preferences.PaneIdentifier {
+extension Settings.PaneIdentifier {
     static let dozer = Self("dozer")
     static let general = Self("general")
 }

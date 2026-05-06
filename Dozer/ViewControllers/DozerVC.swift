@@ -4,11 +4,11 @@
 
 import Cocoa
 import Sparkle
-import Preferences
+import Settings
 
-final class Dozer: NSViewController, PreferencePane {
-    let preferencePaneIdentifier = Preferences.PaneIdentifier.dozer
-    let preferencePaneTitle: String = "Dozer"
+final class Dozer: NSViewController, SettingsPane {
+    let paneIdentifier = Settings.PaneIdentifier.dozer
+    let paneTitle: String = "Dozer"
     let toolbarItemIcon = NSImage(named: "AppIcon")!
 
     override var nibName: NSNib.Name? { "Dozer" }

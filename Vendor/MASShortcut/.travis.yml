@@ -1,0 +1,4 @@
+language: objective-c
+script:
+    - xcodebuild -scheme MASShortcut build test
+    - bundle exec pod lib lint

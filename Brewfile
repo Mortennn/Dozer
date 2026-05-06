@@ -1,5 +1,5 @@
 brew "swiftformat"
 brew "swiftgen"
-brew "swiftlint"
+# brew "swiftlint"  # Requires full Xcode.app installation
 brew "xcodegen"
 brew "carthage"

@@ -60,3 +60,36 @@ There are 2 or 3, numbered from right to left:
 
 ## 📄 Requirements
 macOS 10.13+
+
+## 🛠️ Building from Source
+
+### Prerequisites
+- Xcode 10.2.1 or later
+- [Homebrew](https://brew.sh/)
+- [Carthage](https://github.com/Carthage/Carthage)
+- [XcodeGen](https://github.com/yonaskolb/XcodeGen)
+- [SwiftGen](https://github.com/SwiftGen/SwiftGen)
+
+### Build Instructions
+
+1. Clone the repository:
+```shell
+git clone https://github.com/Mortennn/Dozer.git
+cd Dozer
+```
+
+2. Build the project:
+```shell
+make build
+```
+
+This will:
+- Install dependencies via Homebrew
+- Bootstrap Carthage dependencies with XCFramework support (Apple Silicon compatible)
+- Generate necessary files using SwiftGen
+- Generate Xcode project using XcodeGen
+- Open the project in Xcode
+
+### Apple Silicon Support
+
+The project now supports Apple Silicon (arm64) natively through XCFrameworks. The build system automatically handles both Intel (x86_64) and Apple Silicon (arm64) architectures.
