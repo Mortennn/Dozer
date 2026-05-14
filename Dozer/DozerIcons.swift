@@ -181,8 +181,9 @@ public final class DozerIcons {
     }
 
     public func showIconAndMenu() {
-        if NSWorkspace.shared.frontmostApplication?.bundleIdentifier != AppInfo.bundleIdentifier {
-            previousApp = NSWorkspace.shared.frontmostApplication!
+        if let frontmostApplication = NSWorkspace.shared.frontmostApplication,
+            frontmostApplication.bundleIdentifier != AppInfo.bundleIdentifier {
+            previousApp = frontmostApplication
         }
         if Defaults[.showIconAndMenuEnabled] {
             _ = DozerIcons.toggleDockIcon(showIcon: true)
@@ -339,7 +340,7 @@ public final class DozerIcons {
 
         for windowInfo in windowInfoList {
             guard let window = Window(windowInfo),
-                // If the preferences window are close to the menu bar it won't auto hide
+                // If the preferences window is close to the menu bar it won't auto hide
                 window.owner != "Dozer" else {
                     continue
             }
@@ -355,7 +356,8 @@ public final class DozerIcons {
 
             for statusBarApp in statusBarAppsWindowInfo {
                 guard statusBarApp.owner == window.owner else { continue }
-                guard (statusBarApp.y + 22...statusBarApp.y + 30).contains(window.y) else { continue }
+                let statusBarBottom = statusBarApp.y + statusBarApp.height
+                guard (statusBarBottom...statusBarBottom + 12).contains(window.y) else { continue }
 
                 return true
             }
@@ -403,7 +405,10 @@ public final class DozerIcons {
         }
 
         var isStatusIcon: Bool {
-            guard level == 25 && height == 22 else {
+            guard level == Int(CGWindowLevelForKey(.statusWindow)) else {
+                return false
+            }
+            guard width > 0, height >= 18, height <= 40 else {
                 return false
             }
             return true

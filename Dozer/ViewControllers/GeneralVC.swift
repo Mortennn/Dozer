@@ -36,9 +36,11 @@ final class General: NSViewController, PreferencePane {
         LaunchAtLoginCheckbox.focusRingType = .none
 
         LaunchAtLoginCheckbox.isChecked = LaunchAtLogin.isEnabled
-        if SUUpdater.shared() != nil {
-            CheckForUpdatesCheckbox.isChecked = SUUpdater.shared()!.automaticallyChecksForUpdates
+        if AppInfo.hasUpdateFeed, let updater = SUUpdater.shared() {
+            CheckForUpdatesCheckbox.isEnabled = true
+            CheckForUpdatesCheckbox.isChecked = updater.automaticallyChecksForUpdates
         } else {
+            CheckForUpdatesCheckbox.isEnabled = false
             CheckForUpdatesCheckbox.isChecked = false
         }
 
@@ -66,11 +68,11 @@ final class General: NSViewController, PreferencePane {
     }
 
     @IBAction private func automaticallyCheckForUpdatesClicked(_ sender: NSButton) {
-        guard SUUpdater.shared() != nil else {
+        guard CheckForUpdatesCheckbox.isEnabled, AppInfo.hasUpdateFeed, let updater = SUUpdater.shared() else {
             CheckForUpdatesCheckbox.isChecked = false
             return
         }
-        SUUpdater.shared()!.automaticallyChecksForUpdates = CheckForUpdatesCheckbox.isChecked
+        updater.automaticallyChecksForUpdates = CheckForUpdatesCheckbox.isChecked
     }
 
     @IBAction private func hideStatusBarIconsAtLaunchClicked(_ sender: NSButton) {

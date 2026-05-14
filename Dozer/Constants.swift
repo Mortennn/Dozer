@@ -43,6 +43,12 @@ struct AppInfo {
     static var buildVersionNumber: String? {
         Bundle.main.infoDictionary?["CFBundleVersion"] as? String
     }
+    static var hasUpdateFeed: Bool {
+        guard let feedURL = Bundle.main.infoDictionary?["SUFeedURL"] as? String else {
+            return false
+        }
+        return !feedURL.isEmpty
+    }
 }
 
 enum StatusIconAction {

@@ -3,14 +3,14 @@ options:
   usesTabs: false
   tabWidth: 4
   createIntermediateGroups: true
-  xcodeVersion: 10.2.1
-  deploymentTarget: 10.13
+  xcodeVersion: 15.0
+  deploymentTarget: 11.0
 targets:
   Dozer:
     type: application
     platform: macOS
     deploymentTarget: 
-      macOS: 10.13
+      macOS: 11.0
     configFiles:
       Debug: Configs/Debug.xcconfig
       Release: Configs/Release.xcconfig
@@ -23,8 +23,16 @@ targets:
       - path: Scripts/SignFrameworks.sh
         name: Sign Frameworks
         runOnlyWhenInstalling: true
-        runOnlyWhenInstalling: true
-      - script: /usr/local/bin/swiftgen
+      - script: |
+          if command -v swiftgen >/dev/null; then
+            swiftgen
+          elif [ -x /opt/homebrew/bin/swiftgen ]; then
+            /opt/homebrew/bin/swiftgen
+          elif [ -x /usr/local/bin/swiftgen ]; then
+            /usr/local/bin/swiftgen
+          else
+            echo "warning: SwiftGen not installed; using checked-in generated assets"
+          fi
         name: Generate files using SwiftGen
       - path: Scripts/Swiftlint.sh
         name: Swiftlint
@@ -35,15 +43,28 @@ targets:
         SWIFT_VERSION: 5
         DEBUG_INFORMATION_FORMAT: "dwarf-with-dsym"
         ENABLE_HARDENED_RUNTIME: true
-        MACOSX_DEPLOYMENT_TARGET: 10.13
+        MACOSX_DEPLOYMENT_TARGET: 11.0
         VERSIONING_SYSTEM: apple-generic
         CURRENT_PROJECT_VERSION: 30
+        ARCHS: "$(ARCHS_STANDARD)"
+        ONLY_ACTIVE_ARCH: false
+        VALIDATE_WORKSPACE: true
     dependencies:
-      - carthage: LaunchAtLogin
-      - carthage: Defaults
-      - carthage: Preferences
-      - carthage: MASShortcut
-      - carthage: Sparkle
+      - framework: Carthage/Build/LaunchAtLogin.xcframework
+        embed: true
+        codeSign: true
+      - framework: Carthage/Build/Defaults.xcframework
+        embed: true
+        codeSign: true
+      - framework: Carthage/Build/Preferences.xcframework
+        embed: true
+        codeSign: true
+      - framework: Carthage/Build/MASShortcut.xcframework
+        embed: true
+        codeSign: true
+      - framework: Carthage/Build/Sparkle.xcframework
+        embed: true
+        codeSign: true
 schemes:
   Dozer:
     build:

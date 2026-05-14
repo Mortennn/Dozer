@@ -8,8 +8,8 @@
 	<a href="https://img.shields.io/badge/platform-macOS-lightgrey.svg">
  		<img src="https://img.shields.io/badge/platform-macOS-lightgrey.svg" alt="platform">
 	</a>
-	<a href="https://img.shields.io/badge/requirements-macOS High Sierra+-ff69b4.svg">
- 		<img src="https://img.shields.io/badge/requirements-macOS High Sierra+-lightgrey.svg" alt="systemrequirements">
+	<a href="https://img.shields.io/badge/requirements-macOS Big Sur+-ff69b4.svg">
+		<img src="https://img.shields.io/badge/requirements-macOS Big Sur+-lightgrey.svg" alt="systemrequirements">
 	</a>
 	<a href="https://github.com/sindresorhus/swiftlint-sindre">
  		<img src="https://img.shields.io/badge/SwiftLint-Sindre-hotpink.svg" alt="swiftlint">
@@ -59,4 +59,15 @@ There are 2 or 3, numbered from right to left:
 <!-- **Checkout [this GIF](https://raw.githubusercontent.com/Mortennn/Dozer/master/Stuff/demo.gif) to watch Dozer in action.** -->
 
 ## 📄 Requirements
-macOS 10.13+
+macOS 11.0+
+
+## Apple Silicon build
+
+On an Apple Silicon Mac with Xcode installed:
+
+```shell
+brew bundle --no-upgrade
+make arm64
+```
+
+The ARM-native app archive is written to `Releases/Dozer-arm64.zip`.

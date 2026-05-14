@@ -11,5 +11,5 @@ fastlaneLegacy/
 Gemfile
 Gemfile.lock
 
-# Swiftgen
-Dozer/Other/Generated/
+# SwiftGen output is checked in so the app can build on Apple Silicon even
+# when SwiftGen is not installed locally.
