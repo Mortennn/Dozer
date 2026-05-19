@@ -16,6 +16,8 @@ targets:
       Release: Configs/Release.xcconfig
     sources:
       - Dozer
+      - path: Dozer/Other/Generated
+        createIntermediateGroups: true
     postBuildScripts:
       - path: Scripts/LaunchAtLogin.sh
         name: Launch At Login
@@ -24,7 +26,7 @@ targets:
         name: Sign Frameworks
         runOnlyWhenInstalling: true
         runOnlyWhenInstalling: true
-      - script: /usr/local/bin/swiftgen
+      - script: /opt/homebrew/bin/swiftgen
         name: Generate files using SwiftGen
       - path: Scripts/Swiftlint.sh
         name: Swiftlint
@@ -36,6 +38,8 @@ targets:
         DEBUG_INFORMATION_FORMAT: "dwarf-with-dsym"
         ENABLE_HARDENED_RUNTIME: true
         MACOSX_DEPLOYMENT_TARGET: 10.13
+        SUPPORTED_PLATFORMS: "macosx"
+        ARCHS: "arm64 x86_64"
         VERSIONING_SYSTEM: apple-generic
         CURRENT_PROJECT_VERSION: 30
     dependencies:
