@@ -5,8 +5,8 @@ Full rewrite focused on a smaller footprint.
 
 Breaking:
 * Minimum macOS bumped to **13 Ventura**.
-* Carthage is no longer used. The only third-party dependency is Sparkle, fetched via Swift Package Manager.
-* Removed features: global hotkey, auto-hide after delay, the optional "remove" icon (option-click second group), dock icon toggle ("Show icon and menu"), icon size / button padding settings, "no icon" mode.
+* Zero third-party dependencies. Carthage, Sparkle and the rest are gone.
+* Removed features: global hotkey, auto-hide after delay, automatic updates (Sparkle), the optional "remove" icon (option-click second group), dock icon toggle ("Show icon and menu"), icon size / button padding settings, "no icon" mode.
 
 New:
 * Universal binary (`arm64` + `x86_64`) — runs natively on Apple Silicon.

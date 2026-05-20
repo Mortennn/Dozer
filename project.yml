@@ -6,10 +6,6 @@ options:
   xcodeVersion: "14.0"
   deploymentTarget:
     macOS: "13.0"
-packages:
-  Sparkle:
-    url: https://github.com/sparkle-project/Sparkle
-    from: 2.5.0
 targets:
   Dozer:
     type: application
@@ -34,8 +30,6 @@ targets:
         CURRENT_PROJECT_VERSION: 31
         ARCHS: "$(ARCHS_STANDARD)"
         VALID_ARCHS: "arm64 x86_64"
-    dependencies:
-      - package: Sparkle
 schemes:
   Dozer:
     build:

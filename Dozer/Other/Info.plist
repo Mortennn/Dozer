@@ -30,9 +30,5 @@
 	<string>Copyright © 2020 Mortennn@GitHub. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>SUFeedURL</key>
-	<string>https://raw.githubusercontent.com/Mortennn/Dozer/master/appcast.xml</string>
-	<key>SUPublicEDKey</key>
-	<string>97gvwr+B10rf6Exnj8yPuAXrYSu9yKikViJkYkvPMHY=</string>
 </dict>
 </plist>

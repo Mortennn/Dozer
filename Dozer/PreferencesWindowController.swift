@@ -3,26 +3,22 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import Cocoa
-import Sparkle
 
-/// Minimal preferences window built programmatically so we don't need
-/// Interface Builder XIBs or the Carthage Preferences framework.
+/// Minimal preferences window built programmatically — no XIBs, no
+/// third-party preferences framework.
 @MainActor
 final class PreferencesWindowController: NSWindowController {
     private enum Defaults {
         static let hideAtLaunchKey = "hideAtLaunch"
     }
 
-    private let updater: SPUUpdater
     private let launchAtLoginCheckbox = NSButton(checkboxWithTitle: "", target: nil, action: nil)
     private let hideAtLaunchCheckbox = NSButton(checkboxWithTitle: "", target: nil, action: nil)
-    private let autoUpdateCheckbox = NSButton(checkboxWithTitle: "", target: nil, action: nil)
     private let versionLabel = NSTextField(labelWithString: "")
 
-    init(updater: SPUUpdater) {
-        self.updater = updater
+    init() {
         let window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 380, height: 240),
+            contentRect: NSRect(x: 0, y: 0, width: 360, height: 180),
             styleMask: [.titled, .closable],
             backing: .buffered,
             defer: false
@@ -57,34 +53,20 @@ final class PreferencesWindowController: NSWindowController {
         hideAtLaunchCheckbox.target = self
         hideAtLaunchCheckbox.action = #selector(toggleHideAtLaunch)
 
-        autoUpdateCheckbox.title = "Automatically check for updates"
-        autoUpdateCheckbox.target = self
-        autoUpdateCheckbox.action = #selector(toggleAutoUpdate)
-
         versionLabel.font = NSFont.systemFont(ofSize: NSFont.smallSystemFontSize)
         versionLabel.textColor = .secondaryLabelColor
 
-        let checkUpdatesButton = NSButton(
-            title: "Check for updates…",
-            target: self,
-            action: #selector(checkForUpdates)
-        )
         let quitButton = NSButton(
             title: "Quit Dozer",
             target: NSApp,
             action: #selector(NSApplication.terminate(_:))
         )
 
-        let buttonRow = NSStackView(views: [checkUpdatesButton, quitButton])
-        buttonRow.orientation = .horizontal
-        buttonRow.spacing = 10
-
         let stack = NSStackView(views: [
             launchAtLoginCheckbox,
             hideAtLaunchCheckbox,
-            autoUpdateCheckbox,
             NSBox.separator(),
-            buttonRow,
+            quitButton,
             versionLabel
         ])
         stack.orientation = .vertical
@@ -104,7 +86,6 @@ final class PreferencesWindowController: NSWindowController {
     private func refresh() {
         launchAtLoginCheckbox.state = LaunchAtLogin.isEnabled ? .on : .off
         hideAtLaunchCheckbox.state = UserDefaults.standard.bool(forKey: Defaults.hideAtLaunchKey) ? .on : .off
-        autoUpdateCheckbox.state = updater.automaticallyChecksForUpdates ? .on : .off
 
         let info = Bundle.main.infoDictionary
         let short = info?["CFBundleShortVersionString"] as? String ?? "?"
@@ -123,14 +104,6 @@ final class PreferencesWindowController: NSWindowController {
             hideAtLaunchCheckbox.state == .on,
             forKey: Defaults.hideAtLaunchKey
         )
-    }
-
-    @objc private func toggleAutoUpdate() {
-        updater.automaticallyChecksForUpdates = autoUpdateCheckbox.state == .on
-    }
-
-    @objc private func checkForUpdates() {
-        updater.checkForUpdates()
     }
 }
 

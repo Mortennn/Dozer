@@ -37,7 +37,7 @@ Under the hood Dozer keeps two `NSStatusItem`s in the menu bar:
 
 ## 🪶 Footprint
 
-Dozer is intentionally tiny: a single application target, no Carthage, only Sparkle (auto-updates) as an SPM dependency, no background polling timers. The app sits idle in the menu bar between clicks.
+Dozer is intentionally tiny: a single application target, zero third-party dependencies, no background polling timers. The app sits idle in the menu bar between clicks.
 
 ## 🛠️ Build
 

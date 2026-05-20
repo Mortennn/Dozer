@@ -3,19 +3,11 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import Cocoa
-import Sparkle
 
 @MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
     private let statusController = StatusController()
-    private let updaterController = SPUStandardUpdaterController(
-        startingUpdater: true,
-        updaterDelegate: nil,
-        userDriverDelegate: nil
-    )
-    private lazy var preferencesWindowController = PreferencesWindowController(
-        updater: updaterController.updater
-    )
+    private lazy var preferencesWindowController = PreferencesWindowController()
 
     func applicationDidFinishLaunching(_: Notification) {
         NSApp.setActivationPolicy(.accessory)
