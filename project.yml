@@ -3,47 +3,39 @@ options:
   usesTabs: false
   tabWidth: 4
   createIntermediateGroups: true
-  xcodeVersion: 10.2.1
-  deploymentTarget: 10.13
+  xcodeVersion: "14.0"
+  deploymentTarget:
+    macOS: "13.0"
+packages:
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle
+    from: 2.5.0
 targets:
   Dozer:
     type: application
     platform: macOS
-    deploymentTarget: 
-      macOS: 10.13
+    deploymentTarget:
+      macOS: "13.0"
     configFiles:
       Debug: Configs/Debug.xcconfig
       Release: Configs/Release.xcconfig
     sources:
       - Dozer
-    postBuildScripts:
-      - path: Scripts/LaunchAtLogin.sh
-        name: Launch At Login
-        runOnlyWhenInstalling: true
-      - path: Scripts/SignFrameworks.sh
-        name: Sign Frameworks
-        runOnlyWhenInstalling: true
-        runOnlyWhenInstalling: true
-      - script: /usr/local/bin/swiftgen
-        name: Generate files using SwiftGen
-      - path: Scripts/Swiftlint.sh
-        name: Swiftlint
     settings:
       base:
         CODE_SIGN_ENTITLEMENTS: Dozer/Other/Dozer.entitlements
         PRODUCT_BUNDLE_IDENTIFIER: "com.mortennn.Dozer"
-        SWIFT_VERSION: 5
+        INFOPLIST_FILE: Dozer/Other/Info.plist
+        SWIFT_VERSION: "5"
         DEBUG_INFORMATION_FORMAT: "dwarf-with-dsym"
         ENABLE_HARDENED_RUNTIME: true
-        MACOSX_DEPLOYMENT_TARGET: 10.13
+        MACOSX_DEPLOYMENT_TARGET: "13.0"
         VERSIONING_SYSTEM: apple-generic
-        CURRENT_PROJECT_VERSION: 30
+        CURRENT_PROJECT_VERSION: 31
+        ARCHS: "$(ARCHS_STANDARD)"
+        VALID_ARCHS: "arm64 x86_64"
     dependencies:
-      - carthage: LaunchAtLogin
-      - carthage: Defaults
-      - carthage: Preferences
-      - carthage: MASShortcut
-      - carthage: Sparkle
+      - package: Sparkle
 schemes:
   Dozer:
     build:

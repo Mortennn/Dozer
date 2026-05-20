@@ -3,7 +3,8 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import AppKit
+
 let app = NSApplication.shared
-let appDelegate = AppDelegate()
-app.delegate = appDelegate
-_ = NSApplicationMain(CommandLine.argc, CommandLine.unsafeArgv)
+let delegate = AppDelegate()
+app.delegate = delegate
+app.run()

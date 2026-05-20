@@ -3,13 +3,12 @@ build/
 Releases/
 Dozer.xcodeproj/
 Credentials/
-Carthage/
 
 # Fastlane
 fastlane/
-fastlaneLegacy/
 Gemfile
 Gemfile.lock
 
-# Swiftgen
-Dozer/Other/Generated/
+# Xcode user state
+xcuserdata/
+*.xcuserstate

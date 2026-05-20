@@ -3,42 +3,32 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 import Cocoa
-import MASShortcut
 import Sparkle
-import Defaults
-import Preferences
 
-
+@MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
+    private let statusController = StatusController()
+    private let updaterController = SPUStandardUpdaterController(
+        startingUpdater: true,
+        updaterDelegate: nil,
+        userDriverDelegate: nil
+    )
+    private lazy var preferencesWindowController = PreferencesWindowController(
+        updater: updaterController.updater
+    )
+
     func applicationDidFinishLaunching(_: Notification) {
-        MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: UserDefaultKeys.Shortcuts.ToggleMenuItems) { () in
-            DozerIcons.shared.toggle()
+        NSApp.setActivationPolicy(.accessory)
+
+        statusController.onShowPreferences = { [weak self] in
+            self?.preferencesWindowController.show()
         }
-
-        // Initalize Dozer Icons
-        _ = DozerIcons.shared
-        
-        // If enabled hide menu bar icons at launch
-        DozerIcons.shared.hideAtLaunch()
-
-        _ = DozerIcons.toggleDockIcon(showIcon: false)
+        statusController.start()
     }
 
-    // Show all Dozer icons when opening Dozer from Finder etc.
-    func applicationOpenUntitledFile(_ sender: NSApplication) -> Bool {
-        DozerIcons.shared.showAll()
+    func applicationOpenUntitledFile(_: NSApplication) -> Bool {
+        statusController.show()
+        preferencesWindowController.show()
         return true
     }
-
-    lazy var preferences: [PreferencePane] = [
-        Dozer(),
-        General()
-    ]
-
-    lazy var preferencesWindowController = PreferencesWindowController(
-        preferencePanes: preferences,
-        style: .toolbarItems,
-        animated: true,
-        hidesToolbarForSingleItem: true
-    )
 }
