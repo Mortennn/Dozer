@@ -28,7 +28,7 @@ class NormalStatusIcon: HelperstatusIcon {
         case .leftMouseDown:
             DozerIcons.shared.toggle()
         case .rightMouseDown:
-            appDelegate.preferencesWindowController.show(preferencePane: .general)
+            appDelegate.showPreferences()
         default:
             break
         }

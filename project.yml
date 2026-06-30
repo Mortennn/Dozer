@@ -3,31 +3,53 @@ options:
   usesTabs: false
   tabWidth: 4
   createIntermediateGroups: true
-  xcodeVersion: 10.2.1
-  deploymentTarget: 10.13
+  xcodeVersion: "26.0"
+  deploymentTarget: 11.0
+# Pinned to exact versions (committed, reviewable) so a fresh checkout always
+# resolves the same dependency set — the SPM equivalent of the old
+# Cartfile.resolved. Bump these in an explicit, reviewable commit.
+packages:
+  Defaults:
+    url: https://github.com/sindresorhus/Defaults
+    exactVersion: 9.0.9
+  Settings:
+    url: https://github.com/sindresorhus/Settings
+    exactVersion: 3.1.2
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle
+    exactVersion: 2.9.3
+  LaunchAtLogin:
+    url: https://github.com/sindresorhus/LaunchAtLogin-Legacy
+    exactVersion: 5.0.2
+  KeyboardShortcuts:
+    url: https://github.com/sindresorhus/KeyboardShortcuts
+    exactVersion: 3.0.1
 targets:
   Dozer:
     type: application
     platform: macOS
-    deploymentTarget: 
-      macOS: 10.13
+    deploymentTarget:
+      macOS: 11.0
     configFiles:
       Debug: Configs/Debug.xcconfig
       Release: Configs/Release.xcconfig
     sources:
       - Dozer
     postBuildScripts:
-      - path: Scripts/LaunchAtLogin.sh
-        name: Launch At Login
-        runOnlyWhenInstalling: true
-      - path: Scripts/SignFrameworks.sh
-        name: Sign Frameworks
-        runOnlyWhenInstalling: true
-        runOnlyWhenInstalling: true
-      - script: /usr/local/bin/swiftgen
+      - script: |
+          export PATH="$PATH:/opt/homebrew/bin:/usr/local/bin"
+          if which swiftgen >/dev/null; then
+            swiftgen
+          else
+            echo "warning: SwiftGen not installed"
+          fi
         name: Generate files using SwiftGen
       - path: Scripts/Swiftlint.sh
         name: Swiftlint
+      # LaunchAtLogin-Legacy embeds a login-item helper for macOS < 13.
+      - script: '"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh"'
+        name: Copy "Launch at Login Helper"
+        basedOnDependencyAnalysis: false
     settings:
       base:
         CODE_SIGN_ENTITLEMENTS: Dozer/Other/Dozer.entitlements
@@ -35,15 +57,16 @@ targets:
         SWIFT_VERSION: 5
         DEBUG_INFORMATION_FORMAT: "dwarf-with-dsym"
         ENABLE_HARDENED_RUNTIME: true
-        MACOSX_DEPLOYMENT_TARGET: 10.13
+        ENABLE_USER_SCRIPT_SANDBOXING: NO
+        MACOSX_DEPLOYMENT_TARGET: 11.0
         VERSIONING_SYSTEM: apple-generic
         CURRENT_PROJECT_VERSION: 30
     dependencies:
-      - carthage: LaunchAtLogin
-      - carthage: Defaults
-      - carthage: Preferences
-      - carthage: MASShortcut
-      - carthage: Sparkle
+      - package: LaunchAtLogin
+      - package: Defaults
+      - package: Settings
+      - package: KeyboardShortcuts
+      - package: Sparkle
 schemes:
   Dozer:
     build:

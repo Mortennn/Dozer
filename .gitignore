@@ -3,7 +3,6 @@ build/
 Releases/
 Dozer.xcodeproj/
 Credentials/
-Carthage/
 
 # Fastlane
 fastlane/

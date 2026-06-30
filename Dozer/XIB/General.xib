@@ -234,12 +234,12 @@
                     <rect key="frame" x="20" y="43" width="365" height="5"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </box>
-                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Dt-wS-aZ8" customClass="MASShortcutView">
-                    <rect key="frame" x="20" y="15" width="106" height="20"/>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Dt-wS-aZ8">
+                    <rect key="frame" x="20" y="13" width="130" height="24"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </customView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nmU-jA-Ht8">
-                    <rect key="frame" x="130" y="17" width="249" height="17"/>
+                    <rect key="frame" x="158" y="17" width="221" height="17"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Show/hide menu bar icons" id="HZP-sl-H5I">
                         <font key="font" metaFont="system"/>

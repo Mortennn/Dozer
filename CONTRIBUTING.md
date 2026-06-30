@@ -22,7 +22,7 @@ Refresh the Dozer icons or logo. [Design resources for logo and status bar icon]
 You can submit your own code. This can be bug fixes or new features. Please ask me (@Mortennn) before implementing a new feature. Check out [Issues](https://github.com/Mortennn/Dozer/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
 
 ### Getting started
-Make sure you have at least Xcode 10 installed.
+Make sure you have Xcode 15 or later installed (Dozer targets macOS 11+). Dependencies are managed with Swift Package Manager and resolved automatically by Xcode — no Carthage step is required.
 
 Run the following command:
 ```shell

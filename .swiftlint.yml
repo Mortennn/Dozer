@@ -141,7 +141,7 @@ identifier_name:
   min_length:
     warning: 2
     error: 2
-  validates_start_with_lowercase: false
+  validates_start_with_lowercase: off
   allowed_symbols:
     - '_'
   excluded:
