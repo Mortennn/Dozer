@@ -10,6 +10,10 @@ import Preferences
 
 
 final class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationWillTerminate(_: Notification) {
+        DozerIcons.shared.restoreBeforeQuitting()
+    }
+
     func applicationDidFinishLaunching(_: Notification) {
         MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: UserDefaultKeys.Shortcuts.ToggleMenuItems) { () in
             DozerIcons.shared.toggle()

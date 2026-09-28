@@ -1,4 +1,4 @@
-whitelist_rules:
+only_rules:
   - anyobject_protocol
   - array_init
   - attributes

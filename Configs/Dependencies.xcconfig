@@ -1,0 +1,6 @@
+// Older dependencies target macOS versions no longer supported by current Xcode.
+MACOSX_DEPLOYMENT_TARGET = 10.13
+GCC_TREAT_WARNINGS_AS_ERRORS = NO
+ARCHS = arm64 x86_64
+ONLY_ACTIVE_ARCH = NO
+CODE_SIGNING_ALLOWED = NO

@@ -60,3 +60,45 @@ There are 2 or 3, numbered from right to left:
 
 ## 📄 Requirements
 macOS 10.13+
+
+## macOS 27 fork
+
+The `macOS-27` branch adds an experimental compatibility path for macOS 27.
+Apple's new menu bar discards Dozer's oversized separator instead of hiding
+the icons to its left. This branch uses the system's menu bar visibility service
+on macOS 27, and retains the original mechanism on earlier releases.
+
+Build a local Apple Silicon + Intel app with Xcode and Homebrew installed:
+
+```shell
+brew install carthage xcodegen swiftgen swiftlint
+make app
+```
+
+The app is at `build/Build/Products/Release/Dozer.app`. Quit the previous Dozer,
+copy this build to `/Applications/Dozer.app`, and launch it from there.
+On the first hide, allow Dozer in **System Settings → Privacy & Security →
+Accessibility**, then click the dot again. Arrange the icons with ⌘-drag as
+described above; the left Dozer dot remains the normal hiding boundary.
+
+macOS 27 limitations:
+
+- Visibility is controlled per application. If an app has icons on both sides
+  of a separator, its most visible placement wins and its icons stay together.
+- macOS keeps core system controls, including Control Center, Wi-Fi and the clock, visible.
+- This uses the private `MenuBarClientCore` framework, following
+  [Hidden Bar's macOS 27 implementation](https://github.com/dwarvesf/hidden/releases/tag/v1.11.1).
+  An OS update may change it. If it is unavailable or a request fails, Dozer
+  restores the icons and explains the problem.
+- Place the app in `/Applications` before using it. The system must resolve
+  Dozer's bundle identifier to keep its toggle visible.
+- This locally signed build is intended for personal use. A distributed release
+  still needs Developer ID signing and notarization. Rebuilding may require
+  granting Accessibility again.
+- Layout is read while all sections are visible. After rearranging icons with
+  the optional remove section active, Option-click to show all sections before
+  collapsing again. Apps launched while collapsed may appear after the next expand.
+
+Run `make test` after the initial build to check classification, cancellation,
+permission errors, and restoration. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)
+for the license of the adapted visibility bridge and Accessibility inventory.

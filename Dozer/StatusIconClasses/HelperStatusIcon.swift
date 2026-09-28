@@ -33,14 +33,23 @@ class HelperstatusIcon {
     }
 
     deinit {
-        print("status item has been deallocated")
+        NSStatusBar.system.removeStatusItem(statusIcon)
     }
 
     func show() {
         statusIcon.length = StatusIconLength.show
+        if #available(macOS 27, *) {
+            statusIcon.isVisible = true
+        }
     }
 
     func hide() {
+        if #available(macOS 27, *) {
+            // Other applications are hidden by NativeMenuBarVisibility. Length
+            // inflation only discards this item on the new menu bar.
+            statusIcon.isVisible = false
+            return
+        }
         statusIcon.length = StatusIconLength.hide
     }
 
@@ -82,11 +91,14 @@ class HelperstatusIcon {
     func statusIconClicked(_ sender: AnyObject?) {}
 
     var isShown: Bool {
-        statusIcon.length == StatusIconLength.show
+        if #available(macOS 27, *) {
+            return statusIcon.isVisible
+        }
+        return statusIcon.length == StatusIconLength.show
     }
 
     var isHidden: Bool {
-        statusIcon.length == StatusIconLength.hide
+        !isShown
     }
 
     var xPositionOnScreen: CGFloat {

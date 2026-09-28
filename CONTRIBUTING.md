@@ -32,6 +32,21 @@ make build
 ```
 Done! The project should open automatically in Xcode.
 
+### Testing the macOS 27 branch
+
+`make app` builds a locally signed universal app; `make test` runs the compatibility
+tests. `make build` still prepares the project and opens Xcode. Dependency versions
+are pinned in `Cartfile.resolved`; `Configs/Dependencies.xcconfig` applies the
+deployment and architecture settings needed by current Xcode.
+
+For a manual check, install in `/Applications`, grant Accessibility, and place
+one third-party app left of the left dot and another to its right. Verify hide,
+show, repeated clicks, Option-click with the remove dot enabled, shortcut-only
+mode, automatic hiding, and quitting while hidden. Check that apps to the right
+and system controls remain visible. Also check separate displays and a notched
+display; only macOS 27 uses the native visibility service. Use macOS 26 or earlier
+to verify the legacy length-based path.
+
 ### Submitting your pull request
 Please give a small summary of what has changed. Also add any github issues links (`Fixes #100`).
 Once your pull request is created, please add a changelog entry to the CHANGELOG.md along with the PR number.

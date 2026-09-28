@@ -16,15 +16,16 @@ targets:
       Release: Configs/Release.xcconfig
     sources:
       - Dozer
+      - path: THIRD_PARTY_NOTICES.md
+        buildPhase: resources
     postBuildScripts:
       - path: Scripts/LaunchAtLogin.sh
         name: Launch At Login
-        runOnlyWhenInstalling: true
       - path: Scripts/SignFrameworks.sh
         name: Sign Frameworks
-        runOnlyWhenInstalling: true
-        runOnlyWhenInstalling: true
-      - script: /usr/local/bin/swiftgen
+      - script: |
+          export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+          swiftgen
         name: Generate files using SwiftGen
       - path: Scripts/Swiftlint.sh
         name: Swiftlint
@@ -33,19 +34,41 @@ targets:
         CODE_SIGN_ENTITLEMENTS: Dozer/Other/Dozer.entitlements
         PRODUCT_BUNDLE_IDENTIFIER: "com.mortennn.Dozer"
         SWIFT_VERSION: 5
+        SWIFT_OBJC_BRIDGING_HEADER: Dozer/Other/bridging-header.h
         DEBUG_INFORMATION_FORMAT: "dwarf-with-dsym"
         ENABLE_HARDENED_RUNTIME: true
         MACOSX_DEPLOYMENT_TARGET: 10.13
         VERSIONING_SYSTEM: apple-generic
         CURRENT_PROJECT_VERSION: 30
+        CODE_SIGN_IDENTITY: "-"
+        ENABLE_USER_SCRIPT_SANDBOXING: false
     dependencies:
       - carthage: LaunchAtLogin
       - carthage: Defaults
       - carthage: Preferences
       - carthage: MASShortcut
       - carthage: Sparkle
+  MenuBarCompatibilityTests:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "10.13"
+    sources:
+      - Tests
+      - Dozer/StatusIconClasses/MenuBarInventory.swift
+      - Dozer/StatusIconClasses/NativeMenuBarVisibility.swift
+      - Dozer/StatusIconClasses/NativeVisibilityBridge.m
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mortennn.Dozer.CompatibilityTests
+        SWIFT_VERSION: 5
+        SWIFT_OBJC_BRIDGING_HEADER: Dozer/StatusIconClasses/NativeVisibilityBridge.h
+        GENERATE_INFOPLIST_FILE: true
+        CODE_SIGN_IDENTITY: "-"
 schemes:
   Dozer:
     build:
       targets:
         Dozer: all
+    test:
+      targets:
+        - MenuBarCompatibilityTests

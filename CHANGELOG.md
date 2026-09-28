@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+Fixed:
+* Restore menu bar hiding on macOS 27 #212. @orsissimo
+
 ## Version 4.2.0
 New features:
 * Configure amount of seconds to hide the icons after #104. @blakedgordon

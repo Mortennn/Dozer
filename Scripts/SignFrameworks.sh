@@ -7,5 +7,5 @@ then
     # If a code signing identity is not specified, use ad hoc signing
     IDENTITY="-"
 fi
-codesign --verbose --force --deep -o runtime --sign "$IDENTITY" "$LOCATION/Sparkle.framework/Versions/A/Resources/AutoUpdate.app"
+codesign --verbose --force --deep -o runtime --sign "$IDENTITY" "$LOCATION/Sparkle.framework/Versions/A/Resources/Autoupdate.app"
 codesign --verbose --force -o runtime --sign "$IDENTITY" "$LOCATION/Sparkle.framework/Versions/A"
